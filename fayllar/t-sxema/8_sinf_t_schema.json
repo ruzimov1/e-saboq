@@ -1,0 +1,82 @@
+{
+  "grade": "8",
+  "method": "t_schema",
+  "topics": [
+    {
+      "topic": "Dasturlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Mantiqiy fikrlashni rivojlantiradi",
+        "Muammo yechishni o‘rgatadi",
+        "Avtomatlashtirish",
+        "Katta imkoniyatlar",
+        "Kelajak kasbi"
+      ],
+      "right": [
+        "Murakkab",
+        "Ko‘p vaqt talab qiladi",
+        "Xatolar ko‘p",
+        "Sabr kerak",
+        "Doimiy o‘rganish"
+      ]
+    },
+    {
+      "topic": "Veb dizayn",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Vizual chiroyli",
+        "Foydalanuvchi uchun qulay",
+        "Moslashuvchan",
+        "Ijodkorlik",
+        "Sayt yaratish imkoniyati"
+      ],
+      "right": [
+        "Murakkab dizayn",
+        "Ko‘p vaqt",
+        "Texnik bilim kerak",
+        "Moslash muammosi",
+        "Xatoliklar"
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tez aloqa",
+        "Ma’lumot almashish",
+        "Internetga ulanish",
+        "Masofaviy ishlash",
+        "Resurslarni bo‘lishish"
+      ],
+      "right": [
+        "Xavfsizlik muammo",
+        "Nosozliklar",
+        "Tezlik pasayishi",
+        "Sozlash qiyin",
+        "Qurilma talab qiladi"
+      ]
+    },
+    {
+      "topic": "Video va animatsiya",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Qiziqarli",
+        "Vizual tushuncha",
+        "Ta’limda foydali",
+        "Ijodkorlik",
+        "Eslab qolish oson"
+      ],
+      "right": [
+        "Hajm katta",
+        "Qurilma talab qiladi",
+        "Murakkab",
+        "Ko‘p vaqt",
+        "Tezlik kerak"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "grade": "10-11",
+  "method": "t_schema",
+  "topics": [
+    {
+      "topic": "Bilimlar bazasi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Dasturiy ta’minot",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Tizim boshqaruvi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Axborot xavfsizligi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Raqamli tengsizlik",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Ekspert tizimlar",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Multimedia tahrirlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Sun’iy intellekt",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "ITning jamiyatga ta’siri",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Internet texnologiyalari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Loyiha boshqaruvi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Tizim hayotiy sikli",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Grafik dizayn",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Animatsiya",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Mail merge",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    },
+    {
+      "topic": "Veb dasturlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Samaradorlikni oshiradi",
+        "Jarayonlarni avtomatlashtiradi",
+        "Tezkor natija beradi",
+        "Keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Murakkab o‘rganiladi",
+        "Texnik bilim talab qiladi",
+        "Xatolik ehtimoli bor",
+        "Resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavfi bor"
+      ]
+    }
+  ]
+}

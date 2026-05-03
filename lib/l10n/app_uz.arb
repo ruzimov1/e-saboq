@@ -1,0 +1,293 @@
+{
+  "@@locale": "uz",
+  "appTitle": "e-Saboq",
+  "loginTitle": "Kirish",
+  "registerTitle": "Ro'yxatdan o'tish",
+  "joinByCode": "Kod bilan kirish",
+  "myAssignments": "Mening topshiriqlarim",
+  "assignments": "Topshiriqlar",
+  "assignmentResults": "Natijalar",
+  "noSubmissionsYet": "Hali javob yo'q",
+  "subjects": "Fanlar",
+  "save": "Saqlash",
+  "cancel": "Bekor qilish",
+  "delete": "O'chirish",
+  "networkOffline": "Tarmoq yo'q — ma'lumotlar keshdan ko'rinishi mumkin",
+  "networkOnline": "Tarmoq ulandi",
+  "submissionStatusSubmitted": "Yuborilgan",
+  "submissionStatusReviewed": "Ko'rib chiqilgan",
+  "submissionStatusReturned": "Qaytarilgan",
+  "teacherComment": "O'qituvchi izohi",
+  "reviewSave": "Baholashni saqlash",
+  "exportCsv": "CSV nusxa",
+  "csvCopied": "CSV buferga nusxalandi",
+  "rubricLabel": "Baholash mezonlari (o'quvchiga ko'rinadi)",
+  "teacherNotesLabel": "Ichki eslatma (faqat o'qituvchi, o'quvchiga ko'rinmaydi)",
+  "groupWorkOptional": "Guruh topshirig'i (keyingi bosqich, belgi)",
+  "draftSaved": "Qoralama saqlandi",
+  "viewAnswer": "Javobni ko'rish",
+  "statsAssignments": "Topshiriqlar: {total} · Faol: {active} · Yakunlangan: {closed}",
+  "@statsAssignments": {
+    "placeholders": {
+      "total": {"type": "int"},
+      "active": {"type": "int"},
+      "closed": {"type": "int"}
+    }
+  },
+  "avgQuizScore": "Quiz o'rtacha: {score}",
+  "@avgQuizScore": {
+    "placeholders": {
+      "score": {"type": "String"}
+    }
+  },
+  "noAvgQuiz": "Quiz balli hali yo'q",
+  "aiReviewTooltip": "AI tahlil",
+  "aiReviewTitle": "Sun'iy intellekt yordamchisi",
+  "aiReviewLoading": "Tahlil yuborilmoqda…",
+  "aiKeyMissing": "Gemini kalit yo'q: .env fayliga GEMINI_API_KEY= qo'shing (aistudio.google.com/apikey)",
+  "aiDisclaimer": "AI faqat yordam beradi; yakuniy baho o'qituvchining qarorida.",
+  "aiSaveToSubmission": "Natijaga saqlash",
+  "aiFeedbackSaved": "AI tahlili saqlandi",
+  "aiFeedbackLabel": "AI tahlili",
+  "registerSubtitle": "Yangi hisob yarating",
+  "resultsFilterAll": "Barchasi",
+  "resultsFilterSubmitted": "Yuborilgan",
+  "resultsFilterReviewed": "Ko'rib chiqilgan",
+  "resultsFilterReturned": "Qaytarilgan",
+  "resultsFilterNoGrade": "Baho qo'yilmagan",
+  "resultsDateRangePick": "Sana oralig'i",
+  "resultsClearDateRange": "Sanani tozalash",
+  "resultsNoMatchesFilter": "Tanlangan filtr bo'yicha natija topilmadi.",
+  "brainstormIdeaFeedEmpty": "Hozircha fikr yo'q. O'quvchilar yuborsa, stikerlar bu yerda ko'rinadi. Nomuvofiq fikrni o'chirish yoki har bir fikrga baho va izoh berishingiz mumkin.",
+  "assignmentUntitled": "Topshiriq",
+  "reviewStatusFieldLabel": "Holat",
+  "resultsAnswerHeading": "Javob",
+  "resultsQuizPercent": "Test: {percent}%",
+  "@resultsQuizPercent": {
+    "placeholders": {
+      "percent": {"type": "String"}
+    }
+  },
+  "resultsGrade10Chip": "Baho: {grade}/10",
+  "@resultsGrade10Chip": {
+    "placeholders": {
+      "grade": {"type": "String"}
+    }
+  },
+  "brainstormTabStudents": "O'quvchilar",
+  "brainstormTabIdeaFeed": "Fikrlar oqimi",
+  "resultsAssignmentRouteMissing": "Topshiriq tanlanmagan (marshrut).",
+  "brainstormDeleteIdeaTitle": "Fikrni o'chirish",
+  "brainstormDeleteIdeaBody": "Ushbu fikr oqimdan olib tashlansinmi? Javob ro'yxatidagi yuborish o'zgarmaydi — faqat stiker oqimi.",
+  "brainstormIdeaGradeDialogTitle": "Fikr — baho va izoh",
+  "gradeOutOfTenTitle": "Baho (0–10)",
+  "brainstormAvgGrade": "O'rtacha baho: {avg}/10",
+  "@brainstormAvgGrade": {
+    "placeholders": {
+      "avg": {"type": "String"}
+    }
+  },
+  "brainstormAvgGradeNone": "O'rtacha baho: hali yo'q",
+  "brainstormEditGradeComment": "Baho va izoh",
+  "brainstormStudentLine": "O'quvchi: {name}",
+  "@brainstormStudentLine": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "brainstormCommentLine": "Izoh: {text}",
+  "@brainstormCommentLine": {
+    "placeholders": {
+      "text": {"type": "String"}
+    }
+  },
+  "brainstormIdeaDeleted": "Fikr olib tashlandi",
+  "studentListLoginPrompt": "Ro'yxatni ko'rish uchun tizimga kiring.",
+  "studentBulkDeleteSelectedTitle": "Tanlanganlarni o'chirish",
+  "studentBulkDeleteSelectedMessage": "{count} ta element o'chirilsinmi? Guruhdan kelganlar ro'yxatdan olib tashlanadi, yuborilgan javoblar butunlay o'chiriladi.",
+  "@studentBulkDeleteSelectedMessage": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "studentBulkDeleteAllTitle": "Barchasini o'chirish",
+  "studentBulkDeleteAllMessage": "Guruh zahirasidagi {total} ta yozuv o'chiriladi (bajarishdagi + barcha yuborilgan javoblar). Davom etsinmi?",
+  "@studentBulkDeleteAllMessage": {
+    "placeholders": { "total": {"type": "int"} }
+  },
+  "studentBulkDeleteNothingToRemove": "O'chirish uchun element yo'q",
+  "studentBulkDeletedPartial": "Ba'zi elementlar o'chirilmadi ({failed} ta)",
+  "@studentBulkDeletedPartial": {
+    "placeholders": { "failed": {"type": "int"} }
+  },
+  "studentBulkDeletedOk": "O'chirildi",
+  "studentBulkDeleteAllError": "Xato: {failed} ta o'chirilmadi",
+  "@studentBulkDeleteAllError": {
+    "placeholders": { "failed": {"type": "int"} }
+  },
+  "studentBulkDeletedAllOk": "Barchasi o'chirildi",
+  "studentSelectItems": "Tanlang",
+  "studentSelectedCount": "{count} ta tanlandi",
+  "@studentSelectedCount": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "studentDeleteViaSelection": "Tanlash orqali o'chirish",
+  "studentDeleteEverything": "Hammasini o'chirish",
+  "studentDeleteDialogTitle": "O'chirish",
+  "studentAssignmentsEmptyHint": "Hali topshiriq yo'q. Topshiriq yoki guruh kodi bilan qo'shiling.",
+  "studentGroupInboxSection": "Guruhdan (bajarish)",
+  "studentSubmittedSection": "Yuborilgan",
+  "studentCodeLine": "Kod: {code}",
+  "@studentCodeLine": {
+    "placeholders": { "code": {"type": "String"} }
+  },
+  "studentMetaScore": "Ball",
+  "studentMetaTeacherGrade10": "O'qituvchi: {n}/10",
+  "@studentMetaTeacherGrade10": {
+    "placeholders": { "n": {"type": "int"} }
+  },
+  "studentSubmissionHasFeedbackNote": "(baho, izoh yoki tahlil bor)",
+  "studentSubmissionScreenTitle": "Yuborilgan javob",
+  "studentDetailLoginForAnswer": "Javobni ko'rish uchun tizimga kiring.",
+  "studentSubmissionMissing": "Yuborilgan javob topilmadi (o'chirilgan bo'lishi mumkin).",
+  "studentDetailSubmittedAt": "Yuborilgan: {when}",
+  "@studentDetailSubmittedAt": {
+    "placeholders": { "when": {"type": "String"} }
+  },
+  "studentDetailStatusLabel": "Holat",
+  "studentDetailQuizPointsSuffix": " · {points} ball",
+  "@studentDetailQuizPointsSuffix": {
+    "placeholders": { "points": {"type": "String"} }
+  },
+  "studentYourAnswer": "Sizning javobingiz",
+  "studentYourAnswers": "Sizning javoblaringiz",
+  "studentMethodLoadError": "Metod tafsilotlari yuklanmadi.",
+  "studentQuizNotConfigured": "Quiz savollari saqlanmagan.",
+  "studentPollAnswerHeading": "So'rovnoma javobi",
+  "studentAssignmentSectionTitle": "Topshiriq",
+  "studentTeacherOverallGrade10": "O'qituvchi umumiy bahosi: {n}/10",
+  "@studentTeacherOverallGrade10": {
+    "placeholders": { "n": {"type": "int"} }
+  },
+  "studentBrainstormTeacherPerIdea": "O'qituvchi: har bir fikr",
+  "studentBrainstormTeacherPerIdeaHint": "Aqliy hujumda har bir fikr uchun alohida baho va izoh bu yerda ko'rinadi (o'qituvchi yuborgach).",
+  "studentBrainstormIdeasMissingNote": "Fikr yozuvlari topilmadi (eski yuborish yoki tizim). Yuqorida saqlangan javob ko'rsatilgan.",
+  "studentBrainstormNoTeacherGradeYet": "Hozircha o'qituvchi bahosi kiritilmagan.",
+  "studentAnswerShownAbove": "(Yuqorida ko'rsatilgan)",
+  "studentQuizCorrect": "To'g'ri",
+  "studentQuizCorrectOption": "To'g'ri variant: {answer}",
+  "@studentQuizCorrectOption": {
+    "placeholders": { "answer": {"type": "String"} }
+  },
+  "studentMethodCaseScenario": "Vaziyat (case-study)",
+  "studentMethodBrainstormPrompt": "Savol",
+  "studentMethodBrainstormGuide": "Yo'riqnoma",
+  "studentMethodRoleRoles": "Rollar",
+  "studentMethodRoleScenario": "Vaziyat",
+  "studentMethodFishboneDiagram": "T-sxema",
+  "studentMethodFishboneCenter": "Markaz",
+  "studentMethodFishboneBranches": "Tahlil",
+  "studentMethodGroupInstructions": "Ko'rsatma",
+  "caseStudyScenarioSavedSnack": "Ssenariy metodga saqlandi",
+  "caseStudySolutionKeySavedSnack": "Yechim kaliti saqlandi",
+  "caseStudyReviewCompareSubtitle": "Yonma-yon: o'quvchi javobi · namunaviy yechim",
+  "caseStudyPanelStudent": "O'quvchi",
+  "caseStudyPanelReference": "Namunaviy (yechim kaliti)",
+  "caseStudyQuickGrade": "Tezkor baho",
+  "caseStudyStarTooltipPoints": "{points} ball",
+  "@caseStudyStarTooltipPoints": {
+    "placeholders": { "points": {"type": "int"} }
+  },
+  "caseStudyExactScore": "Aniq bal: {n} / 10",
+  "@caseStudyExactScore": {
+    "placeholders": { "n": {"type": "int"} }
+  },
+  "caseStudyCommentHint": "Matnli izoh (ovozli yozuv — keyingi bosqich)",
+  "caseStudyNoProbeSelections": "Tanlovlar hali yo'q",
+  "caseStudyHeatmapEmpty": "Tanlovlar statistikasi hali yo'q (yoki taassurof tanlovlari bo'lmagan javoblar).",
+  "caseStudyHeatmapTitle": "Tanlovlar heatmap",
+  "caseStudyMethodNotSelected": "Metod tanlanmagan",
+  "caseStudyNoAssignments": "Bu metod uchun topshiriqlar yo'q",
+  "caseStudyAssignmentPickerLabel": "Topshiriq",
+  "caseStudyVisualAnalysisTitle": "Vizual tahlil",
+  "caseStudyVisualAnalysisSubtitle": "Quyidagi ko'rsatkichlar tanlangan topshiriq bo'yicha real vaqtda yangilanadi (heatmap, xavfsiz yo'l ulushi, ogohlantirishlar).",
+  "caseStudyDeadEndWarning": "Ogohlantirish: {count} ta javobda so'nggi tanlov noto'g'ri (mantiqiy berk yo'l ehtimoli)",
+  "@caseStudyDeadEndWarning": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "caseStudyAllProbesCorrectTitle": "Sinf bo'yicha: barcha tanlovlar to'g'ri",
+  "caseStudyScenarioAnswerShare": "{percent}% · taassurof javoblari",
+  "@caseStudyScenarioAnswerShare": {
+    "placeholders": { "percent": {"type": "String"} }
+  },
+  "caseStudyNoSubmissionsYet": "Hali yuborishlar yo'q",
+  "caseStudyColTime": "Vaqt",
+  "caseStudyColStages": "Bosqichlar",
+  "caseStudyColWarning": "Ogohlantirish",
+  "caseStudyColGrade": "Baho",
+  "caseStudyColActions": " ",
+  "caseStudyCatalogSearchLabel": "Mavzu qidiruv (barcha sinflar)",
+  "caseStudyJsonBankHint": "JSON bankidan tanlang · tartibni Drag-and-drop bilan o'zgartiring",
+  "caseStudyEditOrderTitle": "Tahrir (tartib)",
+  "caseStudyClear": "Tozalash",
+  "caseStudySaveFirstBandScenario": "Birinchi bandni ssenariy sifatida saqlash",
+  "caseStudySaveAllBandsScenario": "Barcha bandlarni ssenariyga (birlashtirilgan)",
+  "caseStudyInteractiveScenarioMissing": "Bu mavzuda interaktiv ssenariy topilmadi",
+  "caseStudySaveInteractiveScenario": "Interaktiv ssenariyni saqlash",
+  "caseStudySaveSolutionOrder": "Tartib — yechim kaliti (ketma-ketlik)",
+  "caseStudyAppBarPanel": "Case-study panel",
+  "caseStudyNoMethodParams": "Metod parametrlari yo'q",
+  "caseStudyAppBarDashboard": "Case-study · boshqaruv paneli",
+  "caseStudyNavMonitoring": "Monitoring",
+  "caseStudyNavConstructor": "Konstruktor",
+  "caseStudyNavAnalysis": "Tahlil",
+  "csvColDisplayName": "display_name",
+  "csvColStudentId": "student_id",
+  "csvColSubmittedAt": "submitted_at",
+  "csvColScore": "score",
+  "csvColGrade10": "grade10",
+  "csvColReviewStatus": "review_status",
+  "csvColTeacherComment": "teacher_comment",
+  "csvColAiFeedback": "ai_feedback",
+  "csvColAnswerText": "answer_text",
+  "actionRetry": "Qayta urinish",
+  "joinSnackLoginForAssignment": "Avval «Kirish» — topshiriq kodi tizimda ishlatiladi.",
+  "joinSnackEnterCode": "Kod kiriting",
+  "joinSnackCodeInvalid": "Kod topilmadi yoki noto'g'ri",
+  "joinSnackLoginForGroup": "Guruhga qo'shilish uchun tizimga kiring.",
+  "joinSnackGroupStudentOnly": "Guruh a'zoligi o'quvchilar uchun.",
+  "joinSnackEnterGroupCode": "Guruh kodini kiriting",
+  "joinSnackGroupJoined": "Guruhga qo'shildingiz. «Mening topshiriqlarim» ni oching.",
+  "joinTabAssignmentCode": "Topshiriq kodi",
+  "joinTabGroupCode": "Guruh kodi",
+  "joinLoginCardTitle": "Tizimga kiring",
+  "joinLoginCardSubtitleAssignment": "Topshiriq kodi yuborilgach ochiladi.",
+  "joinAssignmentIntro": "O'qituvchi bergan topshiriq kodini kiriting (masalan: XK7F2). Kod nusxalanganda oraliq bo'shliqlar e'tiborsiz yechiladi.",
+  "joinTeacherPreviewTitle": "O'qituvchi rejimi",
+  "joinTeacherPreviewSubtitle": "Kod orqali topshiriqni ko'rush mumkin. Javob yuborish o'quvchilar uchun.",
+  "joinFieldAssignmentCode": "Topshiriq kodi",
+  "joinFieldAssignmentHint": "Masalan: XK7F2",
+  "joinOpenAssignment": "Topshiriqqa o'tish",
+  "joinGroupIntro": "O'qituvchi bergan guruh kirish kodini kiriting. Keyin sizga shu guruh orqali topshiriqlar «Mening topshiriqlarim» da ko'rinadi.",
+  "joinStudentOnlyCardTitle": "Avval o'quvchi sifatida kiring",
+  "joinFieldGroupCode": "Guruh kodi",
+  "joinFieldGroupHint": "6 belgi",
+  "joinGroupSubmit": "Guruhga qo'shilish",
+  "firebaseErrorIndexBuilding": "Firestore so'rovi uchun indeks yaratilmoqda yoki kerak. Bir necha daqiqadan so'ng qayta urinib ko'ring; o'qituvchidan `firebase deploy --only firestore:indexes` bajarilganini tekshiring.",
+  "firebaseErrorPermissionStudent": "Ruxsat rad etildi. Avval o'quvchi sifatida tizimga kiring.",
+  "forgotPasswordTitle": "Parolni tiklash",
+  "forgotPasswordBody": "Loginni kiriting. Tizim Firebase orqali tiklash havolasini yuborishga harakat qiladi (pochta sozlamalari qarab).",
+  "forgotPasswordLoginField": "Login",
+  "forgotPasswordSubmit": "Yuborish",
+  "forgotPasswordSent": "So'rov yuborildi. Agar xat kelmasa, Firebase Console va email domenini tekshiring.",
+  "teacherClassDeleteTitle": "Sinfni o'chirish",
+  "teacherClassDeleteMessage": "\"{name}\" va uning ostidagi mavzular, metodlar va topshiriqlar butunlay o'chiriladi.",
+  "@teacherClassDeleteMessage": {
+    "placeholders": { "name": {"type": "String"} }
+  },
+  "teacherClassDeleted": "Sinf o'chirildi",
+  "teacherMethodDeleteTitle": "Metodni o'chirish",
+  "teacherMethodDeleteMessage": "\"{name}\" va unga bog'langan topshiriqlar butunlay o'chiriladi.",
+  "@teacherMethodDeleteMessage": {
+    "placeholders": { "name": {"type": "String"} }
+  },
+  "teacherMethodDeleted": "Metod o'chirildi"
+}

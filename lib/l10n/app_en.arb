@@ -1,0 +1,293 @@
+{
+  "@@locale": "en",
+  "appTitle": "e-Saboq",
+  "loginTitle": "Sign in",
+  "registerTitle": "Register",
+  "joinByCode": "Join with code",
+  "myAssignments": "My assignments",
+  "assignments": "Assignments",
+  "assignmentResults": "Results",
+  "noSubmissionsYet": "No submissions yet",
+  "subjects": "Subjects",
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "networkOffline": "Offline — showing cached data when available",
+  "networkOnline": "Back online",
+  "submissionStatusSubmitted": "Submitted",
+  "submissionStatusReviewed": "Reviewed",
+  "submissionStatusReturned": "Returned",
+  "teacherComment": "Teacher comment",
+  "reviewSave": "Save review",
+  "exportCsv": "Copy CSV",
+  "csvCopied": "CSV copied to clipboard",
+  "rubricLabel": "Rubric (visible to students)",
+  "teacherNotesLabel": "Internal notes (teacher only)",
+  "groupWorkOptional": "Group submission (coming soon)",
+  "draftSaved": "Draft saved",
+  "viewAnswer": "View answer",
+  "statsAssignments": "Assignments: {total} · Active: {active} · Closed: {closed}",
+  "@statsAssignments": {
+    "placeholders": {
+      "total": {"type": "int"},
+      "active": {"type": "int"},
+      "closed": {"type": "int"}
+    }
+  },
+  "avgQuizScore": "Quiz average: {score}",
+  "@avgQuizScore": {
+    "placeholders": {
+      "score": {"type": "String"}
+    }
+  },
+  "noAvgQuiz": "No quiz scores yet",
+  "aiReviewTooltip": "AI review",
+  "aiReviewTitle": "AI assistant",
+  "aiReviewLoading": "Analyzing…",
+  "aiKeyMissing": "Missing Gemini key: add GEMINI_API_KEY= to .env (aistudio.google.com/apikey)",
+  "aiDisclaimer": "AI is assistive only; final grade is the teacher’s decision.",
+  "aiSaveToSubmission": "Save to submission",
+  "aiFeedbackSaved": "AI feedback saved",
+  "aiFeedbackLabel": "AI feedback",
+  "registerSubtitle": "Create a new account",
+  "resultsFilterAll": "All",
+  "resultsFilterSubmitted": "Submitted",
+  "resultsFilterReviewed": "Reviewed",
+  "resultsFilterReturned": "Returned",
+  "resultsFilterNoGrade": "No grade yet",
+  "resultsDateRangePick": "Date range",
+  "resultsClearDateRange": "Clear dates",
+  "resultsNoMatchesFilter": "No results match the selected filters.",
+  "brainstormIdeaFeedEmpty": "No ideas yet. When students post, stickers appear here. You can remove inappropriate ideas or add a grade and comment to each.",
+  "assignmentUntitled": "Assignment",
+  "reviewStatusFieldLabel": "Status",
+  "resultsAnswerHeading": "Answer",
+  "resultsQuizPercent": "Quiz: {percent}%",
+  "@resultsQuizPercent": {
+    "placeholders": {
+      "percent": {"type": "String"}
+    }
+  },
+  "resultsGrade10Chip": "Grade: {grade}/10",
+  "@resultsGrade10Chip": {
+    "placeholders": {
+      "grade": {"type": "String"}
+    }
+  },
+  "brainstormTabStudents": "Students",
+  "brainstormTabIdeaFeed": "Ideas feed",
+  "resultsAssignmentRouteMissing": "No assignment selected (route).",
+  "brainstormDeleteIdeaTitle": "Delete idea",
+  "brainstormDeleteIdeaBody": "Remove this idea from the feed? Submissions in the list are unchanged — only the sticker feed.",
+  "brainstormIdeaGradeDialogTitle": "Idea — grade and comment",
+  "gradeOutOfTenTitle": "Grade (0–10)",
+  "brainstormAvgGrade": "Average grade: {avg}/10",
+  "@brainstormAvgGrade": {
+    "placeholders": {
+      "avg": {"type": "String"}
+    }
+  },
+  "brainstormAvgGradeNone": "Average grade: none yet",
+  "brainstormEditGradeComment": "Grade and comment",
+  "brainstormStudentLine": "Student: {name}",
+  "@brainstormStudentLine": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "brainstormCommentLine": "Comment: {text}",
+  "@brainstormCommentLine": {
+    "placeholders": {
+      "text": {"type": "String"}
+    }
+  },
+  "brainstormIdeaDeleted": "Idea removed",
+  "studentListLoginPrompt": "Sign in to see your list.",
+  "studentBulkDeleteSelectedTitle": "Delete selected",
+  "studentBulkDeleteSelectedMessage": "Delete {count} item(s)? Group inbox entries will be removed; submitted answers will be fully deleted.",
+  "@studentBulkDeleteSelectedMessage": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "studentBulkDeleteAllTitle": "Delete all",
+  "studentBulkDeleteAllMessage": "This will remove all {total} items (inbox + every submitted answer). Continue?",
+  "@studentBulkDeleteAllMessage": {
+    "placeholders": { "total": {"type": "int"} }
+  },
+  "studentBulkDeleteNothingToRemove": "Nothing to delete",
+  "studentBulkDeletedPartial": "Some items were not removed ({failed}).",
+  "@studentBulkDeletedPartial": {
+    "placeholders": { "failed": {"type": "int"} }
+  },
+  "studentBulkDeletedOk": "Deleted",
+  "studentBulkDeleteAllError": "Error: {failed} item(s) not removed",
+  "@studentBulkDeleteAllError": {
+    "placeholders": { "failed": {"type": "int"} }
+  },
+  "studentBulkDeletedAllOk": "All deleted",
+  "studentSelectItems": "Select",
+  "studentSelectedCount": "{count} selected",
+  "@studentSelectedCount": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "studentDeleteViaSelection": "Delete via selection",
+  "studentDeleteEverything": "Delete everything",
+  "studentDeleteDialogTitle": "Delete",
+  "studentAssignmentsEmptyHint": "No assignments yet. Join with a task or group code.",
+  "studentGroupInboxSection": "From group (to do)",
+  "studentSubmittedSection": "Submitted",
+  "studentCodeLine": "Code: {code}",
+  "@studentCodeLine": {
+    "placeholders": { "code": {"type": "String"} }
+  },
+  "studentMetaScore": "Score",
+  "studentMetaTeacherGrade10": "Teacher: {n}/10",
+  "@studentMetaTeacherGrade10": {
+    "placeholders": { "n": {"type": "int"} }
+  },
+  "studentSubmissionHasFeedbackNote": "(grade, comment, or analysis present)",
+  "studentSubmissionScreenTitle": "Submitted answer",
+  "studentDetailLoginForAnswer": "Sign in to view your answer.",
+  "studentSubmissionMissing": "Submission not found (it may have been deleted).",
+  "studentDetailSubmittedAt": "Submitted: {when}",
+  "@studentDetailSubmittedAt": {
+    "placeholders": { "when": {"type": "String"} }
+  },
+  "studentDetailStatusLabel": "Status",
+  "studentDetailQuizPointsSuffix": " · {points} pts",
+  "@studentDetailQuizPointsSuffix": {
+    "placeholders": { "points": {"type": "String"} }
+  },
+  "studentYourAnswer": "Your answer",
+  "studentYourAnswers": "Your answers",
+  "studentMethodLoadError": "Could not load method details.",
+  "studentQuizNotConfigured": "Quiz questions are not stored.",
+  "studentPollAnswerHeading": "Survey response",
+  "studentAssignmentSectionTitle": "Assignment",
+  "studentTeacherOverallGrade10": "Teacher overall grade: {n}/10",
+  "@studentTeacherOverallGrade10": {
+    "placeholders": { "n": {"type": "int"} }
+  },
+  "studentBrainstormTeacherPerIdea": "Teacher: each idea",
+  "studentBrainstormTeacherPerIdeaHint": "In brainstorming, each idea can have its own grade and comment here (once the teacher adds them).",
+  "studentBrainstormIdeasMissingNote": "No idea notes found (older submission or system). Your saved answer is shown above.",
+  "studentBrainstormNoTeacherGradeYet": "No teacher grade yet.",
+  "studentAnswerShownAbove": "(Shown above)",
+  "studentQuizCorrect": "Correct",
+  "studentQuizCorrectOption": "Correct option: {answer}",
+  "@studentQuizCorrectOption": {
+    "placeholders": { "answer": {"type": "String"} }
+  },
+  "studentMethodCaseScenario": "Situation (case study)",
+  "studentMethodBrainstormPrompt": "Prompt",
+  "studentMethodBrainstormGuide": "Guide",
+  "studentMethodRoleRoles": "Roles",
+  "studentMethodRoleScenario": "Scenario",
+  "studentMethodFishboneDiagram": "Fishbone diagram",
+  "studentMethodFishboneCenter": "Center",
+  "studentMethodFishboneBranches": "Analysis",
+  "studentMethodGroupInstructions": "Instructions",
+  "caseStudyScenarioSavedSnack": "Scenario saved to method",
+  "caseStudySolutionKeySavedSnack": "Solution key saved",
+  "caseStudyReviewCompareSubtitle": "Side by side: learner answer · model solution",
+  "caseStudyPanelStudent": "Learner",
+  "caseStudyPanelReference": "Model (solution key)",
+  "caseStudyQuickGrade": "Quick grade",
+  "caseStudyStarTooltipPoints": "{points} pts",
+  "@caseStudyStarTooltipPoints": {
+    "placeholders": { "points": {"type": "int"} }
+  },
+  "caseStudyExactScore": "Score: {n} / 10",
+  "@caseStudyExactScore": {
+    "placeholders": { "n": {"type": "int"} }
+  },
+  "caseStudyCommentHint": "Text comment (voice input — coming later)",
+  "caseStudyNoProbeSelections": "No selections yet",
+  "caseStudyHeatmapEmpty": "No choice statistics yet (or no scenario selections in responses).",
+  "caseStudyHeatmapTitle": "Choice heatmap",
+  "caseStudyMethodNotSelected": "No method selected",
+  "caseStudyNoAssignments": "No assignments for this method",
+  "caseStudyAssignmentPickerLabel": "Assignment",
+  "caseStudyVisualAnalysisTitle": "Visual analytics",
+  "caseStudyVisualAnalysisSubtitle": "The metrics below update in real time for the selected assignment (heatmap, safe-path share, alerts).",
+  "caseStudyDeadEndWarning": "Warning: {count} response(s) end with an incorrect last choice (possible logic dead end)",
+  "@caseStudyDeadEndWarning": {
+    "placeholders": { "count": {"type": "int"} }
+  },
+  "caseStudyAllProbesCorrectTitle": "Class-wide: all choices correct",
+  "caseStudyScenarioAnswerShare": "{percent}% · scenario-based answers",
+  "@caseStudyScenarioAnswerShare": {
+    "placeholders": { "percent": {"type": "String"} }
+  },
+  "caseStudyNoSubmissionsYet": "No submissions yet",
+  "caseStudyColTime": "Time",
+  "caseStudyColStages": "Stages",
+  "caseStudyColWarning": "Alert",
+  "caseStudyColGrade": "Grade",
+  "caseStudyColActions": " ",
+  "caseStudyCatalogSearchLabel": "Topic search (all classes)",
+  "caseStudyJsonBankHint": "Pick from JSON bank · reorder via drag-and-drop",
+  "caseStudyEditOrderTitle": "Edit (order)",
+  "caseStudyClear": "Clear",
+  "caseStudySaveFirstBandScenario": "Save first block as scenario",
+  "caseStudySaveAllBandsScenario": "Save all blocks as one scenario",
+  "caseStudyInteractiveScenarioMissing": "No interactive scenario for this topic",
+  "caseStudySaveInteractiveScenario": "Save interactive scenario",
+  "caseStudySaveSolutionOrder": "Order — solution key (sequence)",
+  "caseStudyAppBarPanel": "Case study panel",
+  "caseStudyNoMethodParams": "No method parameters",
+  "caseStudyAppBarDashboard": "Case study · dashboard",
+  "caseStudyNavMonitoring": "Monitoring",
+  "caseStudyNavConstructor": "Builder",
+  "caseStudyNavAnalysis": "Analytics",
+  "csvColDisplayName": "display_name",
+  "csvColStudentId": "student_id",
+  "csvColSubmittedAt": "submitted_at",
+  "csvColScore": "score",
+  "csvColGrade10": "grade10",
+  "csvColReviewStatus": "review_status",
+  "csvColTeacherComment": "teacher_comment",
+  "csvColAiFeedback": "ai_feedback",
+  "csvColAnswerText": "answer_text",
+  "actionRetry": "Retry",
+  "joinSnackLoginForAssignment": "Sign in first — assignment codes work when logged in.",
+  "joinSnackEnterCode": "Enter a code",
+  "joinSnackCodeInvalid": "Code not found or invalid",
+  "joinSnackLoginForGroup": "Sign in to join a group.",
+  "joinSnackGroupStudentOnly": "Group membership is for students.",
+  "joinSnackEnterGroupCode": "Enter the group code",
+  "joinSnackGroupJoined": "You joined the group. Open “My assignments”.",
+  "joinTabAssignmentCode": "Assignment code",
+  "joinTabGroupCode": "Group code",
+  "joinLoginCardTitle": "Sign in",
+  "joinLoginCardSubtitleAssignment": "Opens after you send the assignment code flow.",
+  "joinAssignmentIntro": "Enter the assignment code from your teacher (e.g. XK7F2). Extra spaces are ignored when pasting.",
+  "joinTeacherPreviewTitle": "Teacher mode",
+  "joinTeacherPreviewSubtitle": "You can preview the task by code. Submitting answers is for students.",
+  "joinFieldAssignmentCode": "Assignment code",
+  "joinFieldAssignmentHint": "e.g. XK7F2",
+  "joinOpenAssignment": "Open assignment",
+  "joinGroupIntro": "Enter the group join code from your teacher. Then group assignments appear under “My assignments”.",
+  "joinStudentOnlyCardTitle": "Sign in as a student first",
+  "joinFieldGroupCode": "Group code",
+  "joinFieldGroupHint": "6 characters",
+  "joinGroupSubmit": "Join group",
+  "firebaseErrorIndexBuilding": "A Firestore index may be building or missing. Try again in a few minutes; ask your teacher if `firebase deploy --only firestore:indexes` was run.",
+  "firebaseErrorPermissionStudent": "Permission denied. Sign in as a student first.",
+  "forgotPasswordTitle": "Reset password",
+  "forgotPasswordBody": "Enter your username/login. The app will try to send a reset link via Firebase (depends on email setup).",
+  "forgotPasswordLoginField": "Login",
+  "forgotPasswordSubmit": "Send",
+  "forgotPasswordSent": "Request sent. If no email arrives, check Firebase Console and your domain.",
+  "teacherClassDeleteTitle": "Delete class",
+  "teacherClassDeleteMessage": "\"{name}\" and all topics, methods, and assignments under it will be permanently removed.",
+  "@teacherClassDeleteMessage": {
+    "placeholders": { "name": {"type": "String"} }
+  },
+  "teacherClassDeleted": "Class deleted",
+  "teacherMethodDeleteTitle": "Delete method",
+  "teacherMethodDeleteMessage": "\"{name}\" and all linked assignments will be permanently removed.",
+  "@teacherMethodDeleteMessage": {
+    "placeholders": { "name": {"type": "String"} }
+  },
+  "teacherMethodDeleted": "Method deleted"
+}

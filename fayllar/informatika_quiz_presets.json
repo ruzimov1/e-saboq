@@ -1,0 +1,34 @@
+{
+  "informatika": {
+    "title": "Quiz (online test): {topic}",
+    "questions": [
+      {
+        "question": "{subject} — {topic}: ushbu mavzuni o‘zlashtirish darajangiz qanday?",
+        "options": [
+          "To‘liq tushunarli",
+          "Qisman tushunarli",
+          "Qiyinroq tuyuldi"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "{topic} bo‘yicha amaliy mashq bajarishga qanchalik tayyorsiz?",
+        "options": [
+          "Bajarib ko‘rganman",
+          "Hali sinab ko‘rganim yo‘q",
+          "Qiyin, yordam kerak"
+        ],
+        "correctIndex": 0
+      },
+      {
+        "question": "Keyingi darsga {topic} bo‘yicha qanday tayyorgarlik ko‘rasiz?",
+        "options": [
+          "Mustaqil o‘qish va mustahkamlash",
+          "Video yoki onlayn materiallar",
+          "O‘qituvchi bilan qo‘shimcha tushuntirish"
+        ],
+        "correctIndex": 0
+      }
+    ]
+  }
+}

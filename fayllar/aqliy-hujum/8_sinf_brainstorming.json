@@ -1,0 +1,257 @@
+{
+  "grade": "8",
+  "method": "brainstorming",
+  "subject": "informatika",
+  "topics": [
+    {
+      "topic": "Maqsadni amalga oshirishda dasturlashdan foydalanish",
+      "questions": [
+        "Dastur yaratishdan oldin reja tuzish: qaysi qadamlar o‘rganilishi kerak?",
+        "Kod sifati, nomlash va tarkib: qisqa, o‘qilishi oson dastur qanday bo‘ladi?",
+        "Sinov (test) va xatolarni tahlil: amalda qanday odatlar tavsiya etiladi?",
+        "Tayyor modul yoki funksiyani qayta foydalanish qanday tejamkorlik beradi?",
+        "Dasturlash siz o‘ylagan kasblar yoki fandan tashqarida qayerlarda yordam beradi?"
+      ]
+    },
+    {
+      "topic": "Maqsadni amalga oshirish uchun veb-sayt dizaynini yaratish",
+      "questions": [
+        "Foydalanuvchi uchun tushunarli veb-bet tuzilmasi qanday bo‘ladi (menyu, sarlavha, kontent)?",
+        "Rang palitrasi, shrift va bo‘sh joylar: sinfdagi sayt namunasida nimalarga e’tibor qilyapsiz?",
+        "Mobil va katta ekranlar uchun responsivlik nimani anglatadi?",
+        "Katta fayl va sekin yuklanish: saytni yengil qilish fikrlari bering.",
+        "Kirish formasi, tugmalar, havolalar: foydalanish qulayligini yaxshilash yollari nimalar?"
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlaridan maqsadli foydalanish",
+      "questions": [
+        "Tarmoq nima va kundalik hayotda qanday turlaridan foydalanasiz (Wi-Fi, kabel, mobil)?",
+        "Kechikish (ping) va tarmoq tezligiga ta’sir etuvchi omillar qanday?",
+        "Kuchli parol, yangilanish, shubhali havolalardan ehtiyot: qisqa ehtiyot choralar ro‘yxati.",
+        "Ulanish yo‘q yoki uzoq: muammoni ketma-ket tekshiruv fikrini tushunaring.",
+        "Fayl, printer yoki o‘quv portalini tarmoq orqali ulashda qanday xavf-xatarlar bolar?"
+      ]
+    },
+    {
+      "topic": "Maqsadni amalga oshirish uchun video yoki animatsiya",
+      "questions": [
+        "Qisqa o‘quv roligida qaysi elementlar tahlil, kirish, asosiy fikr, xulosani qamraydi?",
+        "Ovoz, fon va sifat: dars materiallarini qayta o‘girishda nimalarga e’tibor berasiz?",
+        "Soddalash turlari (2D) va sarxatlar: qachon o‘quv loyihasida yengilroqroq yondashuv yetarli bo‘ladi?",
+        "Format va hajm: tarmoqqa yuklash yoki o‘qituvchiga yuborishda qulay yechim qanday?",
+        "Boshqa o‘quvchilarning loyihalarini baholash bo‘yicha 3–4 ta kriterianing misoli"
+      ]
+    },
+    {
+      "topic": "1-bob. Kompyuter tizimining turlari va komponentlari",
+      "questions": [
+        "Kiritish, qayta ishlash, saqlash, chiqarish bo‘g‘inlarini o‘qituvchiga tushuntiring.",
+        "Shaxsiy noutbuk, server, smartfon, IoT: qisqacha turlar va o‘qituv muhiti uchun misol.",
+        "Markaziy protsessor (CPU) va xotira: vazifalar jihatdan aniqroq qilib farqlang.",
+        "Dasturiy va apparat: qisqacha va operatsion tizim nima o‘rnatiladi?",
+        "Energiyadan tejamkor qurilma va e-vazni qog‘ozsiz: qisqa fikr va misollar"
+      ]
+    },
+    {
+      "topic": "2-bob. Kiritish va chiqarish qurilmalari",
+      "questions": [
+        "Kiritish va chiqarish qurilmalari bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Kiritish va chiqarish qurilmalari mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Kiritish va chiqarish qurilmalari qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Kiritish va chiqarish qurilmalari bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "3-bob. Xotira qurilmalari va ma'lumot almashish vositalari",
+      "questions": [
+        "Xotira qurilmalari va ma'lumot almashish vositalari bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Xotira qurilmalari va ma'lumot almashish vositalari mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Xotira qurilmalari va ma'lumot almashish vositalari qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Xotira qurilmalari va ma'lumot almashish vositalari bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "4-bob. Kompyuter tarmoqlari va ulardan foydalanish",
+      "questions": [
+        "Kompyuter tarmoqlari va ulardan foydalanish bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Kompyuter tarmoqlari va ulardan foydalanish mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Kompyuter tarmoqlari va ulardan foydalanish qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Kompyuter tarmoqlari va ulardan foydalanish bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "5-bob. Axborot texnologiyalarining ta'siri",
+      "questions": [
+        "Axborot texnologiyalarining ta'siri bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Axborot texnologiyalarining ta'siri mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Axborot texnologiyalarining ta'siri qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Axborot texnologiyalarining ta'siri bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "6-bob. AKTni tadbiq etish",
+      "questions": [
+        "AKTni tadbiq etish bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda AKTni tadbiq etish mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda AKTni tadbiq etish qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: AKTni tadbiq etish bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "7-bob. Tizimning hayot davri",
+      "questions": [
+        "Tizimning hayot davri bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Tizimning hayot davri mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Tizimning hayot davri qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Tizimning hayot davri bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "8-bob. Xavfsizlik texnikasi qoidalari",
+      "questions": [
+        "Xavfsizlik texnikasi qoidalari bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Xavfsizlik texnikasi qoidalari mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Xavfsizlik texnikasi qoidalari qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Xavfsizlik texnikasi qoidalari bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "9-bob. Auditoriya",
+      "questions": [
+        "Auditoriya bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Auditoriya mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Auditoriya qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Auditoriya bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "10-bob. Kommunikatsiya",
+      "questions": [
+        "Kommunikatsiya bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Kommunikatsiya mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Kommunikatsiya qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Kommunikatsiya bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "11-bob. Fayllar boshqaruvi",
+      "questions": [
+        "Fayllar boshqaruvi bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Fayllar boshqaruvi mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Fayllar boshqaruvi qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Fayllar boshqaruvi bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "12-bob. Tasvirlar",
+      "questions": [
+        "Tasvirlar bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Tasvirlar mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Tasvirlar qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Tasvirlar bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "13-bob. Loyihalash",
+      "questions": [
+        "Loyihalash bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Loyihalash mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Loyihalash qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Loyihalash bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "14-bob. Uslublar",
+      "questions": [
+        "Uslublar bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Uslublar mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Uslublar qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Uslublar bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "15-bob. Xatolarni tekshirish",
+      "questions": [
+        "Xatolarni tekshirish bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Xatolarni tekshirish mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Xatolarni tekshirish qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Xatolarni tekshirish bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "16-bob. Grafik va xaritalar",
+      "questions": [
+        "Grafik va xaritalar bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Grafik va xaritalar mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Grafik va xaritalar qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Grafik va xaritalar bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "17-bob. Hujjatlar bilan ishlash",
+      "questions": [
+        "Hujjatlar bilan ishlash bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Hujjatlar bilan ishlash mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Hujjatlar bilan ishlash qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Hujjatlar bilan ishlash bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "18-bob. Ma'lumotlarni boshqarish",
+      "questions": [
+        "Ma'lumotlarni boshqarish bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Ma'lumotlarni boshqarish mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Ma'lumotlarni boshqarish qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Ma'lumotlarni boshqarish bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "19-bob. Taqdimot",
+      "questions": [
+        "Taqdimot bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Taqdimot mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Taqdimot qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Taqdimot bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "20-bob. Ma'lumotlar tahlili",
+      "questions": [
+        "Ma'lumotlar tahlili bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Ma'lumotlar tahlili mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Ma'lumotlar tahlili qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Ma'lumotlar tahlili bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    },
+    {
+      "topic": "21-bob. Veb-saytlar yaratish",
+      "questions": [
+        "Veb-saytlar yaratish bo'yicha asosiy tushunchalarni 3-4 ta sifatda yozing va bittasiga misol keltiring.",
+        "Sinfda Veb-saytlar yaratish mavzusini tushunarsiz etish: qisqa fikr va 2 ta o'qitish usuli.",
+        "Amalda Veb-saytlar yaratish qaysi dastur, qurilma yoki tarmoqlar bilan uchrashadi? Qisqacha ro'yxat.",
+        "Bu bo'b bilan bog'liq eng ko'p uchraydigan 2-3 ta muammo va ularni kamaytirish yo'li.",
+        "Xavfsizlik, axborot yoki odat: Veb-saytlar yaratish bo'yicha 2 ta tavsiya va qisqa xulosa."
+      ]
+    }
+  ]
+}

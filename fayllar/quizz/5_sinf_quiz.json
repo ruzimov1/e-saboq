@@ -1,0 +1,336 @@
+{
+  "grade": "5",
+  "method": "quiz",
+  "topics": [
+    {
+      "topic": "Matnli hujjat bilan ishlash",
+      "questions": [
+        {
+          "question": "Ctrl + S nima qiladi?",
+          "options": {
+            "A": "Saqlaydi",
+            "B": "O‘chiradi",
+            "C": "Chop etadi",
+            "D": "Yopadi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ctrl + C nima qiladi?",
+          "options": {
+            "A": "Kesadi",
+            "B": "Nusxa oladi",
+            "C": "Joylaydi",
+            "D": "Saqlaydi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Ctrl + V nima qiladi?",
+          "options": {
+            "A": "Saqlaydi",
+            "B": "O‘chiradi",
+            "C": "Joylaydi",
+            "D": "Qidiradi"
+          },
+          "correct": "C"
+        },
+        {
+          "question": "Enter tugmasi nima qiladi?",
+          "options": {
+            "A": "Saqlaydi",
+            "B": "Yangi qatorga o‘tkazadi",
+            "C": "O‘chiradi",
+            "D": "Chop etadi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Ctrl + B nima qiladi?",
+          "options": {
+            "A": "Qalin qiladi",
+            "B": "O‘chiradi",
+            "C": "Saqlaydi",
+            "D": "Ko‘chiradi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Tasvirlar bilan ishlash",
+      "questions": [
+        {
+          "question": "Rasmni kichraytirish uchun nima qilinadi?",
+          "options": {
+            "A": "O‘chiriladi",
+            "B": "Resize qilinadi",
+            "C": "Saqlanadi",
+            "D": "Chop etiladi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Crop nima qiladi?",
+          "options": {
+            "A": "Rasmni kesadi",
+            "B": "Rang beradi",
+            "C": "Saqlaydi",
+            "D": "Ko‘chiradi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Rasm sifati nimaga bog‘liq?",
+          "options": {
+            "A": "Hajmga",
+            "B": "Rangga",
+            "C": "Piksellarga",
+            "D": "Fayl nomiga"
+          },
+          "correct": "C"
+        },
+        {
+          "question": "Rasmni joylash uchun nima ishlatiladi?",
+          "options": {
+            "A": "Move",
+            "B": "Delete",
+            "C": "Save",
+            "D": "Print"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Rasmni qo‘shish uchun qaysi menyu ishlatiladi?",
+          "options": {
+            "A": "Insert",
+            "B": "File",
+            "C": "Edit",
+            "D": "View"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Diagrammalar bilan ishlash",
+      "questions": [
+        {
+          "question": "Diagramma nima uchun ishlatiladi?",
+          "options": {
+            "A": "O‘yin",
+            "B": "Ma’lumot ko‘rsatish",
+            "C": "Yozish",
+            "D": "Saqlash"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Diagramma qayerda yaratiladi?",
+          "options": {
+            "A": "Insert",
+            "B": "File",
+            "C": "Edit",
+            "D": "Help"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Diagrammada nima asosiy?",
+          "options": {
+            "A": "Rang",
+            "B": "Ma’lumot",
+            "C": "Fon",
+            "D": "Shrift"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Diagramma qanday bo‘ladi?",
+          "options": {
+            "A": "Matn",
+            "B": "Grafik",
+            "C": "Audio",
+            "D": "Video"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Diagramma noto‘g‘ri bo‘lsa nima bo‘ladi?",
+          "options": {
+            "A": "Chiroyli",
+            "B": "Xato tushuniladi",
+            "C": "O‘chadi",
+            "D": "Saqlanadi"
+          },
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "topic": "Dasturlashni boshlash",
+      "questions": [
+        {
+          "question": "Algoritm nima?",
+          "options": {
+            "A": "O‘yin",
+            "B": "Qadamlar ketma-ketligi",
+            "C": "Rasm",
+            "D": "Video"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Kod nima?",
+          "options": {
+            "A": "Buyruq",
+            "B": "Rasm",
+            "C": "Matn",
+            "D": "Diagramma"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xato nima deyiladi?",
+          "options": {
+            "A": "Bug",
+            "B": "File",
+            "C": "Save",
+            "D": "Print"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Dastur nima beradi?",
+          "options": {
+            "A": "Natija",
+            "B": "Rasm",
+            "C": "O‘yin",
+            "D": "Chop etish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Buyruqlar nima qiladi?",
+          "options": {
+            "A": "O‘chiradi",
+            "B": "Bajaradi",
+            "C": "Saqlaydi",
+            "D": "Chop etadi"
+          },
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "topic": "Qidiruv tizimlarida ishlash",
+      "questions": [
+        {
+          "question": "Google nima?",
+          "options": {
+            "A": "O‘yin",
+            "B": "Qidiruv tizimi",
+            "C": "Matn",
+            "D": "Rasm"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Kalit so‘z nima?",
+          "options": {
+            "A": "Muhim so‘z",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Qidiruv natijasi nima?",
+          "options": {
+            "A": "Saytlar ro‘yxati",
+            "B": "O‘yin",
+            "C": "Kod",
+            "D": "Fayl"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Internet nima?",
+          "options": {
+            "A": "Tarmoq",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Sayt nima?",
+          "options": {
+            "A": "Web sahifa",
+            "B": "O‘yin",
+            "C": "Kod",
+            "D": "Rasm"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Elektron pochtada ishlash",
+      "questions": [
+        {
+          "question": "Email nima?",
+          "options": {
+            "A": "Xat",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Attachment nima?",
+          "options": {
+            "A": "Fayl",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Spam nima?",
+          "options": {
+            "A": "Keraksiz xat",
+            "B": "Muhim xat",
+            "C": "Fayl",
+            "D": "Rasm"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Email yuborish uchun nima kerak?",
+          "options": {
+            "A": "Internet",
+            "B": "Rasm",
+            "C": "Printer",
+            "D": "Scanner"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Parol nima?",
+          "options": {
+            "A": "Himoya",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}

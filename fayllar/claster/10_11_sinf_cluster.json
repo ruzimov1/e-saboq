@@ -1,0 +1,120 @@
+{
+  "sinf": "10-11",
+  "fan": "Informatika va axborot texnologiyalari",
+  "mavzular_klasteri": [
+    {
+      "id": 1,
+      "mavzu": "Bilimlar bazasi",
+      "markaziy_goya": "Intellektual ma'lumotlar ombori",
+      "kalit_sozlar": ["Faktlar", "Qoidalar", "Bilimlarni tasvirlash", "Ontologiya"]
+    },
+    {
+      "id": 2,
+      "mavzu": "Texnik va dasturiy ta'minot",
+      "markaziy_goya": "Tizimli resurslarni boshqarish",
+      "kalit_sozlar": ["Operatsion tizim", "Drayverlar", "Apparat konfiguratsiyasi", "Yutilish darajasi"]
+    },
+    {
+      "id": 3,
+      "mavzu": "Kuzatuv va boshqaruv",
+      "markaziy_goya": "Avtomatlashtirilgan nazorat tizimlari",
+      "kalit_sozlar": ["Sensorli nazorat", "Masofaviy boshqaruv", "Qayta aloqa", "Monitoring"]
+    },
+    {
+      "id": 4,
+      "mavzu": "Elektron xavfsizlik, salomatlik va xavfsizlik",
+      "markaziy_goya": "Raqamli muhitda inson omili va xavfsizligi",
+      "kalit_sozlar": ["Kibergigiyena", "Ergonomika", "Ma'lumotlar maxfiyligi", "Sog'liqni saqlash"]
+    },
+    {
+      "id": 5,
+      "mavzu": "Raqamli tengsizlik",
+      "markaziy_goya": "Axborotga kirish imkoniyatlari tahlili",
+      "kalit_sozlar": ["Global kirish", "Ijtimoiy tafovut", "Infrastruktura", "IT-inklyuzivlik"]
+    },
+    {
+      "id": 6,
+      "mavzu": "Tarmoqlardan foydalanish",
+      "markaziy_goya": "Tarmoq resurslarini optimallashtirish",
+      "kalit_sozlar": ["Tarmoq protokollari", "Resurs ulashish", "Xavfsiz ulanish", "Ma'lumot uzatish"]
+    },
+    {
+      "id": 7,
+      "mavzu": "Ekspert tizimlar",
+      "markaziy_goya": "Sun'iy intellekt va qaror qabul qilish",
+      "kalit_sozlar": ["Mantiqiy xulosa", "Bilim muhandisligi", "Qarorlar daraxti", "Simbioz"]
+    },
+    {
+      "id": 8,
+      "mavzu": "Elektron jadvallar",
+      "markaziy_goya": "Murakkab modellarni shakllantirish",
+      "kalit_sozlar": ["Dinamik tahlil", "Makroslar", "Ma'lumotlarni modellashtirish", "Statistik funksiyalar"]
+    },
+    {
+      "id": 9,
+      "mavzu": "Ma'lumotlar bazasi va fayl konsepsiyalari",
+      "markaziy_goya": "Strukturalangan axborot arxitekturasi",
+      "kalit_sozlar": ["Fayl tashkil etilishi", "Indeksli kirish", "Ma'lumotlar yaxlitligi", "Normalizatsiya"]
+    },
+    {
+      "id": 10,
+      "mavzu": "Tovush va videoni tahrirlash",
+      "markaziy_goya": "Professional multimedia ishlab chiqarish",
+      "kalit_sozlar": ["Raqamli signal", "Montaj usullari", "Kompressiya", "Koder/Dekoder"]
+    },
+    {
+      "id": 11,
+      "mavzu": "Yangi texnologiyalar",
+      "markaziy_goya": "Innovatsion IT tendensiyalar",
+      "kalit_sozlar": ["Blockchain", "IoT", "Sun'iy intellekt", "Virtual borliq (VR)"]
+    },
+    {
+      "id": 12,
+      "mavzu": "Axborot texnologiyalarining o'rni va jamiyatdagi ta'siri",
+      "markaziy_goya": "Global raqamlashtirish falsafasi",
+      "kalit_sozlar": ["E-hukumat", "Iqtisodiy o'sish", "Madaniy o'zgarishlar", "Kelajak kasblari"]
+    },
+    {
+      "id": 13,
+      "mavzu": "Tarmoqlar",
+      "markaziy_goya": "Keng ko'lamli tarmoq dizayni",
+      "kalit_sozlar": ["WAN/LAN", "Tarmoq qurilmalari", "Simsiz aloqa", "Topologiya"]
+    },
+    {
+      "id": 14,
+      "mavzu": "Loyiha boshkaruvi",
+      "markaziy_goya": "IT-loyihalarni samarali boshqarish metodologiyasi",
+      "kalit_sozlar": ["Gantt diagrammasi", "Resurslar taqsimoti", "Risklar tahlili", "Budjetlashtirish"]
+    },
+    {
+      "id": 15,
+      "mavzu": "Tizimdan foydalanish sikli",
+      "markaziy_goya": "SDLC (System Development Life Cycle)",
+      "kalit_sozlar": ["Talablarni aniqlash", "Dizayn", "Implementatsiya", "Ekspluatatsiya"]
+    },
+    {
+      "id": 16,
+      "mavzu": "Grafik yaratish",
+      "markaziy_goya": "Kompter grafikasi algoritmlari",
+      "kalit_sozlar": ["Rendering", "3D modellashtirish", "G'oyadan tasvirgacha"]
+    },
+    {
+      "id": 17,
+      "mavzu": "Animatsiya",
+      "markaziy_goya": "Harakat dinamikasi va vizual effektlar",
+      "kalit_sozlar": ["Taym-layn", "Kadrlash", "Tweening", "Morfiing"]
+    },
+    {
+      "id": 18,
+      "mavzu": "Xatlarni birlashtirish",
+      "markaziy_goya": "Avtomatlashtirilgan hujjatlar oqimi (Mail Merge)",
+      "kalit_sozlar": ["Andozalar", "Ma'lumot manbai", "Ommaviy jo'natma", "Personallashtirish"]
+    },
+    {
+      "id": 19,
+      "mavzu": "Veb uchun dasturlash",
+      "markaziy_goya": "Interaktiv veb-ilovalar yaratish",
+      "kalit_sozlar": ["Client-side scripting", "Server-side scripting", "API", "Ma'lumotlar bazasi bilan bog'lanish"]
+    }
+  ]
+}

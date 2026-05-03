@@ -1,0 +1,77 @@
+{
+  "informatika_klaster_shablon": [
+    {
+      "id": 1,
+      "mavzu_nomi": "Matnli hujjat bilan ishlashni boshlash",
+      "markaziy_goya": "Raqamli savodxonlik va hujjat madaniyati",
+      "kalit_sozlar": [
+        "Shrift va formatlash",
+        "Matn muharriri (Word)",
+        "Sahifa parametrlari",
+        "Hujjatni saqlash (PDF/Docx)",
+        "Jadvallar bilan ishlash"
+      ]
+    },
+    {
+      "id": 2,
+      "mavzu_nomi": "Tasvirlar bilan ishlashni boshlash",
+      "markaziy_goya": "Vizual kommunikatsiya va ijodkorlik",
+      "kalit_sozlar": [
+        "Rastrli va Vektorli grafika",
+        "Grafik tahrirlash",
+        "Ranglar palitrasi",
+        "Tasvir o'lchamlari",
+        "Filtrlar va effektlar"
+      ]
+    },
+    {
+      "id": 3,
+      "mavzu_nomi": "Diagrammalar bilan ishlashni boshlash",
+      "markaziy_goya": "Ma'lumotlar tahlili va vizuallashtirish",
+      "kalit_sozlar": [
+        "Ustunli diagramma",
+        "Doiraviy diagramma",
+        "Ma'lumotlar to'plami",
+        "Legend va sarlavha",
+        "Statistik tahlil"
+      ]
+    },
+    {
+      "id": 4,
+      "mavzu_nomi": "Dasturlashni boshlash",
+      "markaziy_goya": "Algoritmik tafakkur va muammolarni hal qilish",
+      "kalit_sozlar": [
+        "Algoritm ketma-ketligi",
+        "Sikl va Takrorlanish",
+        "Shart operatorlari",
+        "O'zgaruvchilar",
+        "Dasturlash tili (Python/Scratch)"
+      ]
+    },
+    {
+      "id": 5,
+      "mavzu_nomi": "Qidiruv tizimlarida ishlashni boshlash",
+      "markaziy_goya": "Global axborot makonida samarali filtratsiya",
+      "kalit_sozlar": [
+        "Brauzerlar",
+        "Kalit so'zlar",
+        "Axborot xavfsizligi",
+        "Verifikatsiya (Tekshirish)",
+        "Internet etika"
+      ]
+    },
+    {
+      "id": 6,
+      "mavzu_nomi": "Elektron pochta bilan ishlashni boshlash",
+      "markaziy_goya": "Professional raqamli muloqot va etika",
+      "kalit_sozlar": [
+        "Elektron manzil (@)",
+        "Xat yozish etikasi",
+        "Fayl biriktirish",
+        "Spam va xavfsizlik",
+        "Mavzu (Subject) qatori"
+      ]
+    }
+  ],
+  "umumiy_markaziy_goya": "Informatika va Axborot Texnologiyalari"
+}

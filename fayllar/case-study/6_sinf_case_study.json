@@ -1,0 +1,86 @@
+{
+  "grade": "6",
+  "method": "case_study",
+  "topics": [
+    {
+      "topic": "Matnli hujjatlar bilan ishlash",
+      "tasks": [
+        "O‘quvchi hujjatda kerakli so‘zni topa olmayapti. Qanday qidiruv funksiyasidan foydalanadi?",
+        "Matnni tez o‘zgartirish kerak. Qanday qilib barcha bir xil so‘zlarni birdaniga almashtirish mumkin?",
+        "Hujjat noto‘g‘ri saqlandi va topilmayapti. Qanday qilib uni qayta topish mumkin?",
+        "Matnda bir xil format yo‘q. Uni qanday qilib bir xil ko‘rinishga keltirasiz?",
+        "Matnni boshqa foydalanuvchi bilan ulashish kerak. Qanday usulni tanlaysiz?"
+      ]
+    },
+    {
+      "topic": "Grafika bilan ishlash",
+      "tasks": [
+        "Rasm noto‘g‘ri rangda chiqdi. Qanday qilib uni to‘g‘rilash mumkin?",
+        "Chizilgan rasmda xatolik bor. Qanday tuzatish vositasidan foydalanasiz?",
+        "Rasmni boshqa formatga o‘tkazish kerak. Qanday qilasiz?",
+        "Rasm juda katta joy egallamoqda. Qanday optimallashtirasiz?",
+        "Rasmni fonidan ajratish kerak. Qanday yechim taklif qilasiz?"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar bilan ishlash",
+      "tasks": [
+        "Jadvalda noto‘g‘ri natija chiqdi. Formulani qanday tekshirasiz?",
+        "Ko‘p sonlarni tez qo‘shish kerak. Qanday funksiyadan foydalanasiz?",
+        "Jadval tartibsiz. Qanday qilib uni saralaysiz?",
+        "Ma’lumotni grafik ko‘rinishda ko‘rsatish kerak. Qanday qilasiz?",
+        "Jadvalni himoyalash kerak. Qanday choralar ko‘rasiz?"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi bilan ishlash",
+      "tasks": [
+        "Kerakli ma’lumotni topa olmayapsiz. Qanday qidiruv usulini qo‘llasiz?",
+        "Bir xil ma’lumotlar ko‘payib ketdi. Qanday hal qilasiz?",
+        "Ma’lumot noto‘g‘ri kiritilgan. Qanday tuzatasiz?",
+        "Yangi ma’lumot qo‘shish kerak. Qanday amalga oshirasiz?",
+        "Ma’lumotni himoyalash kerak. Qanday usuldan foydalanasiz?"
+      ]
+    },
+    {
+      "topic": "Dasturlashni o‘rganish",
+      "tasks": [
+        "Kod ishlamayapti. Xatoni qanday topasiz?",
+        "Dastur noto‘g‘ri natija bermoqda. Qanday tekshirasiz?",
+        "Bir xil kod ko‘p yozilgan. Qanday qisqartirasiz?",
+        "Algoritm noto‘g‘ri tuzilgan. Qanday yaxshilaysiz?",
+        "Dastur juda sekin ishlayapti. Qanday tezlashtirasiz?"
+      ]
+    },
+    {
+      "topic": "Internetda ishlash",
+      "tasks": [
+        "Sayt ochilmayapti. Sababi nima bo‘lishi mumkin?",
+        "Kerakli ma’lumot topilmadi. Qidiruvni qanday yaxshilaysiz?",
+        "Soxta saytga duch keldingiz. Qanday aniqlaysiz?",
+        "Internet sekin ishlayapti. Qanday choralar ko‘rasiz?",
+        "Ma’lumotni yuklab olish kerak. Qanday xavfsiz yuklaysiz?"
+      ]
+    },
+    {
+      "topic": "Elektron pochta",
+      "tasks": [
+        "Xat noto‘g‘ri formatda yuborildi. Qanday tuzatasiz?",
+        "Fayl juda katta va yuborilmayapti. Qanday hal qilasiz?",
+        "Spam xatlar ko‘paydi. Qanday kamaytirasiz?",
+        "Muhim xat yo‘qolib qoldi. Qanday topasiz?",
+        "Email hisobingiz buzildi. Qanday himoya qilasiz?"
+      ]
+    },
+    {
+      "topic": "Multimedia bilan ishlash",
+      "tasks": [
+        "Video sifati past. Qanday yaxshilaysiz?",
+        "Audio va video mos kelmayapti. Qanday sinxronlashtirasiz?",
+        "Fayl hajmi katta. Qanday kichraytirasiz?",
+        "Video kesish kerak. Qanday amalga oshirasiz?",
+        "Multimedia fayl ochilmayapti. Sababi nima?"
+      ]
+    }
+  ]
+}

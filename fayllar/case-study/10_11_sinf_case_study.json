@@ -1,0 +1,196 @@
+{
+  "grade": "10-11",
+  "method": "case_study",
+  "topics": [
+    {
+      "topic": "Bilimlar bazasi",
+      "tasks": [
+        "Bilimlar bazasi eskirgan ma’lumotlar bilan to‘lib qolgan. Uni qanday yangilaysiz?",
+        "Kerakli bilimni tez topish qiyin. Qanday tizimlashtirasiz?",
+        "Bilimlar bazasiga noto‘g‘ri ma’lumot kiritildi. Qanday tekshirasiz?",
+        "Bilimlar bazasini kengaytirish kerak. Qanday reja tuzasiz?",
+        "Foydalanuvchilar bilimlar bazasidan foydalanmayapti. Qanday yaxshilaysiz?"
+      ]
+    },
+    {
+      "topic": "Texnika va dasturiy ta’minot",
+      "tasks": [
+        "Dastur qurilmada ishlamayapti. Moslikni qanday tekshirasiz?",
+        "Kompyuter tezligi past. Qanday optimallashtirasiz?",
+        "Dastur xatolik bermoqda. Qanday diagnostika qilasiz?",
+        "Yangi dastur tanlash kerak. Qanday mezonlarga qaraysiz?",
+        "Qurilma nosoz. Qanday aniqlaysiz va tuzatasiz?"
+      ]
+    },
+    {
+      "topic": "Kuzatuv va boshqaruv",
+      "tasks": [
+        "Tizim ishlamayapti. Qanday monitoring qilasiz?",
+        "Xatoliklar tez-tez chiqmoqda. Qanday loglarni tekshirasiz?",
+        "Resurslar noto‘g‘ri taqsimlangan. Qanday boshqarasiz?",
+        "Tizimni nazorat qilish kerak. Qanday vositalardan foydalanasiz?",
+        "Admin panel ishlamayapti. Qanday muammoni hal qilasiz?"
+      ]
+    },
+    {
+      "topic": "Elektron xavfsizlik",
+      "tasks": [
+        "Foydalanuvchi akkaunti buzildi. Qanday himoya qilasiz?",
+        "Phishing hujumiga duch keldingiz. Qanday aniqlaysiz?",
+        "Ma’lumotlar sizib chiqdi. Qanday choralar ko‘rasiz?",
+        "Parol juda oddiy. Qanday kuchaytirasiz?",
+        "Tizimni himoyalash kerak. Qanday xavfsizlik choralarini qo‘llasiz?"
+      ]
+    },
+    {
+      "topic": "Raqamli tengsizlik",
+      "tasks": [
+        "Ba’zi o‘quvchilarda internet yo‘q. Qanday yechim topasiz?",
+        "Texnologiyaga kirish imkoniyati cheklangan. Qanday yordam berasiz?",
+        "Raqamli savodxonlik past. Qanday oshirasiz?",
+        "Texnologiyadan foydalanish teng emas. Qanday muvozanatlashtirasiz?",
+        "Online ta’lim hamma uchun qulay emas. Qanday yaxshilaysiz?"
+      ]
+    },
+    {
+      "topic": "Tarmoqlardan foydalanish",
+      "tasks": [
+        "Tarmoq juda sekin. Qanday optimallashtirasiz?",
+        "Wi-Fi xavfsiz emas. Qanday himoya qilasiz?",
+        "Ping juda yuqori. Qanday kamaytirasiz?",
+        "Tarmoqda ortiqcha trafik bor. Qanday boshqarasiz?",
+        "Firewall noto‘g‘ri sozlangan. Qanday tuzatasiz?"
+      ]
+    },
+    {
+      "topic": "Ekspert tizimlar",
+      "tasks": [
+        "Ekspert tizim noto‘g‘ri qaror bermoqda. Qanday tekshirasiz?",
+        "Knowledge base yetarli emas. Qanday to‘ldirasiz?",
+        "Inference engine noto‘g‘ri ishlamoqda. Qanday tuzatasiz?",
+        "Ekspert tizimni yaxshilash kerak. Qanday qilasiz?",
+        "Foydalanuvchi tizimga ishonmayapti. Qanday ishonchni oshirasiz?"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar",
+      "tasks": [
+        "Jadvalda murakkab hisob-kitob bor. Qanday formuladan foydalanasiz?",
+        "Ma’lumotni tahlil qilish kerak. Qanday vosita ishlatasiz?",
+        "Jadval noto‘g‘ri natija bermoqda. Qanday tekshirasiz?",
+        "Diagramma noto‘g‘ri chiqdi. Qanday tuzatasiz?",
+        "Pivot table kerak. Qanday yaratasiz?"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi",
+      "tasks": [
+        "Ma’lumotlar bazasi sekin ishlayapti. Qanday optimallashtirasiz?",
+        "SQL so‘rov noto‘g‘ri. Qanday tuzatasiz?",
+        "Primary key yo‘q. Qanday muammo keltiradi?",
+        "Ma’lumotlar takrorlangan. Qanday normalizatsiya qilasiz?",
+        "Database xavfsizligi past. Qanday himoya qilasiz?"
+      ]
+    },
+    {
+      "topic": "Tovush va video tahrirlash",
+      "tasks": [
+        "Video sifati past. Qanday yaxshilaysiz?",
+        "Audio va video sinxron emas. Qanday tuzatasiz?",
+        "Fayl hajmi katta. Qanday siqasiz?",
+        "Video effektlari ortiqcha. Qanday optimallashtirasiz?",
+        "Rendering juda sekin. Qanday tezlashtirasiz?"
+      ]
+    },
+    {
+      "topic": "Yangi texnologiyalar",
+      "tasks": [
+        "AI noto‘g‘ri natija bermoqda. Qanday yaxshilaysiz?",
+        "IoT qurilmalar ishlamayapti. Qanday tekshirasiz?",
+        "VR tizimi noto‘g‘ri ishlamoqda. Qanday tuzatasiz?",
+        "Machine learning modeli past aniqlikda. Qanday oshirasiz?",
+        "Yangi texnologiyani tanlash kerak. Qanday qaror qilasiz?"
+      ]
+    },
+    {
+      "topic": "ITning jamiyatga ta’siri",
+      "tasks": [
+        "Texnologiyaga qaramlik oshdi. Qanday kamaytirasiz?",
+        "Soxta axborot tarqaldi. Qanday tekshirasiz?",
+        "IT ish o‘rinlarini o‘zgartirdi. Qanday moslashasiz?",
+        "Online ta’lim samarasi past. Qanday yaxshilaysiz?",
+        "Texnologiya salbiy ta’sir ko‘rsatmoqda. Qanday muvozanatlashtirasiz?"
+      ]
+    },
+    {
+      "topic": "Tarmoqlar",
+      "tasks": [
+        "DNS ishlamayapti. Qanday tuzatasiz?",
+        "HTTP xatolik bermoqda. Qanday tekshirasiz?",
+        "IP manzil muammo bermoqda. Qanday aniqlaysiz?",
+        "Switch noto‘g‘ri ishlamoqda. Qanday tuzatasiz?",
+        "Tarmoq konfiguratsiyasi noto‘g‘ri. Qanday sozlaysiz?"
+      ]
+    },
+    {
+      "topic": "Loyiha boshqaruvi",
+      "tasks": [
+        "Loyiha muddatdan kechikmoqda. Qanday boshqarasiz?",
+        "Jamoa samaradorligi past. Qanday oshirasiz?",
+        "Risklar ko‘paydi. Qanday boshqarasiz?",
+        "Agile noto‘g‘ri qo‘llanmoqda. Qanday tuzatasiz?",
+        "Scrum jarayoni buzildi. Qanday tiklaysiz?"
+      ]
+    },
+    {
+      "topic": "Tizim sikli",
+      "tasks": [
+        "Talablar noto‘g‘ri aniqlangan. Qanday tuzatasiz?",
+        "Test bosqichi o‘tkazilmadi. Qanday muammo bo‘ladi?",
+        "Deploymentda xatolik bo‘ldi. Qanday hal qilasiz?",
+        "Maintenance talab qilinmoqda. Qanday reja tuzasiz?",
+        "SDLC noto‘g‘ri bajarildi. Qanday yaxshilaysiz?"
+      ]
+    },
+    {
+      "topic": "Grafik yaratish",
+      "tasks": [
+        "Infografika tushunarsiz. Qanday yaxshilaysiz?",
+        "Dizayn noto‘g‘ri. Qanday tuzatasiz?",
+        "Ranglar mos emas. Qanday tanlaysiz?",
+        "Alignment noto‘g‘ri. Qanday tekislaysiz?",
+        "Grafik ma’lumot noto‘g‘ri. Qanday tuzatasiz?"
+      ]
+    },
+    {
+      "topic": "Animatsiya",
+      "tasks": [
+        "Animatsiya juda tez. Qanday sozlaysiz?",
+        "Frame rate past. Qanday oshirasiz?",
+        "Motion noto‘g‘ri. Qanday tuzatasiz?",
+        "Timing mos emas. Qanday sozlaysiz?",
+        "Effektlar ortiqcha. Qanday optimallashtirasiz?"
+      ]
+    },
+    {
+      "topic": "Xatlarni birlashtirish",
+      "tasks": [
+        "Mail merge ishlamayapti. Qanday tuzatasiz?",
+        "Data source noto‘g‘ri. Qanday tekshirasiz?",
+        "Template noto‘g‘ri. Qanday tuzatasiz?",
+        "Merge field noto‘g‘ri joylashgan. Qanday tuzatasiz?",
+        "Xatlar noto‘g‘ri chiqdi. Qanday tekshirasiz?"
+      ]
+    },
+    {
+      "topic": "Veb uchun dasturlash",
+      "tasks": [
+        "Frontend ishlamayapti. Qanday tekshirasiz?",
+        "Backend xatolik bermoqda. Qanday tuzatasiz?",
+        "API ishlamayapti. Qanday diagnostika qilasiz?",
+        "Database ulanishi yo‘q. Qanday hal qilasiz?",
+        "Debug qilish kerak. Qanday vositalardan foydalanasiz?"
+      ]
+    }
+  ]
+}

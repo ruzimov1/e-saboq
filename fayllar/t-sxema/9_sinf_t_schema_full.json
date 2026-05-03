@@ -1,0 +1,405 @@
+{
+  "grade": "9",
+  "method": "t_schema",
+  "topics": [
+    {
+      "topic": "Kompyuter tizimlari va ularning tarkibi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Kiritish qurilmalari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Chiqarish qurilmalari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Xotira qurilmalari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Kompyuterning ishlash prinsipi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Operatsion tizimlar",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Fayllar va papkalar bilan ishlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Fayl tizimi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Axborot xavfsizligi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Kompyuter viruslari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Lokal va global tarmoqlar",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Internet xizmatlari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Elektron pochta",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Veb-saytlar va brauzerlar",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Qidiruv tizimlari",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Grafika bilan ishlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Hujjatlar bilan ishlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Taqdimotlar",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    },
+    {
+      "topic": "Veb-sahifa yaratish",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ish samaradorligini oshiradi",
+        "Tezkor natija beradi",
+        "Qulay foydalanish imkonini beradi",
+        "Amaliyotda keng qo‘llaniladi",
+        "Bilim va ko‘nikmalarni rivojlantiradi"
+      ],
+      "right": [
+        "Xatolik ehtimoli mavjud",
+        "Texnik bilim talab qiladi",
+        "Qurilmalarga bog‘liq",
+        "Vaqt va resurs talab qiladi",
+        "Noto‘g‘ri foydalanish xavf tug‘diradi"
+      ]
+    }
+  ]
+}

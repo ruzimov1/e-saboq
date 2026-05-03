@@ -1,0 +1,8 @@
+{
+  "informatika": {
+    "title": "T-sxema: {topic}",
+    "problem": "Markaziy muammo yoki savol: {topic}. O‘qituvchi bu qatorni dars vaziyati bilan aniqlashtirishi mumkin.",
+    "branches": "Chap va o‘ng ustunlar bo‘yicha dalillarni yozing. Har bir yo‘nalish bo‘yicha sabab-moqolarni yozing:\n• Texnik / jihoz\n• Inson / kompetensiya\n• Jarayon / reja\n• Vaqt / resurs\n• Tashqi omillar (tarmoq, qonun-qoida)",
+    "sxema": "T-sxema: vertikal ustunda — asosiy muammo yoki savol; gorizontal qismda chap va o‘ng tomonda sabablar, omillar yoki taqqoslash nuqtalari. Pastki qatorda qisqa xulosa beriladi. O‘qituvchi o‘quvchidan muammo → tahlil → xulosa zanjirini matnda ifodalashni talab qilishi mumkin. Matn: Word o‘quv dasturidan; `{topic}` va `{subject}` maydonlari dasturda avtomatik to‘ldiriladi."
+  }
+}

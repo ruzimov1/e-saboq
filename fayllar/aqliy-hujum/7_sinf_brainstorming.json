@@ -1,0 +1,47 @@
+{
+  "grade": "7",
+  "method": "brainstorming",
+  "subject": "informatika",
+  "topics": [
+    {
+      "topic": "Matnli hujjatlardan maqsadli foydalanish",
+      "questions": [
+        "Katta hajmdagi hujjatni qanday tartibli qilish mumkin?",
+        "Professional hujjat yaratishda nimalarga e’tibor berish kerak?",
+        "Matnni tez ko‘rib chiqish uchun qanday usullar bor?",
+        "Hujjatni turli formatlarda saqlashning afzalligi nimada?",
+        "Matn bilan ishlashda samaradorlikni qanday oshirish mumkin?"
+      ]
+    },
+    {
+      "topic": "Multimediadan maqsadli foydalanish",
+      "questions": [
+        "Multimedia darsni qanday qiziqarli qiladi?",
+        "Qaysi holatlarda multimedia ortiqcha bo‘lishi mumkin?",
+        "Video va audio tanlashda nimalarga e’tibor berish kerak?",
+        "Multimedia sifati nimaga bog‘liq?",
+        "Taqdimotda multimedia qanday muvozanatda bo‘lishi kerak?"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallardan maqsadli foydalanish",
+      "questions": [
+        "Jadvalda ma’lumotlarni qanday samarali tahlil qilish mumkin?",
+        "Formulalardan foydalanish qanday qulaylik yaratadi?",
+        "Diagrammalar ma’lumotni qanday yaxshiroq tushuntiradi?",
+        "Katta jadval bilan ishlashda qanday muammolar bo‘ladi?",
+        "Jadvalni boshqalarga tushunarli qilish uchun nima qilish kerak?"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasidan maqsadli foydalanish",
+      "questions": [
+        "Ma’lumotlar bazasi nima uchun kerak?",
+        "Katta ma’lumotlarni qanday tartibli saqlash mumkin?",
+        "Qidiruvni tezlashtirish uchun nima qilish kerak?",
+        "Takroriy ma’lumotlar qanday zarar keltiradi?",
+        "Ma’lumotlar bazasini qanday himoyalash mumkin?"
+      ]
+    }
+  ]
+}

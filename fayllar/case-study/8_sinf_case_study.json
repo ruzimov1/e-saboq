@@ -1,0 +1,46 @@
+{
+  "grade": "8",
+  "method": "case_study",
+  "topics": [
+    {
+      "topic": "Dasturlashdan maqsadli foydalanish",
+      "tasks": [
+        "Dastur foydalanuvchi kiritgan noto‘g‘ri ma’lumotni qabul qildi. Qanday qilib buni oldini olasiz?",
+        "Kod juda uzun va tushunarsiz. Qanday qilib uni optimallashtirasiz?",
+        "Dastur noto‘g‘ri natija bermoqda. Qanday debugging usulini qo‘llasiz?",
+        "Bir xil funksiyalar takrorlanmoqda. Qanday yechim taklif qilasiz?",
+        "Dastur tez ishlamayapti. Qanday yaxshilash mumkin?"
+      ]
+    },
+    {
+      "topic": "Veb-sayt dizaynini yaratish",
+      "tasks": [
+        "Sayt mobil qurilmada noto‘g‘ri ko‘rinmoqda. Qanday hal qilasiz?",
+        "Foydalanuvchi saytni tushunmayapti. UX ni qanday yaxshilaysiz?",
+        "Sayt juda sekin yuklanmoqda. Qanday optimallashtirasiz?",
+        "Ranglar mos emas. Qanday dizayn tamoyillarini qo‘llasiz?",
+        "Saytda navigatsiya chalkash. Qanday soddalashtirasiz?"
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlaridan foydalanish",
+      "tasks": [
+        "Internet ulanmayapti. Qanday tekshiruvlar qilasiz?",
+        "Tarmoq juda sekin. Qanday sabablarni aniqlaysiz?",
+        "Wi-Fi xavfsiz emas. Qanday himoya choralarini ko‘rasiz?",
+        "Bir nechta qurilma tarmoqqa ulanmayapti. Qanday hal qilasiz?",
+        "IP manzil bilan bog‘liq muammo yuzaga keldi. Qanday yechim topasiz?"
+      ]
+    },
+    {
+      "topic": "Video va animatsiya yaratish",
+      "tasks": [
+        "Video sifati past chiqdi. Qanday yaxshilaysiz?",
+        "Animatsiya juda tez. Qanday sozlaysiz?",
+        "Video hajmi katta. Qanday kichraytirasiz?",
+        "Audio va video mos kelmayapti. Qanday tuzatasiz?",
+        "Video effektlari ortiqcha. Qanday optimallashtirasiz?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "sinf": 9,
+  "fan": "Informatika va axborot texnologiyalari",
+  "mavzular_klasteri": [
+    {
+      "id": 1,
+      "mavzu": "Kompyuter tizimining turlari va komponentlari",
+      "markaziy_goya": "Apparat ta'minoti va tizim arxitekturasi",
+      "kalit_sozlar": ["Protsessor", "Ona plata", "Tizim turlari", "Qurilmalar integratsiyasi"]
+    },
+    {
+      "id": 2,
+      "mavzu": "Kiritish va chiqarish qurilmalari",
+      "markaziy_goya": "Inson va kompyuter interfeysi",
+      "kalit_sozlar": ["Sensorlar", "Printer/Skaner", "Ma'lumotlarni raqamlashtirish", "Periferiya"]
+    },
+    {
+      "id": 3,
+      "mavzu": "Xotira qurilmalari va ma'lumot almashish vositalari",
+      "markaziy_goya": "Axborotni saqlash va uzatish texnologiyalari",
+      "kalit_sozlar": ["SSD/HDD", "Bulutli xotira", "Kesh xotira", "Ma'lumot tashuvchilar"]
+    },
+    {
+      "id": 4,
+      "mavzu": "Kompyuter tarmoqlari va ulardan foydalanish",
+      "markaziy_goya": "Global va lokal tarmoq infratuzilmasi",
+      "kalit_sozlar": ["Router", "Kommutator", "Tarmoq xizmatlari", "Internet protokollar"]
+    },
+    {
+      "id": 5,
+      "mavzu": "Axborot texnologiyalarining ta'siri",
+      "markaziy_goya": "IT va jamiyat rivojlanishi",
+      "kalit_sozlar": ["Ijtimoiy ta'sir", "Raqamli iqtisodiyot", "Etika", "Avtomatlashtirish"]
+    },
+    {
+      "id": 6,
+      "mavzu": "AKTni tadbiq etish",
+      "markaziy_goya": "Amaliy sohalarda texnologik yechimlar",
+      "kalit_sozlar": ["Ta'limda AKT", "Tibbiyotda AKT", "Boshqaruv tizimlari"]
+    },
+    {
+      "id": 7,
+      "mavzu": "Tizimning hayot davri",
+      "markaziy_goya": "Dasturiy ta'minotni ishlab chiqish bosqichlari",
+      "kalit_sozlar": ["Tahlil", "Loyiha", "Amalga oshirish", "Texnik xizmat"]
+    },
+    {
+      "id": 8,
+      "mavzu": "Xavfsizlik texnikasi qoidalari",
+      "markaziy_goya": "Mehnat muhofazasi va kibergigiyena",
+      "kalit_sozlar": ["Elektr xavfsizligi", "Ergonomika", "Ma'lumotlar xavfsizligi"]
+    },
+    {
+      "id": 9,
+      "mavzu": "Auditoriya",
+      "markaziy_goya": "Foydalanuvchi ehtiyojlarini tahlil qilish",
+      "kalit_sozlar": ["Maqsadli guruh", "Foydalanuvchi talablari", "Interfeys moslashuvi"]
+    },
+    {
+      "id": 10,
+      "mavzu": "Kommunikatsiya",
+      "markaziy_goya": "Raqamli aloqa vositalari va kanallari",
+      "kalit_sozlar": ["Sinxron aloqa", "Asinxron aloqa", "Muloqot platformalari"]
+    },
+    {
+      "id": 11,
+      "mavzu": "Fayllar boshkaruvi",
+      "markaziy_goya": "Ma'lumotlarni tizimli tashkil etish",
+      "kalit_sozlar": ["Fayl tizimi", "Kataloglar", "Arxivlash", "Zaxiralash"]
+    },
+    {
+      "id": 12,
+      "mavzu": "Tasvirlar",
+      "markaziy_goya": "Raqamli grafika va vizual kontent",
+      "kalit_sozlar": ["Piksel", "Ruxsat (Resolution)", "Tahrirlash", "Grafik formatlar"]
+    },
+    {
+      "id": 13,
+      "mavzu": "Loyihalash",
+      "markaziy_goya": "Tizimli rejalashtirish va modellashtirish",
+      "kalit_sozlar": ["Prototip", "Struktura", "Algoritmik chizma"]
+    },
+    {
+      "id": 14,
+      "mavzu": "Uslublar",
+      "markaziy_goya": "Dizayn va yozish standartlari",
+      "kalit_sozlar": ["Korporativ uslub", "Shablonlar", "Unifikatsiya"]
+    },
+    {
+      "id": 15,
+      "mavzu": "Xatolarni tekshirish",
+      "markaziy_goya": "Verifikatsiya va validatsiya jarayonlari",
+      "kalit_sozlar": ["Sintaktik xatolar", "Mantiqiy tahlil", "Testlash"]
+    },
+    {
+      "id": 16,
+      "mavzu": "Grafik va xaritalar",
+      "markaziy_goya": "Geografik va statistik ma'lumotlar vizualizatsiyasi",
+      "kalit_sozlar": ["GIS", "Infografika", "Kartografiya"]
+    },
+    {
+      "id": 17,
+      "mavzu": "Hujjatlar bilan ishlash",
+      "markaziy_goya": "Elektron hujjat aylanishi",
+      "kalit_sozlar": ["E-imzo", "Bulutli tahrir", "Jamoaviy ishlash"]
+    },
+    {
+      "id": 18,
+      "mavzu": "Ma'lumotlarni boshqarish",
+      "markaziy_goya": "Ma'lumotlar bazasini optimallashtirish",
+      "kalit_sozlar": ["Normalizatsiya", "Indekslash", "Xavfsizlik"]
+    },
+    {
+      "id": 19,
+      "mavzu": "Taqdimot",
+      "markaziy_goya": "Notiqlik san'ati va vizual hamrohlik",
+      "kalit_sozlar": ["Slaydlar dizayni", "Animatsiya effektlari", "Publikatsiya"]
+    },
+    {
+      "id": 20,
+      "mavzu": "Ma'lumotlar tahlili",
+      "markaziy_goya": "Katta ma'lumotlar (Big Data) bilan ishlash",
+      "kalit_sozlar": ["Interpretatsiya", "Gipoteza", "Statistik modellar"]
+    },
+    {
+      "id": 21,
+      "mavzu": "Veb-saytlar yaratish",
+      "markaziy_goya": "Full-stack veb-ishlanmalar",
+      "kalit_sozlar": ["Frontend", "Backend", "Hosting", "CMS"]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "grade": "6",
+  "method": "brainstorming",
+  "subject": "informatika",
+  "topics": [
+    {
+      "topic": "Matnli hujjatlar bilan ishlash",
+      "questions": [
+        "Matnni tez tahrirlash uchun qanday vositalardan foydalanish mumkin?",
+        "Katta hujjatda kerakli ma’lumotni topishning samarali usullari qanday?",
+        "Matn formatini bir xil qilish nima uchun muhim?",
+        "Hujjatni boshqalar bilan ulashishning qulay usullari qaysilar?",
+        "Matn yozishda qanday xatolar ko‘p uchraydi va ularni qanday oldini olish mumkin?"
+      ]
+    },
+    {
+      "topic": "Grafika bilan ishlash",
+      "questions": [
+        "Rasm sifatini saqlagan holda hajmini kamaytirish yo‘llari qanday?",
+        "Grafikada rang tanlash nima uchun muhim?",
+        "Rasmni tahrirlashda qaysi vositalar eng foydali?",
+        "Tasvirni to‘g‘ri joylashtirish dizaynga qanday ta’sir qiladi?",
+        "Grafika ishlatish qachon ortiqcha bo‘lishi mumkin?"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar bilan ishlash",
+      "questions": [
+        "Jadvalda hisob-kitoblarni avtomatlashtirish qanday amalga oshiriladi?",
+        "Ma’lumotlarni saralash va filtr qilish qachon kerak bo‘ladi?",
+        "Diagrammalar jadvalni qanday tushunarli qiladi?",
+        "Formulalarda xatoliklar qanday aniqlanadi?",
+        "Jadvalni himoyalash nima uchun muhim?"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi bilan ishlash",
+      "questions": [
+        "Ma’lumotlarni tartibli saqlashning afzalliklari qanday?",
+        "Kerakli yozuvni tez topish uchun qanday usullar bor?",
+        "Takroriy ma’lumotlar qanday muammo keltiradi?",
+        "Ma’lumotlar bazasini qanday himoyalash mumkin?",
+        "Ma’lumotlar bazasini kengaytirishda nimalarga e’tibor beriladi?"
+      ]
+    },
+    {
+      "topic": "Dasturlashni o'rganish",
+      "questions": [
+        "Dasturlash mantiqiy fikrlashni qanday rivojlantiradi?",
+        "Kod yozishda xatolarni kamaytirish uchun nima qilish kerak?",
+        "Algoritm tuzishning ahamiyati nimada?",
+        "Oddiy dastur yaratishda qaysi bosqichlar muhim?",
+        "Kodlarni qayta ishlatish qanday foyda beradi?"
+      ]
+    },
+    {
+      "topic": "Internetda ishlashni o'rganish",
+      "questions": [
+        "Internetdan xavfsiz foydalanish uchun qanday qoidalar bor?",
+        "To‘g‘ri ma’lumotni tanlash uchun nimalarga e’tibor beriladi?",
+        "Brauzerlar qanday imkoniyatlar beradi?",
+        "Internet tezligini oshirish uchun nima qilish mumkin?",
+        "Onlayn manbalardan samarali foydalanish usullari qanday?"
+      ]
+    },
+    {
+      "topic": "Elektron pochtadan foydalanishni o'rganish",
+      "questions": [
+        "Email yozishda qanday etik qoidalar mavjud?",
+        "Katta fayllarni yuborishning qulay usullari qanday?",
+        "Spam xatlarni kamaytirish uchun nima qilish kerak?",
+        "Email xavfsizligini qanday ta’minlash mumkin?",
+        "Email orqali samarali muloqot qanday olib boriladi?"
+      ]
+    },
+    {
+      "topic": "Multimedia bilan ishlash",
+      "questions": [
+        "Video va audio materiallar ta’limda qanday yordam beradi?",
+        "Multimedia fayllarni siqishning qanday usullari bor?",
+        "Audio va video sinxronlash nima uchun muhim?",
+        "Multimedia yaratishda qaysi dasturlar foydali?",
+        "Multimedia ortiqcha bo‘lsa qanday muammo tug‘iladi?"
+      ]
+    }
+  ]
+}

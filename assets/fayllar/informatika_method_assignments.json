@@ -1,0 +1,49 @@
+{
+  "informatika": {
+    "preset_quiz": [
+      { "id": "preset_quiz_inf_1", "title": "Quiz: {topic} — asosiy tushunchalar", "subtitle": "Mavzuning kalit ideyalari bo'yicha tez tekshiruv" },
+      { "id": "preset_quiz_inf_2", "title": "Quiz: {topic} — amaliy bilim", "subtitle": "Kompyuter va AKTdan foydalanish bo'yicha" },
+      { "id": "preset_quiz_inf_3", "title": "Quiz: {topic} — qisqa nazorat (10 daqiqa)", "subtitle": "Dars yakunidagi mini-test" },
+      { "id": "preset_quiz_inf_4", "title": "Quiz: {topic} — axborot xavfsizligi va etika", "subtitle": "Parol, shaxsiy ma'lumot, ishonchli manbalar" },
+      { "id": "preset_quiz_inf_5", "title": "Quiz: {topic} — mustahkamlash", "subtitle": "Oldingi mavzular bilan bog'langan takrorlash" }
+    ],
+    "preset_poll": [
+      { "id": "preset_poll_inf_1", "title": "So'rovnoma: {topic} — qiyinchilik darajasi", "subtitle": "O'quvchilar qayerda qiynalayotganini aniqlash" },
+      { "id": "preset_poll_inf_2", "title": "So'rovnoma: {topic} — eng foydali mashg'ulot turi", "subtitle": "Amaliy ish, video, taqdimot…" },
+      { "id": "preset_poll_inf_3", "title": "So'rovnoma: {topic} — keyingi dars ustuvorligi", "subtitle": "Mavzuni rejalashtirish uchun ovoz" },
+      { "id": "preset_poll_inf_4", "title": "So'rovnoma: {topic} — texnologiya va vositalar", "subtitle": "Qaysi dastur yoki platforma qulay?" },
+      { "id": "preset_poll_inf_5", "title": "So'rovnoma: {topic} — uyga tayyorgarlik", "subtitle": "Mustaqil ishlash vaqt va resurslar haqida" }
+    ],
+    "preset_brainstorm": [
+      { "id": "preset_brainstorm_inf_1", "title": "Aqliy hujum: {topic} — kalit so'zlar va atamalar", "subtitle": "Mavzuga oid barcha muhim terminlarni yozish" },
+      { "id": "preset_brainstorm_inf_2", "title": "Aqliy hujum: {topic} — muammo va yechim g'oyalari", "subtitle": "Amaliyotdagi vaziyatlar va IT yechimlari" },
+      { "id": "preset_brainstorm_inf_3", "title": "Aqliy hujum: {topic} — AKT vositalari", "subtitle": "Dastur, qurilma, xizmat — qisqa ro'yxat" },
+      { "id": "preset_brainstorm_inf_4", "title": "Aqliy hujum: {topic} — kasb va kelajak", "subtitle": "Informatika bilan bog'liq kasblar haqida g'oyalar" },
+      { "id": "preset_brainstorm_inf_5", "title": "Aqliy hujum: {topic} — loyiha g'oyalari", "subtitle": "Sinfdagi yoki uyda bajariladigan kichik loyihalar" }
+    ],
+    "preset_case": [
+      { "id": "preset_case_inf_1", "title": "Case: {topic} — fayl yo'qoldi, nima qilasiz?", "subtitle": "Zaxira nusxa, qidiruv, xavfsizlik qoidalari" },
+      { "id": "preset_case_inf_2", "title": "Case: {topic} — parolni begonalarga bermaslik", "subtitle": "Phishing va ijtimoiy injeneriya vaziyati" },
+      { "id": "preset_case_inf_3", "title": "Case: {topic} — shubhali xat yoki havola", "subtitle": "Tarmoqda xavfsiz harakatlar rejasi" },
+      { "id": "preset_case_inf_4", "title": "Case: {topic} — guruhbila loyiha muddati", "subtitle": "Rollar, muddat, muloqot vositalari" },
+      { "id": "preset_case_inf_5", "title": "Case: {topic} — internet manbasi ishonchliligi", "subtitle": "Manbashunoslik va tekshirish qadamlari" }
+    ],
+    "preset_role_play": [
+      { "id": "preset_role_play_inf_1", "title": "Rolli o'yin: {topic} — administrator va foydalanuvchi", "subtitle": "Huquqlar va mas'uliyat" },
+      { "id": "preset_role_play_inf_2", "title": "Rolli o'yin: {topic} — o'qituvchi va o'quvchi", "subtitle": "Darsda AKTdan foydalanish munozarasi" },
+      { "id": "preset_role_play_inf_3", "title": "Rolli o'yin: {topic} — IT mutaxassisi va mijoz", "subtitle": "Muammoni aniqlash va yechim taklifi" },
+      { "id": "preset_role_play_inf_4", "title": "Rolli o'yin: {topic} — jamoat xavfsigi va o'quvchi", "subtitle": "Kiberxavfsizlik qoidalari muhokamasi" },
+      { "id": "preset_role_play_inf_5", "title": "Rolli o'yin: {topic} — guruh rahbari va a'zolar", "subtitle": "Loyiha topshirig'ini muvofiqlashtirish" }
+    ],
+    "preset_fishbone": [
+      { "id": "preset_fishbone_inf_1", "title": "T-sxema: {topic}", "subtitle": "Mavzu bo'yicha afzallik va kamchiliklarni taqqoslash" }
+    ],
+    "preset_group": [
+      { "id": "preset_group_inf_1", "title": "Guruh ishi: {topic} — taqdimot tayyorlash", "subtitle": "Slayd va nutq tuzilmasi" },
+      { "id": "preset_group_inf_2", "title": "Guruh ishi: {topic} — qisqa video / skrin-kast", "subtitle": "Mavzuni tushuntirish bo'yicha" },
+      { "id": "preset_group_inf_3", "title": "Guruh ishi: {topic} — infografika yoki plakat", "subtitle": "Vizual qisqa xulosalar" },
+      { "id": "preset_group_inf_4", "title": "Guruh ishi: {topic} — veb-resurs tahlili", "subtitle": "Ishonchli sayt va ma'lumot tanlash" },
+      { "id": "preset_group_inf_5", "title": "Guruh ishi: {topic} — mini-loyiha hisoboti", "subtitle": "Maqsad, usul, natija" }
+    ]
+  }
+}

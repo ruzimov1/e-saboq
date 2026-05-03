@@ -1,0 +1,226 @@
+{
+  "grade": "7",
+  "method": "quiz",
+  "topics": [
+    {
+      "topic": "Matnli hujjatlardan maqsadli foydalanish",
+      "questions": [
+        {
+          "question": "Styles nima uchun ishlatiladi?",
+          "options": {
+            "A": "Rasm chizish",
+            "B": "Matnni bir xil formatlash",
+            "C": "O‘chirish",
+            "D": "Saqlash"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "PDF formatining afzalligi nima?",
+          "options": {
+            "A": "O‘chadi",
+            "B": "Format saqlanadi",
+            "C": "Rasmga aylanadi",
+            "D": "O‘zgarmaydi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Find funksiyasi nima qiladi?",
+          "options": {
+            "A": "Qidiradi",
+            "B": "Saqlaydi",
+            "C": "O‘chiradi",
+            "D": "Chop etadi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Replace nima qiladi?",
+          "options": {
+            "A": "Qidiradi",
+            "B": "Almashtiradi",
+            "C": "O‘chiradi",
+            "D": "Chop etadi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Header nima?",
+          "options": {
+            "A": "Pastki qism",
+            "B": "Yuqori qism",
+            "C": "Rasm",
+            "D": "Video"
+          },
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "topic": "Multimediadan maqsadli foydalanish",
+      "questions": [
+        {
+          "question": "Multimedia nima?",
+          "options": {
+            "A": "Faqat matn",
+            "B": "Matn+audio+video",
+            "C": "Faqat rasm",
+            "D": "Faqat video"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Video sifati nimaga bog‘liq?",
+          "options": {
+            "A": "Rang",
+            "B": "Resolution",
+            "C": "Ovoz",
+            "D": "Matn"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Audio format qaysi?",
+          "options": {
+            "A": "MP3",
+            "B": "PNG",
+            "C": "JPG",
+            "D": "DOC"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Slaydda multimedia nima beradi?",
+          "options": {
+            "A": "Zerikarli",
+            "B": "Qiziqarli",
+            "C": "O‘chadi",
+            "D": "Saqlanadi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Playback nima?",
+          "options": {
+            "A": "Saqlash",
+            "B": "O‘ynatish",
+            "C": "O‘chirish",
+            "D": "Qidirish"
+          },
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "topic": "Elektron jadvallardan maqsadli foydalanish",
+      "questions": [
+        {
+          "question": "AVERAGE nima qiladi?",
+          "options": {
+            "A": "Qo‘shadi",
+            "B": "O‘rtacha hisoblaydi",
+            "C": "Ayiradi",
+            "D": "Ko‘paytiradi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Filter nima?",
+          "options": {
+            "A": "O‘chirish",
+            "B": "Saralash",
+            "C": "Ko‘rsatish",
+            "D": "Yashirish"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Chart nima?",
+          "options": {
+            "A": "Matn",
+            "B": "Grafik",
+            "C": "Audio",
+            "D": "Video"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Cell reference nima?",
+          "options": {
+            "A": "Katak manzili",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "File"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Spreadsheet nima?",
+          "options": {
+            "A": "Jadval",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Kod"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasidan maqsadli foydalanish",
+      "questions": [
+        {
+          "question": "Table nima?",
+          "options": {
+            "A": "Jadval",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Kod"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Query nima qiladi?",
+          "options": {
+            "A": "O‘chiradi",
+            "B": "Qidiradi",
+            "C": "Saqlaydi",
+            "D": "Chop etadi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Primary key nima?",
+          "options": {
+            "A": "Takrorlanmaydigan kalit",
+            "B": "Oddiy kalit",
+            "C": "Rasm",
+            "D": "Video"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Database nima?",
+          "options": {
+            "A": "Ma’lumotlar to‘plami",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Kod"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Form nima?",
+          "options": {
+            "A": "Kiritish oynasi",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Kod"
+          },
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "grade": "8",
+  "method": "quiz",
+  "topics": [
+    {
+      "topic": "Dasturlashdan maqsadli foydalanish",
+      "questions": [
+        {
+          "question": "Algoritm nima?",
+          "options": {
+            "A": "Rasm",
+            "B": "Qadamlar ketma-ketligi",
+            "C": "Video",
+            "D": "Fayl"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Debug nima?",
+          "options": {
+            "A": "Xato topish",
+            "B": "Saqlash",
+            "C": "O‘chirish",
+            "D": "Chop etish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Function nima?",
+          "options": {
+            "A": "Kod blok",
+            "B": "Rasm",
+            "C": "Audio",
+            "D": "Fayl"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loop nima qiladi?",
+          "options": {
+            "A": "Takrorlaydi",
+            "B": "To‘xtaydi",
+            "C": "Saqlaydi",
+            "D": "O‘chiradi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Compiler nima?",
+          "options": {
+            "A": "Tarjimon",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Kod yozuvchi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Veb-sayt dizaynini yaratish",
+      "questions": [
+        {
+          "question": "HTML nima?",
+          "options": {
+            "A": "Dizayn",
+            "B": "Struktura",
+            "C": "Rasm",
+            "D": "Audio"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "CSS nima?",
+          "options": {
+            "A": "Kod",
+            "B": "Dizayn",
+            "C": "Audio",
+            "D": "Video"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Responsive dizayn nima?",
+          "options": {
+            "A": "Tez",
+            "B": "Moslashuvchan",
+            "C": "Sekin",
+            "D": "Oddiy"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "UX nima?",
+          "options": {
+            "A": "Foydalanuvchi tajribasi",
+            "B": "Kod",
+            "C": "Rasm",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Navbar nima?",
+          "options": {
+            "A": "Menu",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlari",
+      "questions": [
+        {
+          "question": "LAN nima?",
+          "options": {
+            "A": "Mahalliy tarmoq",
+            "B": "Internet",
+            "C": "Rasm",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Router nima qiladi?",
+          "options": {
+            "A": "Ulaydi",
+            "B": "O‘chiradi",
+            "C": "Saqlaydi",
+            "D": "Chop etadi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "IP nima?",
+          "options": {
+            "A": "Manzil",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Wi-Fi nima?",
+          "options": {
+            "A": "Simsiz tarmoq",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ping nima?",
+          "options": {
+            "A": "Tekshiruv",
+            "B": "Saqlash",
+            "C": "O‘chirish",
+            "D": "Chop etish"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Video va animatsiya yaratish",
+      "questions": [
+        {
+          "question": "FPS nima?",
+          "options": {
+            "A": "Kadr tezligi",
+            "B": "Rasm",
+            "C": "Audio",
+            "D": "Kod"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Render nima?",
+          "options": {
+            "A": "Yaratish",
+            "B": "O‘chirish",
+            "C": "Saqlash",
+            "D": "Qidirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Timeline nima?",
+          "options": {
+            "A": "Vaqt chizig‘i",
+            "B": "Rasm",
+            "C": "Audio",
+            "D": "Kod"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Transition nima?",
+          "options": {
+            "A": "O‘tish",
+            "B": "Saqlash",
+            "C": "O‘chirish",
+            "D": "Qidirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Effect nima?",
+          "options": {
+            "A": "Ta’sir",
+            "B": "Rasm",
+            "C": "Audio",
+            "D": "Kod"
+          },
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}

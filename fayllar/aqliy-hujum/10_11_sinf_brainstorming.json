@@ -1,0 +1,197 @@
+{
+  "grade": "10-11",
+  "method": "brainstorming",
+  "subject": "informatika",
+  "topics": [
+    {
+      "topic": "Bilimlar bazasi",
+      "questions": [
+        "Bilimlar bazasi nima uchun kerak?",
+        "Ma’lumotlarni tizimlashtirish qanday foyda beradi?",
+        "Bilimlar bazasini qanday yangilab borish kerak?",
+        "Qidiruvni tezlashtirish uchun nima qilish mumkin?",
+        "Bilimlar bazasidan kimlar foydalanadi?"
+      ]
+    },
+    {
+      "topic": "Texnik va dasturiy ta'minot",
+      "questions": [
+        "Hardware va software farqi nimada?",
+        "Dastur tanlashda nimalarga e’tibor berish kerak?",
+        "Kompyuter ishlashini qanday yaxshilash mumkin?",
+        "Texnik nosozliklarni qanday aniqlash mumkin?",
+        "Dasturiy ta’minotni yangilash nima uchun muhim?"
+      ]
+    },
+    {
+      "topic": "Kuzatuv va boshqaruv",
+      "questions": [
+        "Tizim monitoringi nima uchun kerak?",
+        "Log fayllar qanday yordam beradi?",
+        "Resurslarni qanday samarali boshqarish mumkin?",
+        "Tizimni nazorat qilish qanday amalga oshiriladi?",
+        "Muammolarni oldindan aniqlash qanday foyda beradi?"
+      ]
+    },
+    {
+      "topic": "Elektron xavfsizlik, salomatlik va xavfsizlik",
+      "questions": [
+        "Kuchli parol qanday bo‘lishi kerak?",
+        "Phishing hujumlarini qanday aniqlash mumkin?",
+        "Ma’lumotlarni himoyalashning qanday usullari bor?",
+        "Antivirus dasturlari nima uchun kerak?",
+        "Internetda xavfsiz ishlash qoidalari qanday?"
+      ]
+    },
+    {
+      "topic": "Raqamli tengsizlik",
+      "questions": [
+        "Raqamli tengsizlik nima?",
+        "Texnologiyaga kirish imkoniyati nima uchun muhim?",
+        "Internet yo‘qligi qanday muammolar keltiradi?",
+        "Raqamli savodxonlikni qanday oshirish mumkin?",
+        "Bu muammoni qanday kamaytirish mumkin?"
+      ]
+    },
+    {
+      "topic": "Tarmoqlardan foydalanish",
+      "questions": [
+        "Tarmoq tezligi nimaga bog‘liq?",
+        "Wi-Fi xavfsizligini qanday oshirish mumkin?",
+        "Ping nima va nimaga ta’sir qiladi?",
+        "Firewall qanday himoya qiladi?",
+        "Tarmoqdagi muammolarni qanday aniqlash mumkin?"
+      ]
+    },
+    {
+      "topic": "Ekspert tizimlar",
+      "questions": [
+        "Ekspert tizim nima?",
+        "AI qanday ishlaydi?",
+        "Knowledge base qanday rol o‘ynaydi?",
+        "Qaror qabul qilish jarayoni qanday kechadi?",
+        "Ekspert tizimlar qayerlarda ishlatiladi?"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar",
+      "questions": [
+        "Pivot table nima uchun ishlatiladi?",
+        "Formulalar qanday qulaylik yaratadi?",
+        "Ma’lumotlarni tahlil qilish qanday amalga oshiriladi?",
+        "Diagrammalar nimani ko‘rsatadi?",
+        "Jadvalni qanday optimallashtirish mumkin?"
+      ]
+    },
+    {
+      "topic": "Ma'lumotlar bazasi va fayl konsepsiyalari",
+      "questions": [
+        "Database nima?",
+        "SQL nima uchun kerak?",
+        "Primary key nima vazifa bajaradi?",
+        "Ma’lumotlarni qanday tartibga solish mumkin?",
+        "Database xavfsizligini qanday ta’minlash mumkin?"
+      ]
+    },
+    {
+      "topic": "Tovush va videoni tahrirlash",
+      "questions": [
+        "Video sifatini qanday yaxshilash mumkin?",
+        "Audio va video sinxronligi nima uchun muhim?",
+        "Fayl hajmini qanday kamaytirish mumkin?",
+        "Tahrirlashda qaysi vositalar muhim?",
+        "Render jarayoni nima?"
+      ]
+    },
+    {
+      "topic": "Yangi texnologiyalar",
+      "questions": [
+        "AI qayerlarda qo‘llaniladi?",
+        "IoT qanday ishlaydi?",
+        "VR nima uchun kerak?",
+        "Machine learning nimaga asoslanadi?",
+        "Yangi texnologiyalar hayotni qanday o‘zgartirmoqda?"
+      ]
+    },
+    {
+      "topic": "Axborot texnologiyalarining o'rni va jamiyatdagi ta'siri",
+      "questions": [
+        "IT jamiyatga qanday ta’sir qiladi?",
+        "Texnologiyaning ijobiy va salbiy tomonlari qanday?",
+        "Online ta’limning afzalligi nimada?",
+        "Texnologiyaga qaramlik qanday kamaytiriladi?",
+        "Kelajakda IT qanday bo‘ladi?"
+      ]
+    },
+    {
+      "topic": "Tarmoqlar",
+      "questions": [
+        "DNS nima vazifa bajaradi?",
+        "HTTP qanday ishlaydi?",
+        "IP manzil nima?",
+        "Switch nima qiladi?",
+        "Tarmoq qanday tashkil qilinadi?"
+      ]
+    },
+    {
+      "topic": "Loyiha boshqaruvi",
+      "questions": [
+        "Agile nima?",
+        "Scrum qanday ishlaydi?",
+        "Deadline nima uchun muhim?",
+        "Risklarni qanday boshqarish mumkin?",
+        "Loyihani qanday rejalashtirish kerak?"
+      ]
+    },
+    {
+      "topic": "Tizimdan foydalanish sikli",
+      "questions": [
+        "SDLC nima?",
+        "Analiz bosqichi nima uchun muhim?",
+        "Testlash qanday amalga oshiriladi?",
+        "Deployment nima?",
+        "Maintenance nimani anglatadi?"
+      ]
+    },
+    {
+      "topic": "Grafik yaratish",
+      "questions": [
+        "Infografika nima?",
+        "Dizayn qoidalari qanday?",
+        "Rang tanlash nima uchun muhim?",
+        "Contrast nima beradi?",
+        "Alignment nima uchun kerak?"
+      ]
+    },
+    {
+      "topic": "Animatsiya",
+      "questions": [
+        "Animatsiya nima?",
+        "Frame rate nimani bildiradi?",
+        "Motion qanday yaratiladi?",
+        "Timing nima uchun muhim?",
+        "Effektlar qanday ishlatiladi?"
+      ]
+    },
+    {
+      "topic": "Xatlarni birlashtirish",
+      "questions": [
+        "Mail merge nima?",
+        "Data source nima?",
+        "Template qanday ishlaydi?",
+        "Merge field nima?",
+        "Bu usul qanday foyda beradi?"
+      ]
+    },
+    {
+      "topic": "Veb uchun dasturlash",
+      "questions": [
+        "Frontend nima?",
+        "Backend nima?",
+        "API qanday ishlaydi?",
+        "Database qanday ulanadi?",
+        "Debug jarayoni nima?"
+      ]
+    }
+  ]
+}

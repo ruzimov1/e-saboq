@@ -1,0 +1,46 @@
+{
+  "grade": "7",
+  "method": "case_study",
+  "topics": [
+    {
+      "topic": "Matnli hujjatlardan maqsadli foydalanish",
+      "tasks": [
+        "O‘quvchi katta hujjatda kerakli bo‘limni topa olmayapti. Qanday vositalardan foydalanasiz?",
+        "Hujjat professional ko‘rinmayapti. Qanday uslublar qo‘llasiz?",
+        "Bir xil formatni butun hujjatga qo‘llash kerak. Qanday bajarasiz?",
+        "Hujjatni PDF ga aylantirish kerak. Qanday amalga oshirasiz?",
+        "Matnni tez ko‘rib chiqish va tahrirlash kerak. Qanday strategiya qo‘llasiz?"
+      ]
+    },
+    {
+      "topic": "Multimediadan maqsadli foydalanish",
+      "tasks": [
+        "Taqdimotda multimedia juda ko‘p va tushunarsiz. Qanday optimallashtirasiz?",
+        "Video hajmi katta. Qanday kamaytirasiz?",
+        "Audio sifati past. Qanday yaxshilaysiz?",
+        "Multimedia mazmunga mos emas. Qanday tanlaysiz?",
+        "Slaydda multimedia ishlamayapti. Sababi nima bo‘lishi mumkin?"
+      ]
+    },
+    {
+      "topic": "Elektron jadvallardan maqsadli foydalanish",
+      "tasks": [
+        "Jadvalda o‘rtacha qiymatni topish kerak. Qanday qilasiz?",
+        "Ma’lumotni faqat kerakli qismini ko‘rsatish kerak. Qanday filtr qo‘llasiz?",
+        "Jadvaldagi xatoliklarni aniqlash kerak. Qanday tekshirasiz?",
+        "Diagramma noto‘g‘ri chiqdi. Qanday tuzatasiz?",
+        "Jadvalni boshqalardan himoya qilish kerak. Qanday qilasiz?"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasidan maqsadli foydalanish",
+      "tasks": [
+        "Kerakli yozuvni tez topish kerak. Qanday qidiruvdan foydalanasiz?",
+        "Bir xil yozuvlar ko‘payib ketdi. Qanday tozalaysiz?",
+        "Yangi ma’lumot qo‘shishda xato bo‘ldi. Qanday tuzatasiz?",
+        "Ma’lumotlar bazasi tartibsiz. Qanday strukturaga keltirasiz?",
+        "Ma’lumotlarni xavfsiz saqlash kerak. Qanday choralar ko‘rasiz?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "40985160494",
+    "project_id": "eduinteractive-b4afc",
+    "storage_bucket": "eduinteractive-b4afc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40985160494:android:376714e69a626b898c28bf",
+        "android_client_info": {
+          "package_name": "com.eduinteractive.edu_interactive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALe_gGTUaHLMTSpCpeXOkt9tfEGkLtOho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1106 @@
+{
+  "grade": "9",
+  "method": "quiz",
+  "topics": [
+    {
+      "topic": "Kompyuter tizimlari va komponentlari",
+      "questions": [
+        {
+          "question": "Kompyuter tizimlari va komponentlarida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tizimlari va komponentlari bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tizimlari va komponentlarida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tizimlari va komponentlaridan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tizimlari va komponentlarining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Kiritish va chiqarish qurilmalari",
+      "questions": [
+        {
+          "question": "Kiritish va chiqarish qurilmalarida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kiritish va chiqarish qurilmalari bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kiritish va chiqarish qurilmalarida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kiritish va chiqarish qurilmalaridan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kiritish va chiqarish qurilmalarining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Xotira qurilmalari",
+      "questions": [
+        {
+          "question": "Xotira qurilmalarida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xotira qurilmalari bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xotira qurilmalarida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xotira qurilmalaridan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xotira qurilmalarining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlari",
+      "questions": [
+        {
+          "question": "Kompyuter tarmoqlarida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tarmoqlari bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tarmoqlarida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tarmoqlaridan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kompyuter tarmoqlarining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Axborot texnologiyalarining ta’siri",
+      "questions": [
+        {
+          "question": "Axborot texnologiyalarining ta’sirida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot texnologiyalarining ta’siri bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot texnologiyalarining ta’sirida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot texnologiyalarining ta’siridan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot texnologiyalarining ta’sirining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Fayllar boshqaruvi",
+      "questions": [
+        {
+          "question": "Fayllar boshqaruvida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Fayllar boshqaruvi bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Fayllar boshqaruvida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Fayllar boshqaruvidan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Fayllar boshqaruvining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Tasvirlar bilan ishlash",
+      "questions": [
+        {
+          "question": "Tasvirlar bilan ishlashda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tasvirlar bilan ishlash bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tasvirlar bilan ishlashda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tasvirlar bilan ishlashdan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tasvirlar bilan ishlashning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Hujjatlar bilan ishlash",
+      "questions": [
+        {
+          "question": "Hujjatlar bilan ishlashda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Hujjatlar bilan ishlash bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Hujjatlar bilan ishlashda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Hujjatlar bilan ishlashdan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Hujjatlar bilan ishlashning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Taqdimotlar",
+      "questions": [
+        {
+          "question": "Taqdimotlarda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Taqdimotlar bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Taqdimotlarda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Taqdimotlardan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Taqdimotlarning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Veb-saytlar yaratish",
+      "questions": [
+        {
+          "question": "Veb-saytlar yaratishda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb-saytlar yaratish bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb-saytlar yaratishda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb-saytlar yaratishdan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb-saytlar yaratishning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Loyihalash",
+      "questions": [
+        {
+          "question": "Loyihalashda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyihalash bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyihalashda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyihalashdan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyihalashning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Uslublar",
+      "questions": [
+        {
+          "question": "Uslublarda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Uslublar bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Uslublarda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Uslublardan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Uslublarning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Xatolarni tekshirish",
+      "questions": [
+        {
+          "question": "Xatolarni tekshirishda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatolarni tekshirish bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatolarni tekshirishda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatolarni tekshirishdan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatolarni tekshirishning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Grafik va xaritalar",
+      "questions": [
+        {
+          "question": "Grafik va xaritalarda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik va xaritalar bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik va xaritalarda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik va xaritalardan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik va xaritalarning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Ma’lumotlarni boshqarish",
+      "questions": [
+        {
+          "question": "Ma’lumotlarni boshqarishda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlarni boshqarish bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlarni boshqarishda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlarni boshqarishdan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlarni boshqarishning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar tahlili",
+      "questions": [
+        {
+          "question": "Ma’lumotlar tahlilida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar tahlili bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar tahlilida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar tahlilidan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar tahlilining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Diagrammalar bilan ishlash",
+      "questions": [
+        {
+          "question": "Diagrammalar bilan ishlashda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Diagrammalar bilan ishlash bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Diagrammalar bilan ishlashda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Diagrammalar bilan ishlashdan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Diagrammalar bilan ishlashning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Elektron hujjatlar",
+      "questions": [
+        {
+          "question": "Elektron hujjatlarda asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron hujjatlar bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron hujjatlarda xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron hujjatlardan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron hujjatlarning foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Axborot xavfsizligi",
+      "questions": [
+        {
+          "question": "Axborot xavfsizligida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot xavfsizligi bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot xavfsizligida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot xavfsizligidan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Axborot xavfsizligining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Internet xizmatlari",
+      "questions": [
+        {
+          "question": "Internet xizmatlarida asosiy vazifa nimadan iborat?",
+          "options": {
+            "A": "To‘g‘ri ishlashni ta’minlash",
+            "B": "Faqat saqlash",
+            "C": "Faqat o‘chirish",
+            "D": "O‘yin yaratish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Internet xizmatlari bilan ishlashda eng muhim omil nima?",
+          "options": {
+            "A": "Aniqlik va tartib",
+            "B": "Tasodifiylik",
+            "C": "Tez yopish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Internet xizmatlarida xatolik aniqlansa birinchi nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilish",
+            "B": "O‘chirish",
+            "C": "Kompyuterni o‘chirish",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Internet xizmatlaridan samarali foydalanish uchun nima zarur?",
+          "options": {
+            "A": "Bilim va amaliyot",
+            "B": "Faqat tezlik",
+            "C": "Tasodif",
+            "D": "Faqat texnika"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Internet xizmatlarining foydasi nimada?",
+          "options": {
+            "A": "Ishni yengillashtiradi",
+            "B": "Qiyinlashtiradi",
+            "C": "Hech narsa bermaydi",
+            "D": "Faqat vaqt oladi"
+          },
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}

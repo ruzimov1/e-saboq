@@ -1,0 +1,67 @@
+{
+  "grade": "5",
+  "method": "brainstorming",
+  "subject": "informatika",
+  "topics": [
+    {
+      "topic": "Matnli hujjat bilan ishlash",
+      "questions": [
+        "Kompyuterda matn yozishning qanday afzalliklari bor?",
+        "Matnni chiroyli va tushunarli qilish uchun nimalarga e'tibor berish kerak?",
+        "Matnni tez yozish uchun qanday usullardan foydalanish mumkin?",
+        "Hujjatni saqlash nima uchun muhim?",
+        "Matnni tahrirlash jarayonida qanday xatolar yuz berishi mumkin?"
+      ]
+    },
+    {
+      "topic": "Tasvirlar bilan ishlash",
+      "questions": [
+        "Rasm hujjatni qanday yaxshilaydi?",
+        "Tasvirni tanlashda nimalarga e'tibor berish kerak?",
+        "Rasmni to'g'ri joylashtirish nima uchun muhim?",
+        "Tasvir sifati nimaga bog'liq?",
+        "Rasmni tahrirlash qanday foyda beradi?"
+      ]
+    },
+    {
+      "topic": "Diagrammalar bilan ishlash",
+      "questions": [
+        "Diagrammalar qayerlarda ishlatiladi?",
+        "Diagramma ma'lumotni qanday tushunarli qiladi?",
+        "Qaysi turdagi diagrammalarni bilasiz?",
+        "Diagrammada ranglardan qanday foydalanish kerak?",
+        "Diagramma noto'g'ri bo'lsa qanday muammo yuzaga keladi?"
+      ]
+    },
+    {
+      "topic": "Dasturlashni boshlash",
+      "questions": [
+        "Kompyuterga buyruq berish qanday amalga oshiriladi?",
+        "Algoritm nima uchun kerak?",
+        "Dastur tuzishda qanday xatolar bo'lishi mumkin?",
+        "Dasturlashni o'rganish nimaga yordam beradi?",
+        "Oddiy dastur qanday tuziladi?"
+      ]
+    },
+    {
+      "topic": "Qidiruv tizimlarida ishlash",
+      "questions": [
+        "Internetda ma'lumotni qanday tez topish mumkin?",
+        "Qidiruvda kalit so'zlar qanday rol o'ynaydi?",
+        "To'g'ri ma'lumotni qanday tanlash kerak?",
+        "Soxta ma'lumotni qanday aniqlash mumkin?",
+        "Qidiruv natijalarini qanday yaxshilash mumkin?"
+      ]
+    },
+    {
+      "topic": "Elektron pochtada ishlash",
+      "questions": [
+        "Email orqali qanday ishlarni bajarish mumkin?",
+        "Xat yozishda nimalarga e'tibor berish kerak?",
+        "Fayl yuborishda qanday qoidalar bor?",
+        "Email xavfsizligini qanday ta'minlash mumkin?",
+        "Spam xatlar nimaga zarar keltiradi?"
+      ]
+    }
+  ]
+}

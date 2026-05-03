@@ -1,0 +1,106 @@
+{
+  "grade": "9",
+  "method": "case_study",
+  "topics": [
+    {
+      "topic": "Kompyuter tizimlari va komponentlari",
+      "tasks": [
+        "Kompyuter sekin ishlayapti. Qaysi komponent muammo berayotganini qanday aniqlaysiz?",
+        "Yangi dastur ishlamayapti. Qurilma mos kelishini qanday tekshirasiz?",
+        "Kompyuter qizib ketmoqda. Qanday yechim topasiz?",
+        "RAM yetarli emas. Qanday choralar ko‘rasiz?",
+        "Kompyuter tezligini oshirish uchun nima qilasiz?"
+      ]
+    },
+    {
+      "topic": "Kiritish va chiqarish qurilmalari",
+      "tasks": [
+        "Klaviatura ishlamayapti. Muammoni qanday hal qilasiz?",
+        "Printer chop etmayapti. Sababini qanday aniqlaysiz?",
+        "Sensorli ekran noto‘g‘ri ishlayapti. Qanday tuzatasiz?",
+        "Ovoz chiqmayapti. Qaysi qurilmani tekshirasiz?",
+        "Qurilmalar mos kelmayapti. Qanday yechim topasiz?"
+      ]
+    },
+    {
+      "topic": "Xotira qurilmalari",
+      "tasks": [
+        "Kompyuter xotirasi to‘lib qolgan. Qanday bo‘shatasiz?",
+        "Fayllar yo‘qolib qoldi. Qanday tiklaysiz?",
+        "SSD va HDD o‘rtasida tanlash kerak. Qanday qaror qilasiz?",
+        "Ma’lumotni xavfsiz saqlash kerak. Qanday usul tanlaysiz?",
+        "Bulutli xotira ishlamayapti. Qanday muammoni aniqlaysiz?"
+      ]
+    },
+    {
+      "topic": "Kompyuter tarmoqlari",
+      "tasks": [
+        "Internet ulanmayapti. Qanday tekshiruv qilasiz?",
+        "Tarmoq juda sekin. Sababini qanday topasiz?",
+        "Wi-Fi paroli buzilgan. Qanday himoya qilasiz?",
+        "IP manzil bilan muammo bor. Qanday tuzatasiz?",
+        "Tarmoqqa ortiqcha qurilmalar ulangan. Qanday boshqarasiz?"
+      ]
+    },
+    {
+      "topic": "Axborot texnologiyalarining ta’siri",
+      "tasks": [
+        "O‘quvchi internetga qaram bo‘lib qolgan. Qanday maslahat berasiz?",
+        "Soxta ma’lumot tarqaldi. Qanday tekshirasiz?",
+        "Texnologiya noto‘g‘ri ishlatilmoqda. Qanday yo‘l ko‘rsatasiz?",
+        "Online ta’lim samarasi past. Qanday yaxshilaysiz?",
+        "Texnologiya foydasi va zarari qanday muvozanatda bo‘lishi kerak?"
+      ]
+    },
+    {
+      "topic": "Fayllar boshqaruvi",
+      "tasks": [
+        "Fayllar tartibsiz joylashgan. Qanday tizimlashtirasiz?",
+        "Kerakli faylni topa olmayapsiz. Qanday qidirasiz?",
+        "Fayl noto‘g‘ri joyga ko‘chirilgan. Qanday tuzatasiz?",
+        "Zaxira nusxa kerak. Qanday yaratasiz?",
+        "Fayl nomlari chalkash. Qanday tartib o‘rnatasiz?"
+      ]
+    },
+    {
+      "topic": "Tasvirlar bilan ishlash",
+      "tasks": [
+        "Rasm sifati past. Qanday yaxshilaysiz?",
+        "Rasm hajmi katta. Qanday optimallashtirasiz?",
+        "Rasm noto‘g‘ri formatda. Qanday o‘zgartirasiz?",
+        "Rasmni tahrirlash kerak. Qanday vosita ishlatasiz?",
+        "Rasm noto‘g‘ri kesilgan. Qanday tuzatasiz?"
+      ]
+    },
+    {
+      "topic": "Hujjatlar bilan ishlash",
+      "tasks": [
+        "Hujjat formatlari aralash. Qanday bir xil qilasiz?",
+        "Hujjatda xatolar bor. Qanday tekshirasiz?",
+        "Hujjatni professional qilish kerak. Qanday usul qo‘llasiz?",
+        "Hujjatni ulashish kerak. Qanday format tanlaysiz?",
+        "Hujjatni himoyalash kerak. Qanday qilasiz?"
+      ]
+    },
+    {
+      "topic": "Taqdimotlar",
+      "tasks": [
+        "Slaydlar juda uzun. Qanday qisqartirasiz?",
+        "Taqdimot zerikarli. Qanday yaxshilaysiz?",
+        "Animatsiyalar ortiqcha. Qanday optimallashtirasiz?",
+        "Taqdimot tushunarsiz. Qanday soddalashtirasiz?",
+        "Multimedia ishlamayapti. Sababi nima?"
+      ]
+    },
+    {
+      "topic": "Veb-saytlar yaratish",
+      "tasks": [
+        "Sayt ochilmayapti. Sababini qanday aniqlaysiz?",
+        "Sayt mobilga mos emas. Qanday tuzatasiz?",
+        "Sayt sekin ishlayapti. Qanday optimallashtirasiz?",
+        "Dizayn noto‘g‘ri. Qanday yaxshilaysiz?",
+        "Sayt xavfsiz emas. Qanday himoya qilasiz?"
+      ]
+    }
+  ]
+}

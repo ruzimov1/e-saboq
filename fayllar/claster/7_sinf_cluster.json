@@ -1,0 +1,54 @@
+{
+  "sinf": 7,
+  "fan": "Informatika va axborot texnologiyalari",
+  "mavzular_klasteri": [
+    {
+      "id": 1,
+      "mavzu": "Matnli hujjatlardan maqsadli foydalanish",
+      "markaziy_goya": "Murakkab tuzilmali hujjatlar va akademik yozuv",
+      "kalit_sozlar": [
+        "Havolalar va snoska",
+        "Ma'lumotnomalar yaratish",
+        "Annotatsiya",
+        "Taqriz",
+        "Hujjat ustida jamoaviy ishlash"
+      ]
+    },
+    {
+      "id": 2,
+      "mavzu": "Multimediadan maqsadli foydalanish",
+      "markaziy_goya": "Interaktiv media-loyihalar va raqamli hikoyachilik",
+      "kalit_sozlar": [
+        "Ssenariy yozish",
+        "Video-kontent yaratish",
+        "Audio montaj texnikasi",
+        "Interaktiv taqdimotlar",
+        "Media-etiket"
+      ]
+    },
+    {
+      "id": 3,
+      "mavzu": "Elektron jadvallardan maqsadli foydalanish",
+      "markaziy_goya": "Mantiqiy tahlil va bashorat qilish modellari",
+      "kalit_sozlar": [
+        "Murakkab formulalar",
+        "Mantiqiy funksiyalar (IF, AND, OR)",
+        "Trendlar va prognoz",
+        "Ma'lumotlarni saralash va filtr",
+        "Pivot jadvallar"
+      ]
+    },
+    {
+      "id": 4,
+      "mavzu": "Ma'lumotlar bazasidan maqsadli foydalanish",
+      "markaziy_goya": "Axborot tizimlarini loyihalash va boshqarish",
+      "kalit_sozlar": [
+        "Ma'lumotlar modellari",
+        "Birlamchi va tashqi kalitlar",
+        "SQL so'rovlar asoslari",
+        "Ma'lumotlar yaxlitligi",
+        "Bazani boshqarish tizimlari (BBT)"
+      ]
+    }
+  ]
+}

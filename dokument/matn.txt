@@ -1,0 +1,166 @@
+================================================================================
+  e-Saboq (EduInteractive) — loyiha dokumentatsiyasi
+  Paket nomi: edu_interactive | Versiya: 1.0.0+1
+================================================================================
+
+1. LOYIHA HAQIDA
+----------------
+e-Saboq — o‘rta maktab kontekstida interaktiv topshiriqlar va metodlar uchun
+Flutter ilovasi. O‘qituvchi fan / sinf / mavzu bo‘yicha metodlarni sozlaydi,
+topshiriqlar yaratadi; o‘quvchi kod orqali qo‘shiladi va javoblarni yuboradi.
+Qo‘llab-quvvatlanadi: quiz, so‘rovnoma, aqliy hujum, klaster, T-sxema (fishbone),
+case-study, rolli o‘yin va boshqalar.
+
+Asosiy kod papkasi: lib/
+Marshrutlar: lib/router/app_router.dart
+Kirish nuqtasi: lib/main.dart
+
+
+2. TEXNOLOGIYALAR
+-----------------
+- Flutter (Dart SDK ^3.11.4)
+- State: flutter_bloc, equatable
+- Marshrutlash: go_router
+- Backend / autentifikatsiya: Firebase (Auth, Firestore, Storage, Analytics,
+  Crashlytics)
+- HTTP: dio (Gemini REST chaqiruvlari)
+- Mahalliy sozlamalar: shared_preferences, flutter_dotenv (.env)
+- Modellar: freezed / json_serialization (qisman)
+- UI: Material 3, flutter_animate, cached_network_image, flutter_svg
+- Til: flutter_localizations — o‘zbek va ingliz (l10n)
+
+
+3. DASTUR MUHITI TALABLARI
+--------------------------
+- Flutter SDK (stable, SDK chegarasi pubspec bilan mos)
+- Dart
+- Android Studio / VS Code + Flutter kengaytmalari
+- Web uchun: Chrome (flutter run -d chrome)
+- Windows desktop uchun: Visual Studio + «Desktop development with C++»
+  (flutter doctor bo‘yicha)
+- Firebase loyihasi: ilova uchun firebase_options va konfiguratsiya
+
+
+4. O‘RNATISH VA ISHGA TUSHIRISH
+-------------------------------
+  cd <loyiha_ildizi>
+  flutter pub get
+
+  Tekshiruv:
+  flutter doctor
+
+  Ishga tushirish (veb):
+  flutter run -d chrome
+
+  Ishga tushirish (Windows):
+  flutter run -d windows
+
+  Reliz (veb):
+  flutter build web
+
+  Reliz (Windows EXE qurilishi):
+  flutter build windows
+
+
+5. MUHIT O‘ZGARUVCHILARI (.env)
+--------------------------------
+Loyiha ildizida .env fayli bo‘lishi kerak (pubspec assets ro‘yxatida qo‘shilgan).
+main.dart da: dotenv.load(fileName: '.env')
+
+Muhim o‘zgaruvchi:
+  GEMINI_API_KEY=<Google AI Studio kaliti>
+
+Kalit: https://aistudio.google.com/apikey
+
+Eslatma: .env ni umumiy repozitoriyaga yuklamang; kalitni maxfiy saqlang.
+
+
+6. LOYIHA TUZILMASI (qisqa)
+----------------------------
+lib/
+  main.dart                 — dotenv, assetlar bootstrap, Firebase, router
+  firebase/                 — Firebase ishga tushirish
+  router/                   — marshrutlar, argumentlar
+  core/
+    ai/                     — GeminiApi, GeminiMethodCoach, GeminiSubmissionReviewer
+    curriculum/             — o‘quv dasturi katalogi, JSON presetlar, klaster
+    case_study/             — case-study bank va modellar
+    quiz/                   — quiz bank
+    theme/, widgets/, ...
+  features/
+    auth/                   — kirish, ro‘yxatdan o‘tish
+    profile/
+    teacher/                — sinflar, fanlar, mavzular, metodlar, topshiriqlar,
+                              guruhlar, natijalar
+    student/                — kodi bilan qo‘shilish, topshiriq bajarish, yuborish
+  l10n/                     — tarjimalar (arb + codegen)
+
+fayllar/                    — statik JSON (informatika, t-sxema, klaster,
+                              aqliy hujum, case-study va hokazo)
+assets/                     — rasmlar, shriftlar
+
+
+7. FOYDALANUVCHI ROLLARI
+------------------------
+O‘qituvchi:
+  - Sinflar, fanlar (tizim + maxsus fanlar), mavzular
+  - Har mavzu bo‘yicha metodlar (quiz, poll, brainstorm, group, fishbone, case, ...) 
+  - Topshiriq yaratish, muddat, kod, natijalar, (ixtiyoriy) AI yordamida tahlil
+
+O‘quvchi:
+  - Topshiriq kodi bilan qo‘shilish
+  - Topshirqni bajarish va yuborish
+  - Yuborilgan javob va izohlarni ko‘rish
+
+
+8. FIRESTORE (umumiy yo‘nalish)
+--------------------------------
+Asosiy yo‘l: subjects/{subjectId}/classes/{classId}/topics/{topicId}/...
+  — metodlar, topshiriqlar, yuborishlar (submission_repository orqali)
+
+Aniq struktura kodda repositories orqali aniqlanadi (subject_repository,
+classes_repository, topics_repository, method_repository, assignment_repository).
+
+
+9. SUN’IY INTELLEKT (GEMINI)
+-----------------------------
+- lib/core/ai/gemini_api.dart — generateContent, bir necha model bilan ketma-ket
+  urinish (masalan gemini-2.5-flash va zaxiralar).
+- O‘quvchi tomonda: topshiriq ekranida AI yordamchi (studyCompanionNudge),
+  aqliy hujumda guruhlash, case-study ssenariy/maslahat.
+- O‘qituvchi tomonda: topshiriq natijalarida yordamchi tahlil
+  (GeminiSubmissionReviewer).
+
+Brauzerda to‘g‘ridan-to‘g‘ri API chaqiruvi ba’zan CORS bilan cheklanishi mumkin;
+muammo bo‘lsa mobil/desktop yoki backend proksi ko‘rib chiqiladi.
+
+
+10. O‘QUV DASTURI VA JSON PRESETLAR
+------------------------------------
+- CurriculumCatalog — fanlar, sinflar, mavzular (shu jumladan informatika T-sxema
+  bilan sinxron mavzular).
+- InformatikaJsonPresets — fayllar/t-sxema/, fayllar/claster/, quiz banklar
+  va hokazo assetlardan yuklanadi.
+
+O‘zgartirishdan keyin: flutter pub get / qayta yig‘ish; asset yo‘llari pubspec
+ichida ro‘yxatdan o‘tgan bo‘lishi kerak.
+
+
+11. XAVFSIZLIK VA RELIZ ESLATMALARI
+------------------------------------
+- .env va API kalitlarni jamoatga ochiq qilmang.
+- firebase_options / Service Account kalitlarini himoya qiling.
+- Production: debugShowCheckedModeBanner o‘chirilgan bo‘lishi mumkin (main.dart).
+- Reliz build: profile/release rejimida xatolar va hajmni qayta tekshiring.
+
+
+12. FOYDALI BUYRUQLAR
+---------------------
+  dart analyze lib
+  flutter test
+
+
+================================================================================
+  Hujjat yangilanishi: loyiha holatiga qarab qo‘lda yangilab turish tavsiya
+  etiladi.
+================================================================================

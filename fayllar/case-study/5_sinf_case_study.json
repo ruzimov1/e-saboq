@@ -1,0 +1,76 @@
+{
+  "grade": "5",
+  "method": "case_study",
+  "topics": [
+    {
+      "topic": "Matnli hujjat bilan ishlash",
+      "tasks": [
+        "O‘quvchi matn yozdi, lekin saqlamasdan kompyuterni o‘chirib qo‘ydi. Nima qilish kerak edi?",
+        "Matnda sarlavha ajralmayapti. Uni qanday ajratish mumkin?",
+        "Matn tartibsiz yozilgan. Uni qanday qilib o‘qishga qulay qilasiz?",
+        "Matnda xatolar ko‘p. Qanday qilib tez tuzatish mumkin?",
+        "Hujjat boshqa kompyuterda buzildi. Sababi nima bo‘lishi mumkin?"
+      ]
+    },
+    {
+      "topic": "Tasvirlar bilan ishlash",
+      "tasks": [
+        "Rasm juda katta chiqdi. Uni qanday kichraytirasiz?",
+        "Rasm sifati past. Qanday yaxshilash mumkin?",
+        "Rasm noto‘g‘ri joylashgan. Qanday to‘g‘rilaysiz?",
+        "Rasmning keraksiz qismi bor. Uni qanday kesasiz?",
+        "Rasm matnni yopib qo‘ydi. Qanday hal qilasiz?"
+      ]
+    },
+    {
+      "topic": "Diagrammalar bilan ishlash",
+      "tasks": [
+        "Diagramma noto‘g‘ri chiqdi. Sababi nima?",
+        "Diagramma tushunarsiz. Uni qanday yaxshilaysiz?",
+        "Diagrammada sarlavha yo‘q. Bu nimaga olib keladi?",
+        "Ma’lumot noto‘g‘ri kiritildi. Diagramma qanday bo‘ladi?",
+        "Diagramma zerikarli. Uni qanday chiroyli qilasiz?"
+      ]
+    },
+    {
+      "topic": "Dasturlashni boshlash",
+      "tasks": [
+        "Dastur ishlamayapti. Sababi nima bo‘lishi mumkin?",
+        "Buyruqlar noto‘g‘ri tartibda yozilgan. Natija qanday bo‘ladi?",
+        "Dastur noto‘g‘ri natija berdi. Xato qayerda bo‘lishi mumkin?",
+        "Algoritm yozilmasdan kod yozildi. Bu nimaga olib keladi?",
+        "Dastur juda murakkab. Uni qanday soddalashtirasiz?"
+      ]
+    },
+    {
+      "topic": "Qidiruv tizimlarida ishlash",
+      "tasks": [
+        "Noto‘g‘ri ma’lumot topildi. Sababi nima?",
+        "Qidiruv natijalari juda ko‘p. Qanday kamaytirish mumkin?",
+        "Kerakli ma’lumot topilmadi. Qanday qidirasiz?",
+        "Noto‘g‘ri sayt ochildi. Qanday tekshirasiz?",
+        "Qidiruv juda sekin. Qanday tezlashtirasiz?"
+      ]
+    },
+    {
+      "topic": "Elektron pochtada ishlash",
+      "tasks": [
+        {
+          "alert": "⚠ Tizim ogohlantirishi",
+          "scenario": "Elektron pochtangizga «Hisobingiz buzildi — parolni shu havola orqali tiklang» degan shubhali xat tushdi. Havola boshqa domen nomiga olib boradi. Nima qilasiz?",
+          "options": [
+            {"label": "Havolani ochmayman; pochta provayderining rasmiy sayti orqali hisobni tekshiraman", "correct": true, "reaction": "To‘g‘ri yo‘nalish: firibgarlik ehtimolini kamaytirasiz."},
+            {"label": "Shoshilinch havolani ochib, parolni yangilayman", "correct": false, "reaction": "Oqibat: firibgar sahifaga ma'lumotlaringiz tushishi mumkin."},
+            {"label": "Xatni butun sinfga yuborib so‘rash", "correct": false, "reaction": "Oqibat: xavf yoyiladi; boshqalarning hisoblari ham xavf ostida."},
+            {"label": "Hech narsa qilmayman — o‘zi o‘tib ketadi deb o‘ylayman", "correct": false, "reaction": "Oqibat: akkaunt hujumi yashirib qolinishi va yo‘qotishlar kengayishi mumkin."}
+          ]
+        },
+        "Xat noto‘g‘ri odamga yuborildi. Qanday oldini olish mumkin?",
+        "Fayl yuborilmayapti. Sababi nima?",
+        "Spam xatlar ko‘paydi. Nima qilish kerak?",
+        "Parol boshqalarga ma’lum bo‘ldi. Qanday choralar ko‘rasiz?",
+        "Xat yetib bormadi. Qanday tekshirasiz?"
+      ]
+    }
+  ]
+}

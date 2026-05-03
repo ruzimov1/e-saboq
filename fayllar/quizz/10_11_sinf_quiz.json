@@ -1,0 +1,1051 @@
+{
+  "grade": "10-11",
+  "method": "quiz",
+  "topics": [
+    {
+      "topic": "Bilimlar bazasi",
+      "questions": [
+        {
+          "question": "Bilimlar bazasining asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Bilimlar bazasida samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Bilimlar bazasida xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Bilimlar bazasidan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Bilimlar bazasi bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Texnika va dasturiy ta’minot",
+      "questions": [
+        {
+          "question": "Texnika va dasturiy ta’minotning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Texnika va dasturiy ta’minotda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Texnika va dasturiy ta’minotda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Texnika va dasturiy ta’minotdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Texnika va dasturiy ta’minot bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Kuzatuv va boshqaruv",
+      "questions": [
+        {
+          "question": "Kuzatuv va boshqaruvning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kuzatuv va boshqaruvda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kuzatuv va boshqaruvda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kuzatuv va boshqaruvdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Kuzatuv va boshqaruv bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Elektron xavfsizlik",
+      "questions": [
+        {
+          "question": "Elektron xavfsizlikning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron xavfsizlikda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron xavfsizlikda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron xavfsizlikdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron xavfsizlik bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Raqamli tengsizlik",
+      "questions": [
+        {
+          "question": "Raqamli tengsizlikning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Raqamli tengsizlikda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Raqamli tengsizlikda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Raqamli tengsizlikdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Raqamli tengsizlik bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Tarmoqlardan foydalanish",
+      "questions": [
+        {
+          "question": "Tarmoqlardan foydalanishning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlardan foydalanishda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlardan foydalanishda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlardan foydalanishdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlardan foydalanish bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Ekspert tizimlar",
+      "questions": [
+        {
+          "question": "Ekspert tizimlarning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ekspert tizimlarda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ekspert tizimlarda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ekspert tizimlardan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ekspert tizimlar bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar",
+      "questions": [
+        {
+          "question": "Elektron jadvallarning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron jadvallarda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron jadvallarda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron jadvallardan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Elektron jadvallar bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi",
+      "questions": [
+        {
+          "question": "Ma’lumotlar bazasining asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar bazasida samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar bazasida xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar bazasidan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Ma’lumotlar bazasi bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Tovush va video tahrirlash",
+      "questions": [
+        {
+          "question": "Tovush va video tahrirlashning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tovush va video tahrirlashda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tovush va video tahrirlashda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tovush va video tahrirlashdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tovush va video tahrirlash bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Yangi texnologiyalar",
+      "questions": [
+        {
+          "question": "Yangi texnologiyalarning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Yangi texnologiyalarda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Yangi texnologiyalarda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Yangi texnologiyalardan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Yangi texnologiyalar bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "ITning jamiyatga ta’siri",
+      "questions": [
+        {
+          "question": "ITning jamiyatga ta’sirining asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "ITning jamiyatga ta’sirida samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "ITning jamiyatga ta’sirida xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "ITning jamiyatga ta’siridan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "ITning jamiyatga ta’siri bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Tarmoqlar",
+      "questions": [
+        {
+          "question": "Tarmoqlarning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlarda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlarda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlardan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tarmoqlar bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Loyiha boshqaruvi",
+      "questions": [
+        {
+          "question": "Loyiha boshqaruvining asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyiha boshqaruvida samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyiha boshqaruvida xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyiha boshqaruvidan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loyiha boshqaruvi bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Tizim sikli",
+      "questions": [
+        {
+          "question": "Tizim siklining asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tizim siklida samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tizim siklida xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tizim siklidan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Tizim sikli bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Grafik yaratish",
+      "questions": [
+        {
+          "question": "Grafik yaratishning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik yaratishda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik yaratishda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik yaratishdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Grafik yaratish bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Animatsiya",
+      "questions": [
+        {
+          "question": "Animatsiyaning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Animatsiyada samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Animatsiyada xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Animatsiyadan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Animatsiya bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Xatlarni birlashtirish",
+      "questions": [
+        {
+          "question": "Xatlarni birlashtirishning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatlarni birlashtirishda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatlarni birlashtirishda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatlarni birlashtirishdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Xatlarni birlashtirish bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Veb uchun dasturlash",
+      "questions": [
+        {
+          "question": "Veb uchun dasturlashning asosiy maqsadi nima?",
+          "options": {
+            "A": "Jarayonni optimallashtirish",
+            "B": "Faqat saqlash",
+            "C": "O‘yin yaratish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb uchun dasturlashda samaradorlik nimaga bog‘liq?",
+          "options": {
+            "A": "To‘g‘ri foydalanish",
+            "B": "Tasodif",
+            "C": "Faqat tezlik",
+            "D": "E’tibor bermaslik"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb uchun dasturlashda xatolik yuz bersa nima qilinadi?",
+          "options": {
+            "A": "Tahlil qilinadi",
+            "B": "Yopiladi",
+            "C": "O‘chiriladi",
+            "D": "E’tibor berilmaydi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb uchun dasturlashdan foydalanish nimani beradi?",
+          "options": {
+            "A": "Qulaylik va samaradorlik",
+            "B": "Muammo",
+            "C": "Faqat vaqt yo‘qotish",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Veb uchun dasturlash bilan ishlash uchun nima zarur?",
+          "options": {
+            "A": "Bilim va tajriba",
+            "B": "Tasodif",
+            "C": "Faqat texnika",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}

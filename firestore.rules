@@ -1,0 +1,151 @@
+rules_version = '2';
+// O'qituvchi: assignment.teacherId; o'quvchi: submission hujjat id == uid
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function groupSelfJoinListsOk(oldData, newData) {
+      let oldList = oldData.keys().hasAll(['memberIds']) ? oldData.memberIds : [];
+      let newList = newData.memberIds;
+      return newList is list
+        && oldList is list
+        && newList.hasAll(oldList)
+        && newList.size() == oldList.size() + 1
+        && request.auth.uid in newList
+        && !(request.auth.uid in oldList);
+    }
+
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    match /usernames/{uname} {
+      allow read, write: if request.auth != null;
+    }
+
+    /// Topshiriq kodi -> yo'l (indeks; collectionGroup talab qilmaydi).
+    match /assignmentCodes/{code} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.teacherId == request.auth.uid;
+      allow update, delete: if request.auth != null
+        && resource.data.teacherId == request.auth.uid;
+    }
+
+    /// O'qituvchi guruhlari: a'zolar o'qiydi; a'zo qo'shish — o'qituvchi yoki o'zi (faqat memberIds).
+    match /groups/{groupId} {
+      allow read: if request.auth != null && (
+        resource.data.teacherId == request.auth.uid ||
+        (resource.data.memberIds is list &&
+          request.auth.uid in resource.data.memberIds)
+      );
+      allow create: if request.auth != null
+        && request.resource.data.teacherId == request.auth.uid;
+      allow update: if request.auth != null && (
+        resource.data.teacherId == request.auth.uid ||
+        (
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['memberIds'])
+          && groupSelfJoinListsOk(resource.data, request.resource.data)
+        )
+      );
+      allow delete: if request.auth != null
+        && resource.data.teacherId == request.auth.uid;
+    }
+
+    /// Guruhga kirish kodi (hujjat ID = kod). Faqat autentifikatsiyalangan o'qish.
+    match /groupCodes/{code} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+        && request.resource.data.teacherId == request.auth.uid;
+      allow update, delete: if request.auth != null
+        && resource.data.teacherId == request.auth.uid;
+    }
+
+    /// O'quvchiga yuborilgan guruh topshiriqlari (o'qituvchi yozadi).
+    match /studentGroupTasks/{studentId}/items/{itemId} {
+      allow read: if request.auth != null && request.auth.uid == studentId;
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasAll([
+          'groupId', 'subjectId', 'classId', 'topicId', 'methodId',
+          'assignmentId', 'title', 'code'
+        ])
+        && exists(/databases/$(database)/documents/groups/$(request.resource.data.groupId))
+        && get(/databases/$(database)/documents/groups/$(request.resource.data.groupId)).data.teacherId == request.auth.uid
+        && studentId in get(/databases/$(database)/documents/groups/$(request.resource.data.groupId)).data.memberIds;
+      allow update: if false;
+      // O'qituvchi: guruhdan; o'quvchi: o'z ro'yxatidan.
+      allow delete: if request.auth != null && (
+        request.auth.uid == studentId
+        || (
+          resource.data.keys().hasAll(['groupId'])
+          && get(/databases/$(database)/documents/groups/$(resource.data.groupId)).data.teacherId == request.auth.uid
+        )
+      );
+    }
+
+    match /subjects/{subjectId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+          && request.resource.data.teacherId == request.auth.uid;
+      allow update, delete: if request.auth != null
+          && resource.data.teacherId == request.auth.uid;
+
+      match /classes/{classId} {
+        allow read: if request.auth != null;
+        allow write: if request.auth != null;
+
+        match /topics/{topicId} {
+          allow read: if request.auth != null;
+          allow write: if request.auth != null;
+
+          match /methods/{methodId} {
+            allow read: if request.auth != null;
+            allow write: if request.auth != null;
+
+            match /assignments/{assignmentId} {
+              allow read: if request.auth != null;
+              allow create: if request.auth != null
+                  && request.resource.data.teacherId == request.auth.uid;
+              allow update, delete: if request.auth != null
+                  && resource.data.teacherId == request.auth.uid;
+
+              match /submissions/{studentId} {
+                allow read: if request.auth != null;
+                allow create: if request.auth != null
+                    && request.auth.uid == studentId;
+                allow update: if request.auth != null && (
+                  request.auth.uid == studentId ||
+                  get(/databases/$(database)/documents/subjects/$(subjectId)/classes/$(classId)/topics/$(topicId)/methods/$(methodId)/assignments/$(assignmentId)).data.teacherId == request.auth.uid
+                );
+                allow delete: if request.auth != null && request.auth.uid == studentId;
+              }
+
+              /// Aqliy hujum: doskadagi fikrlar; o‘qituvchi moderatsiya va baho.
+              match /ideaFeed/{ideaId} {
+                function assignmentData() {
+                  return get(
+                    /databases/$(database)/documents/subjects/$(subjectId)/classes/$(classId)/topics/$(topicId)/methods/$(methodId)/assignments/$(assignmentId)
+                  ).data;
+                }
+                allow read: if request.auth != null;
+                allow create: if request.auth != null
+                    && request.resource.data.keys().hasAll([
+                      'text', 'studentId', 'submittedAt',
+                    ])
+                    && request.resource.data.studentId == request.auth.uid;
+                allow update: if request.auth != null && (
+                    assignmentData().teacherId == request.auth.uid
+                    || request.resource.data.diff(resource.data)
+                        .affectedKeys()
+                        .hasOnly(['likeUserIds', 'likeCount'])
+                );
+                allow delete: if request.auth != null
+                    && assignmentData().teacherId == request.auth.uid;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

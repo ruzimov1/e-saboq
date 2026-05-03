@@ -1,0 +1,98 @@
+name: edu_interactive
+description: "e-Saboq — interaktiv ta'lim: quiz, so'rovnoma, boshvog'och va boshqalar."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State management
+  flutter_bloc: ^8.1.5
+  equatable: ^2.0.5
+
+  # Navigation
+  go_router: ^13.0.0
+
+  # HTTP
+  dio: ^5.4.0
+
+  # Firebase
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.0
+  cloud_firestore: ^4.15.0
+  firebase_storage: ^11.6.0
+  firebase_analytics: ^10.10.7
+  firebase_crashlytics: ^3.5.7
+  connectivity_plus: ^6.1.4
+
+  # Model generation
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  # UI
+  flutter_animate: ^4.5.0
+  auto_size_text: ^3.0.0
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.10+1
+
+  # Utilities
+  uuid: ^4.3.3
+  intl: ^0.20.2
+  shared_preferences: ^2.2.3
+  flutter_dotenv: ^5.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.8
+  freezed: ^2.4.7
+  json_serializable: ^6.7.1
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  web:
+    generate: true
+  image_path: assets/images/e_saboq_logo.png
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: assets/images/e_saboq_logo.png
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - icons/
+    - assets/images/
+    - assets/fonts/
+    - fayllar/
+    - assets/fayllar/
+    # Word/JSON: `CurriculumWord*` (quiz, T-sxema/baliq skelet, topshiriq sarlavhalari)
+    - fayllar/informatika_fishbone_klaster_sxema_presets.json
+    - fayllar/informatika_quiz_presets.json
+    - fayllar/informatika_method_assignments.json
+    # Aqliy-hujum: barcha sinf fayllari (mobil/reliz yig‘imlarida aniqroq)
+    - fayllar/aqliy-hujum/
+    - fayllar/aqliy-hujum/5_sinf_brainstorming.json
+    - fayllar/aqliy-hujum/6_sinf_brainstorming.json
+    - fayllar/aqliy-hujum/7_sinf_brainstorming.json
+    - fayllar/aqliy-hujum/8_sinf_brainstorming.json
+    - fayllar/aqliy-hujum/9_sinf_brainstorming_full.json
+    - fayllar/aqliy-hujum/10_11_sinf_brainstorming.json
+    # Klaster, T-sxema, test, case: pastki papkalar (faqat `fayllar/` yetarli emas)
+    - fayllar/claster/
+    - fayllar/t-sxema/
+    - fayllar/quizz/
+    - fayllar/case-study/
+    - .env

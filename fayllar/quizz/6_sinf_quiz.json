@@ -1,0 +1,446 @@
+{
+  "grade": "6",
+  "method": "quiz",
+  "topics": [
+    {
+      "topic": "Matnli hujjatlar bilan ishlash",
+      "questions": [
+        {
+          "question": "Ctrl + F nima uchun ishlatiladi?",
+          "options": {
+            "A": "Saqlash",
+            "B": "Qidirish",
+            "C": "O‘chirish",
+            "D": "Chop etish"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Ctrl + H nima qiladi?",
+          "options": {
+            "A": "Almashtirish",
+            "B": "Saqlash",
+            "C": "Ko‘chirish",
+            "D": "Yopish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Matnni markazga joylash qaysi amal?",
+          "options": {
+            "A": "Align left",
+            "B": "Align right",
+            "C": "Center",
+            "D": "Justify"
+          },
+          "correct": "C"
+        },
+        {
+          "question": "Ctrl + P nima qiladi?",
+          "options": {
+            "A": "Saqlaydi",
+            "B": "Chop etadi",
+            "C": "O‘chiradi",
+            "D": "Qidiradi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Undo bu nima?",
+          "options": {
+            "A": "Bekor qilish",
+            "B": "Saqlash",
+            "C": "Yopish",
+            "D": "Chop etish"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Grafika bilan ishlash",
+      "questions": [
+        {
+          "question": "Resize nima?",
+          "options": {
+            "A": "Kesish",
+            "B": "O‘lchamni o‘zgartirish",
+            "C": "Saqlash",
+            "D": "Yopish"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "PNG formati nimasi bilan mashhur?",
+          "options": {
+            "A": "Sifatsiz",
+            "B": "Fonli",
+            "C": "Shaffoflik",
+            "D": "Kichik hajm"
+          },
+          "correct": "C"
+        },
+        {
+          "question": "Brush nima?",
+          "options": {
+            "A": "O‘chirish",
+            "B": "Chizish",
+            "C": "Saqlash",
+            "D": "Kesish"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Rasmni kesish qanday ataladi?",
+          "options": {
+            "A": "Resize",
+            "B": "Crop",
+            "C": "Move",
+            "D": "Save"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Resolution nima?",
+          "options": {
+            "A": "Rang",
+            "B": "Sifat",
+            "C": "O‘lcham",
+            "D": "Fayl"
+          },
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "topic": "Elektron jadvallar bilan ishlash",
+      "questions": [
+        {
+          "question": "Excelda katak nima?",
+          "options": {
+            "A": "Rasm",
+            "B": "Cell",
+            "C": "File",
+            "D": "Sheet"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "SUM funksiyasi nima qiladi?",
+          "options": {
+            "A": "Ko‘paytiradi",
+            "B": "Qo‘shadi",
+            "C": "Bo‘ladi",
+            "D": "Ayiradi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Formula qayerda yoziladi?",
+          "options": {
+            "A": "Cell",
+            "B": "File",
+            "C": "Menu",
+            "D": "Chart"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Diagramma nima beradi?",
+          "options": {
+            "A": "O‘yin",
+            "B": "Vizual ko‘rinish",
+            "C": "Kod",
+            "D": "Rasm"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "= belgisi nimani bildiradi?",
+          "options": {
+            "A": "Matn",
+            "B": "Formula",
+            "C": "Rasm",
+            "D": "Fayl"
+          },
+          "correct": "B"
+        }
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi bilan ishlash",
+      "questions": [
+        {
+          "question": "Database nima?",
+          "options": {
+            "A": "O‘yin",
+            "B": "Ma’lumotlar to‘plami",
+            "C": "Rasm",
+            "D": "Video"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Record nima?",
+          "options": {
+            "A": "Ustun",
+            "B": "Yozuv",
+            "C": "Jadval",
+            "D": "Fayl"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Field nima?",
+          "options": {
+            "A": "Qator",
+            "B": "Ustun",
+            "C": "Rasm",
+            "D": "Kod"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Qidiruv nima qiladi?",
+          "options": {
+            "A": "Saqlaydi",
+            "B": "Topadi",
+            "C": "O‘chiradi",
+            "D": "Chop etadi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Database afzalligi nima?",
+          "options": {
+            "A": "Tartib",
+            "B": "Rasm",
+            "C": "O‘yin",
+            "D": "Video"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Dasturlashni o‘rganish",
+      "questions": [
+        {
+          "question": "If nima?",
+          "options": {
+            "A": "Shart",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Fayl"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Loop nima qiladi?",
+          "options": {
+            "A": "To‘xtaydi",
+            "B": "Takrorlaydi",
+            "C": "Saqlaydi",
+            "D": "Chop etadi"
+          },
+          "correct": "B"
+        },
+        {
+          "question": "Variable nima?",
+          "options": {
+            "A": "O‘zgaruvchi",
+            "B": "Rasm",
+            "C": "Kod",
+            "D": "File"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Output nima?",
+          "options": {
+            "A": "Natija",
+            "B": "Rasm",
+            "C": "Kod",
+            "D": "Saqlash"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Input nima?",
+          "options": {
+            "A": "Kiritish",
+            "B": "Chiqish",
+            "C": "Saqlash",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Internetda ishlash",
+      "questions": [
+        {
+          "question": "Brauzer nima?",
+          "options": {
+            "A": "Dastur",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "O‘yin"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "URL nima?",
+          "options": {
+            "A": "Manzil",
+            "B": "Rasm",
+            "C": "Video",
+            "D": "Audio"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "HTTPS nimani bildiradi?",
+          "options": {
+            "A": "Xavfsiz",
+            "B": "Sekin",
+            "C": "Tez",
+            "D": "Oddiy"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Download nima?",
+          "options": {
+            "A": "Yuklash",
+            "B": "Saqlash",
+            "C": "Chop etish",
+            "D": "O‘chirish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Upload nima?",
+          "options": {
+            "A": "Yuklash (yuqoriga)",
+            "B": "O‘chirish",
+            "C": "Saqlash",
+            "D": "Qidirish"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Elektron pochta",
+      "questions": [
+        {
+          "question": "Inbox nima?",
+          "options": {
+            "A": "Kelgan xatlar",
+            "B": "Yuborilgan",
+            "C": "Spam",
+            "D": "Trash"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "CC nima?",
+          "options": {
+            "A": "Nusxa",
+            "B": "Spam",
+            "C": "File",
+            "D": "Delete"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "BCC nima?",
+          "options": {
+            "A": "Yashirin nusxa",
+            "B": "Oddiy nusxa",
+            "C": "Spam",
+            "D": "File"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Draft nima?",
+          "options": {
+            "A": "Qoralama",
+            "B": "Spam",
+            "C": "File",
+            "D": "Trash"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Trash nima?",
+          "options": {
+            "A": "O‘chirilgan xatlar",
+            "B": "Inbox",
+            "C": "Send",
+            "D": "File"
+          },
+          "correct": "A"
+        }
+      ]
+    },
+    {
+      "topic": "Multimedia bilan ishlash",
+      "questions": [
+        {
+          "question": "MP3 nima?",
+          "options": {
+            "A": "Audio",
+            "B": "Video",
+            "C": "Rasm",
+            "D": "Kod"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "MP4 nima?",
+          "options": {
+            "A": "Video",
+            "B": "Audio",
+            "C": "Rasm",
+            "D": "File"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Edit nima?",
+          "options": {
+            "A": "Tahrirlash",
+            "B": "Saqlash",
+            "C": "O‘chirish",
+            "D": "Chop etish"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Play nima qiladi?",
+          "options": {
+            "A": "O‘ynatadi",
+            "B": "To‘xtatadi",
+            "C": "Saqlaydi",
+            "D": "Yopadi"
+          },
+          "correct": "A"
+        },
+        {
+          "question": "Pause nima qiladi?",
+          "options": {
+            "A": "To‘xtatadi",
+            "B": "Yoqadi",
+            "C": "Saqlaydi",
+            "D": "O‘chiradi"
+          },
+          "correct": "A"
+        }
+      ]
+    }
+  ]
+}

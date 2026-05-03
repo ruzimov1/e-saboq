@@ -1,0 +1,82 @@
+{
+  "grade": "7",
+  "method": "t_schema",
+  "topics": [
+    {
+      "topic": "Matnli hujjat",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Professional ko‘rinish",
+        "Formatlash oson",
+        "Qidirish tez",
+        "PDF qilish mumkin",
+        "Katta hujjat boshqariladi"
+      ],
+      "right": [
+        "Murakkab sozlash",
+        "Xatolik ehtimoli",
+        "Vaqt talab qiladi",
+        "Kompyuter kerak",
+        "Ba’zan chalkash"
+      ]
+    },
+    {
+      "topic": "Multimedia",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Qiziqarli",
+        "Vizual+audio",
+        "Tushunishni osonlashtiradi",
+        "Interaktivlik",
+        "Ta’limda samarali"
+      ],
+      "right": [
+        "Hajm katta",
+        "Tezlik kerak",
+        "Chalg‘itishi mumkin",
+        "Qurilma talab qiladi",
+        "Murakkab"
+      ]
+    },
+    {
+      "topic": "Elektron jadval",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Hisob-kitob tez",
+        "Formulalar",
+        "Diagrammalar",
+        "Tahlil",
+        "Avtomatlashtirish"
+      ],
+      "right": [
+        "Formulalar qiyin",
+        "Xato ehtimoli",
+        "O‘rganish qiyin",
+        "Ko‘p vaqt",
+        "Murakkab jadval"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tartib",
+        "Tez qidiruv",
+        "Katta ma’lumot",
+        "Xavfsizlik",
+        "Boshqarish"
+      ],
+      "right": [
+        "Murakkab",
+        "Texnik bilim",
+        "Xato ehtimoli",
+        "Sozlash qiyin",
+        "Resurs talab"
+      ]
+    }
+  ]
+}

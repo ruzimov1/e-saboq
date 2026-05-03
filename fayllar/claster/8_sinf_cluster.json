@@ -1,0 +1,55 @@
+{
+  "sinf": 8,
+  "kurs_bosqichi": "On Track Stage 2",
+  "fan": "Informatika va axborot texnologiyalari",
+  "mavzular_klasteri": [
+    {
+      "id": 1,
+      "mavzu": "Maqsadni amalga oshirishda dasturlashdan foydalanish",
+      "markaziy_goya": "Amaliy dasturiy yechimlar va avtomatlashtirish",
+      "kalit_sozlar": [
+        "Murakkab algoritmlar",
+        "Ma'lumotlar tuzilmasi",
+        "Ob'ektga yo'naltirilgan dasturlash",
+        "Dasturiy loyihani rejalashtirish",
+        "Testlash va xatoliklar bilan ishlash"
+      ]
+    },
+    {
+      "id": 2,
+      "mavzu": "Maqsadni amalga oshirish uchun veb-sayt dizaynini yaratish",
+      "markaziy_goya": "Zamonaviy veb-texnologiyalar va UI/UX asoslari",
+      "kalit_sozlar": [
+        "HTML va CSS strukturasi",
+        "Veb-dizayn tamoyillari",
+        "Adaptiv dizayn (Responsive)",
+        "Sayt arxitekturasi",
+        "Navigatsiya va foydalanuvchi tajribasi"
+      ]
+    },
+    {
+      "id": 3,
+      "mavzu": "Kompyuter tarmoqlaridan maqsadli foydalanish",
+      "markaziy_goya": "Global kommunikatsiya va tarmoq xavfsizligi",
+      "kalit_sozlar": [
+        "Tarmoq topologiyalari",
+        "IP-manzillar va protokollar",
+        "Ma'lumotlarni uzatish tezligi",
+        "Xavfsiz ulanish (VPN/Firewall)",
+        "Server va mijoz texnologiyasi"
+      ]
+    },
+    {
+      "id": 4,
+      "mavzu": "Maqsadni amalga oshirish uchun video yoki animatsiya yaratish",
+      "markaziy_goya": "Raqamli media-mahsulot va professional montaj",
+      "kalit_sozlar": [
+        "Kadrlar va ssenariy tahlili",
+        "Video tahrirlash (Post-production)",
+        "Maxsus effektlar va translyatsiya",
+        "Renderlash jarayoni",
+        "Mualliflik huquqi va litsenziyalash"
+      ]
+    }
+  ]
+}

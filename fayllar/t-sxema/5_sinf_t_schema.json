@@ -1,0 +1,120 @@
+{
+  "grade": "5",
+  "method": "t_schema",
+  "topics": [
+    {
+      "topic": "Matnli hujjat",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tez yozish mumkin",
+        "Oson tahrirlash",
+        "Saqlash qulay",
+        "Nusxa olish oson",
+        "Chop etish mumkin"
+      ],
+      "right": [
+        "Elektrga bog‘liq",
+        "Xatoliklar bo‘lishi mumkin",
+        "Fayl yo‘qolishi mumkin",
+        "Kompyuter kerak",
+        "Virus xavfi bor"
+      ]
+    },
+    {
+      "topic": "Tasvir",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ma’lumotni tushunarli qiladi",
+        "Qiziqarli ko‘rinadi",
+        "Eslab qolish oson",
+        "Vizual yordam beradi",
+        "Taqdimotni boyitadi"
+      ],
+      "right": [
+        "Hajmi katta bo‘lishi mumkin",
+        "Sifati pasayishi mumkin",
+        "Joy egallaydi",
+        "Noto‘g‘ri tanlansa chalg‘itadi",
+        "Yuklash sekin bo‘lishi mumkin"
+      ]
+    },
+    {
+      "topic": "Diagramma",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Ma’lumotni aniq ko‘rsatadi",
+        "Tahlil qilish oson",
+        "Vizual ko‘rinish beradi",
+        "Tez tushuniladi",
+        "Taqqoslash imkonini beradi"
+      ],
+      "right": [
+        "Noto‘g‘ri tuzilsa xato tushuniladi",
+        "Ma’lumot noto‘g‘ri bo‘lishi mumkin",
+        "Murakkab bo‘lishi mumkin",
+        "Hamma tushunmasligi mumkin",
+        "Dizayn muhim"
+      ]
+    },
+    {
+      "topic": "Dasturlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Mantiqiy fikrlashni rivojlantiradi",
+        "Muammo yechishni o‘rgatadi",
+        "Dastur yaratish mumkin",
+        "Kelajak kasbi",
+        "Avtomatlashtirish beradi"
+      ],
+      "right": [
+        "Qiyin o‘rganiladi",
+        "Ko‘p vaqt talab qiladi",
+        "Xatoliklar ko‘p bo‘ladi",
+        "Sabr kerak",
+        "Amaliyot talab qiladi"
+      ]
+    },
+    {
+      "topic": "Qidiruv",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tez ma’lumot topish",
+        "Ko‘p manba bor",
+        "Oson foydalanish",
+        "Har qanday savolga javob",
+        "Vaqtni tejaydi"
+      ],
+      "right": [
+        "Soxta ma’lumot bor",
+        "Chalg‘ituvchi saytlar bor",
+        "Internet kerak",
+        "Ortiqcha natijalar chiqadi",
+        "Tanlash qiyin"
+      ]
+    },
+    {
+      "topic": "Elektron pochta",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tez xabar yuborish",
+        "Fayl jo‘natish mumkin",
+        "Qulay aloqa",
+        "Arxivlash mumkin",
+        "Rasmiy aloqa vositasi"
+      ],
+      "right": [
+        "Spam xatlar bor",
+        "Internet kerak",
+        "Xavfsizlik muammosi",
+        "Noto‘g‘ri yuborish mumkin",
+        "Parol unutish mumkin"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "grade": "6",
+  "method": "t_schema",
+  "topics": [
+    {
+      "topic": "Matnli hujjat",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tez tahrirlash",
+        "Qidirish oson",
+        "Formatlash qulay",
+        "Saqlash imkoniyati",
+        "Ulashish oson"
+      ],
+      "right": [
+        "Elektrga bog‘liq",
+        "Xatolik ehtimoli",
+        "Fayl yo‘qolishi",
+        "Virus xavfi",
+        "Kompyuter kerak"
+      ]
+    },
+    {
+      "topic": "Grafika",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Vizual tushuncha",
+        "Qiziqarli",
+        "Eslab qolish oson",
+        "Dizayn imkoniyati",
+        "Taqdimotni boyitadi"
+      ],
+      "right": [
+        "Hajm katta",
+        "Sifat pasayishi",
+        "Ko‘p joy egallaydi",
+        "Murakkab",
+        "Yuklash sekin"
+      ]
+    },
+    {
+      "topic": "Elektron jadval",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Hisob-kitob oson",
+        "Formulalar bor",
+        "Tahlil qilish",
+        "Diagramma yaratish",
+        "Avtomatlashtirish"
+      ],
+      "right": [
+        "Xato formulalar",
+        "Murakkab",
+        "O‘rganish qiyin",
+        "Ko‘p vaqt",
+        "Diqqat talab qiladi"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tartibli saqlash",
+        "Tez qidiruv",
+        "Katta hajm",
+        "Xavfsizlik",
+        "Boshqarish oson"
+      ],
+      "right": [
+        "Murakkab tuzilma",
+        "Xato ehtimoli",
+        "Texnik bilim kerak",
+        "Sozlash qiyin",
+        "Resurs talab qiladi"
+      ]
+    },
+    {
+      "topic": "Dasturlash",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Mantiq rivojlanadi",
+        "Muammo yechish",
+        "Avtomatlashtirish",
+        "Kasb imkoniyati",
+        "Ijodkorlik"
+      ],
+      "right": [
+        "Qiyin",
+        "Ko‘p vaqt",
+        "Xatolar",
+        "Sabr talab qiladi",
+        "Doimiy o‘rganish"
+      ]
+    },
+    {
+      "topic": "Internet",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tez ma’lumot",
+        "Aloqa",
+        "Onlayn xizmatlar",
+        "Ta’lim",
+        "Ko‘p resurs"
+      ],
+      "right": [
+        "Soxta ma’lumot",
+        "Qaramlik",
+        "Xavfsizlik muammo",
+        "Internetga bog‘liq",
+        "Chalg‘itadi"
+      ]
+    },
+    {
+      "topic": "Elektron pochta",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Tez yuborish",
+        "Fayl jo‘natish",
+        "Rasmiy aloqa",
+        "Arxivlash",
+        "Qulay"
+      ],
+      "right": [
+        "Spam",
+        "Xavfsizlik",
+        "Parol muammo",
+        "Internet kerak",
+        "Xato yuborish"
+      ]
+    },
+    {
+      "topic": "Multimedia",
+      "left_title": "Afzalliklari",
+      "right_title": "Kamchiliklari",
+      "left": [
+        "Qiziqarli",
+        "Audio+video",
+        "Tushunarli",
+        "Ta’limda foydali",
+        "Vizual"
+      ],
+      "right": [
+        "Hajm katta",
+        "Tezlik kerak",
+        "Qurilma talab qiladi",
+        "Murakkab",
+        "Chalg‘itadi"
+      ]
+    }
+  ]
+}

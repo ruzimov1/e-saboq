@@ -1,0 +1,54 @@
+{
+  "sinf": 6,
+  "fan": "Informatika va axborot texnologiyalari",
+  "mavzular_klasteri": [
+    {
+      "id": 1,
+      "mavzu": "Matnli hujjatlar bilan ishlash",
+      "markaziy_goya": "Professional hujjatlarni tahrirlash va dizayn",
+      "kalit_sozlar": ["Stillar", "Mundarija yaratish", "Sharhlar", "Hujjat himoyasi", "Andozalar"]
+    },
+    {
+      "id": 2,
+      "mavzu": "Grafika bilan ishlash",
+      "markaziy_goya": "Raqamli tasvirlar san'ati va dizayn texnologiyalari",
+      "kalit_sozlar": ["Vektorli muharrirlar", "Qatlamlar (Layers)", "Logotip yaratish", "Rang modellari", "Eksport"]
+    },
+    {
+      "id": 3,
+      "mavzu": "Elektron jadvallar bilan ishlash",
+      "markaziy_goya": "Avtomatlashtirilgan hisob-kitoblar va ma'lumotlar tartibi",
+      "kalit_sozlar": ["Yacheyka va diapazon", "Formulalar", "Funksiyalar (SUM, AVERAGE)", "Filtrlash", "Saralash"]
+    },
+    {
+      "id": 4,
+      "mavzu": "Ma'lumotlar bazasi bilan ishlash",
+      "markaziy_goya": "Katta hajmdagi axborotlarni tizimlashtirish va saqlash",
+      "kalit_sozlar": ["Yozuv va maydon", "Relatsion bog'liqlik", "So'rovlar (Queries)", "Formalar", "Hisobotlar"]
+    },
+    {
+      "id": 5,
+      "mavzu": "Dasturlashni o'rganish",
+      "markaziy_goya": "Mantiqiy yechimlar yaratish va dasturiy ta'minot",
+      "kalit_sozlar": ["Funksiyalar", "Massivlar", "Interfeys dizayni", "Xatolarni tuzatish (Debugging)", "Ssenariylar"]
+    },
+    {
+      "id": 6,
+      "mavzu": "Internetda ishlashni o'rganish",
+      "markaziy_goya": "Global tarmoq imkoniyatlari va bulutli texnologiyalar",
+      "kalit_sozlar": ["Bulutli saqlash", "Onlayn hamkorlik", "Kiberxavfsizlik", "Ijtimoiy tarmoq etikasi", "URL va Domain"]
+    },
+    {
+      "id": 7,
+      "mavzu": "Elektron pochtadan foydalanishni o'rganish",
+      "markaziy_goya": "Raqamli korrespondensiya va xavfsiz muloqot",
+      "kalit_sozlar": ["Arxivlash", "Avto-javob", "Imzo", "Biriktirilgan fayllar", "Filtrlar"]
+    },
+    {
+      "id": 8,
+      "mavzu": "Multimedia bilan ishlash",
+      "markaziy_goya": "Audio va video kontentlarni integratsiya qilish",
+      "kalit_sozlar": ["Video montaj", "Audio tahrir", "Animatsiya", "Prezentatsiya dizayni", "Multimediya formatlari"]
+    }
+  ]
+}

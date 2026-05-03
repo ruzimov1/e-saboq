@@ -1,0 +1,67 @@
+{
+  "grade": "9",
+  "method": "brainstorming",
+  "subject": "informatika",
+  "topics": [
+    {
+      "topic": "Algoritmlar",
+      "questions": [
+        "Algoritm va dastur o‘rtasida qanday farq bor?",
+        "Algoritmni bajarilish bosqichlari (bosqichma-bosqich) qanday ifodalash mumkin?",
+        "Takroriy qadamlar (sikl) algoritmni qanday soddalashtiradi?",
+        "Shartli tarmoqlanish algoritmda qachon ishlatiladi?",
+        "Algoritmni tekshirish va uni optimallashtirish nima demakdir?"
+      ]
+    },
+    {
+      "topic": "Dasturlash asoslari",
+      "questions": [
+        "Dastur yozish muhitida fayl, matn muharriri va interpretator qanday o‘rganiladi?",
+        "O‘zgaruvchi, ma’lumot turi va qiymat o‘zaro qanday bog‘langan?",
+        "Kod formatlash va fikr-mulohazalar (comment) dastur ishonchliligiga qanday yordam beradi?",
+        "Xatolik xabari chiqganda, muammoni topishning birinchi qadamlari qanday bo‘ladi?",
+        "Oddiy dastur strukturasida kirish, qayta ishlash, chiqarish oqimi qanday tushuniladi?"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar tuzilmasi",
+      "questions": [
+        "Massiv va jadval (matn orqali ifodalangan) qachon foydali bo‘ladi?",
+        "Elementlarni qidirish va almashtirish algoritmlarida nimalarga e’tibor qilinadi?",
+        "Bir o‘lchamli va ko‘p o‘lchamli ma’lumotni tavsiflashda qanday farq bor?",
+        "Ma’lumotni qisqacha tartibga solish (masalan, sonlar bo‘yicha) fikrini tushiting.",
+        "Amalda qaysi holatlarda ro‘yxat o‘rniga jadval ishlatiladi?"
+      ]
+    },
+    {
+      "topic": "Ma’lumotlar bazasi",
+      "questions": [
+        "Jadval, ustun, qator, kalit tushunchalarini o‘qituvchiga tushuntirib bering: maqsad nima?",
+        "Ma’lumotlar takrorlanishidan qanday saqlaniladi?",
+        "Oddiy so‘rov (qidiruv) va filtrlash foydalanuvchiga nima beradi?",
+        "Ma’lumotlar ro‘yxatini fayl bilan solishtirganda bazaning afzalliklari nimalar?",
+        "Zaxira nusxa (backup) va ruxsatlar nima uchun muhim?"
+      ]
+    },
+    {
+      "topic": "Tarmoq va xavfsizlik",
+      "questions": [
+        "Lokal tarmoq va global Internet o‘rtasida asosiy farq nima?",
+        "Parol, autentifikatsiya va foydalanuvchi hisobi xavfsizlikda qanday rol o‘ynaydi?",
+        "Phishing, spam va zararli dastur haqida qisqacha g‘oyalar: qanday ehtiyot bo‘linadi?",
+        "HTTPS va oddiy HTTP farqi: nima uchun muhim?",
+        "Shaxsiy ma’lumotni ijtimoiy tarmoqlarda ulashishda qanday chegaralar tavsiya etiladi?"
+      ]
+    },
+    {
+      "topic": "Loyiha ishi",
+      "questions": [
+        "Loyiha maqsadini, auditoriya (kim uchun) va muddatini qanday aniqlashtirish mumkin?",
+        "Bajarilgan ishning bosqichlari: reja, bajarish, test, taqdimot — qisqacha tavsif bering.",
+        "Loyihada rollar: kim nima qiladi (guruh bo‘yicha) — misollar.",
+        "Natijani baholash mezonlari (kriteriyalar) qanday yaratiladi?",
+        "Topshilangan materialni saqlash va muhitlar (fayl, bulut) tanlash: afzallik va kamchiliklar"
+      ]
+    }
+  ]
+}
