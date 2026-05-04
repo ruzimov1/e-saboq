@@ -2,28 +2,23 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/method_type_artwork.dart';
 
-/// Metodlar ro‘yxati yoki tanlash dialogi uchun kartochka (hero + pastki panel).
+/// Metodlar ro‘yxati: logo (`BoxFit.contain`) + pastda metod nomi va ixtiyoriy ikonlar.
 class TeacherMethodGridCard extends StatefulWidget {
   const TeacherMethodGridCard({
     super.key,
-    required this.title,
     required this.methodType,
+    required this.methodName,
     required this.onOpen,
     this.actions,
-    this.contextHint,
-    this.isPreset,
-    this.showBlurb = true,
     this.showBoshlash = true,
   });
 
-  final String title;
   final String methodType;
+  /// Pastki qatorda ko‘rinadigan metod nomi (masalan, «Aqliy hujum»).
+  final String methodName;
   final VoidCallback onOpen;
   final List<Widget>? actions;
-  /// Masalan, "7-sinf · Mavzu"
-  final String? contextHint;
-  final bool? isPreset;
-  final bool showBlurb;
+  /// Pastki panel (dialogda odatda false).
   final bool showBoshlash;
 
   static const double _radius = 18;
@@ -35,217 +30,136 @@ class TeacherMethodGridCard extends StatefulWidget {
 class _TeacherMethodGridCardState extends State<TeacherMethodGridCard> {
   bool _hover = false;
 
-  /// Sarlavhada texnik id va "Klaster:" prefikslarini obertmasdan tozalaydi.
-  static String _heroTitle(String raw, String methodType) {
-    var t = raw.trim();
-    t = t.replaceFirst(RegExp(r'^klaster\s*:', caseSensitive: false), '').trim();
-    t = t.replaceAll(RegExp(r'\bpreset_[a-z0-9_]+\b', caseSensitive: false), '').trim();
-    t = t.replaceAll(RegExp(r'\s+'), ' ');
-    if (t.isEmpty) {
-      return MethodTypeVisual.typeLabelUz(methodType);
-    }
-    if (RegExp(r'^[_a-z0-9]+$').hasMatch(t) && t.contains('_')) {
-      return MethodTypeVisual.typeLabelUz(methodType);
-    }
-    return t;
-  }
+  bool get _hasFooter =>
+      widget.showBoshlash ||
+      (widget.actions != null && widget.actions!.isNotEmpty);
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
     final brightness = theme.brightness;
-    final heroTitle = _heroTitle(widget.title, widget.methodType);
-    final blurb = MethodTypeVisual.blurbUz(widget.methodType);
+    final hasActions =
+        widget.actions != null && widget.actions!.isNotEmpty;
+
+    final hero = ColoredBox(
+      color: cs.surfaceContainerLow,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: widget.onOpen,
+          child: Padding(
+            padding: const EdgeInsets.all(3),
+            child: Center(
+              child: _MethodHeroBackdrop(
+                methodType: widget.methodType,
+                brightness: brightness,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
 
     return MouseRegion(
       onEnter: (_) => setState(() => _hover = true),
       onExit: (_) => setState(() => _hover = false),
       cursor: SystemMouseCursors.click,
-      child: Card(
-        margin: EdgeInsets.zero,
-        clipBehavior: Clip.antiAlias,
-        color: cs.surfaceContainerLowest,
-        elevation: _hover ? 3 : 1,
-        shadowColor: Colors.black.withValues(alpha: 0.14),
-        surfaceTintColor: cs.surfaceTint,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(TeacherMethodGridCard._radius),
-          side: BorderSide(
-            color: _hover
-                ? cs.primary.withValues(alpha: 0.4)
-                : cs.outlineVariant.withValues(alpha: 0.55),
-            width: _hover ? 1.5 : 1,
+      child: AnimatedSlide(
+        duration: const Duration(milliseconds: 220),
+        curve: Curves.easeOutCubic,
+        offset: _hover ? const Offset(0, -0.04) : Offset.zero,
+        child: Card(
+          margin: EdgeInsets.zero,
+          clipBehavior: Clip.antiAlias,
+          color: cs.surfaceContainerLowest,
+          elevation: _hover ? 8 : 1,
+          shadowColor: Colors.black.withValues(alpha: _hover ? 0.22 : 0.14),
+          surfaceTintColor: cs.surfaceTint,
+          shape: RoundedRectangleBorder(
+            borderRadius:
+                BorderRadius.circular(TeacherMethodGridCard._radius),
+            side: BorderSide(
+              color: _hover
+                  ? cs.primary.withValues(alpha: 0.45)
+                  : cs.outlineVariant.withValues(alpha: 0.55),
+              width: _hover ? 1.5 : 1,
+            ),
           ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              flex: 10,
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  onTap: widget.onOpen,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(child: hero),
+              if (_hasFooter)
+                Container(
+                  decoration: BoxDecoration(
+                    color: cs.surface,
+                    border: Border(
+                      top: BorderSide(
+                        color: cs.outlineVariant.withValues(alpha: 0.35),
+                      ),
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                    vertical: 4,
+                  ),
                   child: Stack(
-                    fit: StackFit.expand,
+                    alignment: Alignment.center,
                     children: [
-                      Positioned.fill(
-                        child: _MethodHeroBackdrop(
-                          methodType: widget.methodType,
-                          brightness: brightness,
-                        ),
-                      ),
-                      Positioned.fill(
-                        child: Container(
-                          color: Colors.black.withValues(alpha: 0.5),
-                        ),
-                      ),
-                      Positioned(
-                        left: 16,
-                        right: 16,
-                        top: 16,
-                        bottom: 12,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              heroTitle,
-                              maxLines: 2,
+                      if (widget.showBoshlash)
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: hasActions ? 36 : 4,
+                          ),
+                          child: TextButton(
+                            onPressed: widget.onOpen,
+                            style: TextButton.styleFrom(
+                              foregroundColor: cs.primary,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 6,
+                                vertical: 2,
+                              ),
+                              minimumSize: Size.zero,
+                              tapTargetSize:
+                                  MaterialTapTargetSize.shrinkWrap,
+                            ),
+                            child: Text(
+                              widget.methodName,
+                              maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 18,
-                                height: 1.2,
-                                color: Colors.white,
-                                letterSpacing: -0.2,
+                              textAlign: TextAlign.center,
+                              style: theme.textTheme.titleSmall?.copyWith(
+                                color: cs.primary,
+                                fontWeight: FontWeight.w700,
+                                fontSize: (theme.textTheme.titleSmall
+                                            ?.fontSize ??
+                                        14) -
+                                    0.5,
                               ),
                             ),
-                            if (widget.contextHint != null &&
-                                widget.contextHint!.trim().isNotEmpty) ...[
-                              const SizedBox(height: 6),
-                              Text(
-                                widget.contextHint!,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  height: 1.3,
-                                  color: Colors.white.withValues(alpha: 0.9),
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ],
-                            if (widget.showBlurb) ...[
-                              const SizedBox(height: 8),
-                              Text(
-                                blurb,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  height: 1.35,
-                                  color: Colors.white.withValues(alpha: 0.88),
-                                ),
-                              ),
-                            ],
-                          ],
+                          ),
                         ),
-                      ),
+                      if (hasActions)
+                        Positioned(
+                          right: 0,
+                          top: 0,
+                          bottom: 0,
+                          child: Center(
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: widget.actions!,
+                              ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
-              ),
-            ),
-            Expanded(
-              flex: 12,
-              child: Container(
-                color: Color.alphaBlend(
-                  cs.primaryContainer.withValues(alpha: 0.22),
-                  cs.surface,
-                ),
-                child: Column(
-                  children: [
-                    const Spacer(),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: cs.surface,
-                        border: Border(
-                          top: BorderSide(
-                            color: cs.outlineVariant.withValues(alpha: 0.35),
-                          ),
-                        ),
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 10,
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          if (widget.isPreset == true)
-                            Padding(
-                              padding: const EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Tayyor shablon',
-                                style: theme.textTheme.labelSmall?.copyWith(
-                                  color: cs.primary,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            )
-                          else if (widget.isPreset == false)
-                            Padding(
-                              padding: const EdgeInsets.only(left: 4),
-                              child: Text(
-                                'Qo‘shimcha',
-                                style: theme.textTheme.labelSmall?.copyWith(
-                                  color: cs.onSurfaceVariant,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                          if (widget.actions != null &&
-                              widget.actions!.isNotEmpty)
-                            Expanded(
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: SingleChildScrollView(
-                                  scrollDirection: Axis.horizontal,
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: widget.actions!,
-                                  ),
-                                ),
-                              ),
-                            )
-                          else
-                            const Spacer(),
-                          if (widget.showBoshlash)
-                            FilledButton(
-                              onPressed: widget.onOpen,
-                              style: FilledButton.styleFrom(
-                                minimumSize: const Size(48, 48),
-                                padding: EdgeInsets.zero,
-                                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                shape: const CircleBorder(),
-                                backgroundColor: cs.primary,
-                                foregroundColor: cs.onPrimary,
-                                elevation: _hover ? 3 : 1,
-                              ),
-                              child: const Icon(
-                                Icons.arrow_forward_rounded,
-                                size: 22,
-                              ),
-                            ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -267,10 +181,8 @@ class _MethodHeroBackdrop extends StatelessWidget {
     if (path != null) {
       return Image.asset(
         path,
-        fit: BoxFit.cover,
+        fit: BoxFit.contain,
         alignment: Alignment.center,
-        width: double.infinity,
-        height: double.infinity,
         gaplessPlayback: true,
         errorBuilder: (context, error, stackTrace) =>
             _MethodHeroFallback(methodType: methodType, brightness: brightness),
@@ -294,8 +206,7 @@ class _MethodHeroFallback extends StatelessWidget {
     final c = MethodTypeVisual.iconCircleColor(methodType, brightness);
     final deep = Color.alphaBlend(c, const Color(0xFF4A148C));
     return Container(
-      width: double.infinity,
-      height: double.infinity,
+      constraints: const BoxConstraints.expand(),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
@@ -304,12 +215,12 @@ class _MethodHeroFallback extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Opacity(
-          opacity: 0.45,
+        child: Padding(
+          padding: const EdgeInsets.all(8),
           child: MethodTypeArtworkImage(
             methodType: methodType,
             fit: BoxFit.contain,
-            iconSize: 72,
+            iconSize: 56,
           ),
         ),
       ),

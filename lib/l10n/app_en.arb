@@ -177,6 +177,9 @@
   "@studentQuizCorrectOption": {
     "placeholders": { "answer": {"type": "String"} }
   },
+  "studentQuizPrevious": "Previous",
+  "studentQuizNext": "Next",
+  "studentQuizTimeElapsed": "Done",
   "studentMethodCaseScenario": "Situation (case study)",
   "studentMethodBrainstormPrompt": "Prompt",
   "studentMethodBrainstormGuide": "Guide",

@@ -740,6 +740,24 @@ abstract class AppLocalizations {
   /// **'To\'g\'ri variant: {answer}'**
   String studentQuizCorrectOption(String answer);
 
+  /// No description provided for @studentQuizPrevious.
+  ///
+  /// In uz, this message translates to:
+  /// **'Oldingi'**
+  String get studentQuizPrevious;
+
+  /// No description provided for @studentQuizNext.
+  ///
+  /// In uz, this message translates to:
+  /// **'Keyingi'**
+  String get studentQuizNext;
+
+  /// No description provided for @studentQuizTimeElapsed.
+  ///
+  /// In uz, this message translates to:
+  /// **'Tugadi'**
+  String get studentQuizTimeElapsed;
+
   /// No description provided for @studentMethodCaseScenario.
   ///
   /// In uz, this message translates to:

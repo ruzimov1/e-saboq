@@ -101,6 +101,7 @@ class EduInteractiveApp extends StatelessWidget {
         theme: AppTheme.light(),
         darkTheme: AppTheme.dark(),
         themeMode: ThemeMode.system,
+        locale: const Locale('uz'),
         supportedLocales: AppLocalizations.supportedLocales,
         localeListResolutionCallback: (locales, supported) {
           for (final locale in locales ?? const <Locale>[]) {

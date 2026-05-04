@@ -8,11 +8,11 @@ abstract final class MethodTypeArtwork {
   static String? assetPathForFirestoreType(String type) {
     switch (type) {
       case 'quiz':
-        return 'icons/Quiz.png';
+        return 'icons/quiz.png';
       case 'brainstorm':
-        return 'icons/Aqliy hujum.png';
+        return 'icons/aqliy-hujum.png';
       case 'case':
-        return 'icons/Muammoli vaziyat(case-study).png';
+        return 'icons/case-study.png';
       case 'group':
         return 'icons/klaster.png';
       case 'fishbone':

@@ -168,14 +168,14 @@ class _MethodsScreenState extends State<MethodsScreen> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               crossAxisCount: cross,
-              mainAxisSpacing: 12,
-              crossAxisSpacing: 12,
-              childAspectRatio: cross == 1 ? 0.88 : 0.78,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              childAspectRatio: cross == 1 ? 1.34 : 1.22,
               children: [
                 for (final mt in _addableMethodTypes)
                   TeacherMethodGridCard(
-                    title: _methodTitle(mt),
                     methodType: mt.firestoreValue,
+                    methodName: _methodTitle(mt),
                     onOpen: () => Navigator.pop(ctx, mt.firestoreValue),
                     showBoshlash: false,
                   ),
@@ -229,17 +229,16 @@ class _MethodsScreenState extends State<MethodsScreen> {
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: math.min(3, _methodGridCrossAxisCount(mq.width)),
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 0.75,
+                  mainAxisSpacing: 8,
+                  crossAxisSpacing: 8,
+                  childAspectRatio: 1.22,
                 ),
                 itemCount: methods.length,
                 itemBuilder: (context, i) {
                   final m = methods[i];
                   return TeacherMethodGridCard(
-                    title: _methodDisplayTitle(m),
                     methodType: m.type,
-                    isPreset: CurriculumPresets.isPresetMethodId(m.id),
+                    methodName: _methodCardTitle(m),
                     onOpen: () => Navigator.pop(ctx, m),
                     showBoshlash: false,
                   );
@@ -293,6 +292,10 @@ class _MethodsScreenState extends State<MethodsScreen> {
     return _methodTitleFromType(m.type);
   }
 
+  /// Kartochkada faqat metod nomi (configdagi «Klaster: mavzu» kabi uzun sarlavha emas).
+  static String _methodCardTitle(MethodModel m) =>
+      _methodTitleFromType(m.type);
+
   String _topicLabelForNav() {
     for (final t
         in CurriculumCatalog.topicsFor(widget.subjectId, widget.classId)) {
@@ -303,12 +306,25 @@ class _MethodsScreenState extends State<MethodsScreen> {
     return widget.topicId;
   }
 
+  /// Mavzu nomi ba'zan `6-sinf: Sarlavha` — nav qatorida sinf allaqachon boshda beriladi.
+  String _topicForNavStripGrade(String gradeLabel, String raw) {
+    final g = gradeLabel.trim();
+    if (g.isEmpty) return raw.trim();
+    var t = raw.trim();
+    final prefix = '$g:';
+    while (t.startsWith(prefix)) {
+      t = t.substring(prefix.length).trimLeft();
+    }
+    return t.isEmpty ? raw.trim() : t;
+  }
+
   String _navContextLine() {
     final g = CurriculumCatalog.gradeContextLabel(widget.classId);
     final fan =
         CurriculumCatalog.catalogSubjectName(widget.subjectId) ??
         widget.subjectId;
-    return '$g · $fan · ${_topicLabelForNav()}';
+    final topic = _topicForNavStripGrade(g, _topicLabelForNav());
+    return '$g · $fan · $topic';
   }
 
   @override
@@ -416,7 +432,7 @@ class _MethodsScreenState extends State<MethodsScreen> {
                               return GridView.builder(
                                 padding: const EdgeInsets.fromLTRB(
                                   20,
-                                  0,
+                                  8,
                                   20,
                                   96,
                                 ),
@@ -424,9 +440,9 @@ class _MethodsScreenState extends State<MethodsScreen> {
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: cross,
-                                  mainAxisSpacing: 12,
-                                  crossAxisSpacing: 12,
-                                  childAspectRatio: 0.76,
+                                  mainAxisSpacing: 8,
+                                  crossAxisSpacing: 8,
+                                  childAspectRatio: 1.34,
                                 ),
                                 itemCount: filtered.length,
                                 itemBuilder: (context, i) {
@@ -434,29 +450,10 @@ class _MethodsScreenState extends State<MethodsScreen> {
                                   final preset = CurriculumPresets.isPresetMethodId(
                                     m.id,
                                   );
-                                  final isClusterPreset =
-                                      preset && m.type == 'group';
 
                                   List<Widget>? actions;
-                                  if (isClusterPreset) {
-                                    actions = [
-                                      IconButton(
-                                        tooltip: 'Topshiriqlar',
-                                        icon: Icon(
-                                          Icons.list_alt,
-                                          color: Colors.grey.shade600,
-                                          size: 22,
-                                        ),
-                                        onPressed: () => context.push(
-                                          AppRoutes.teacherMethodAssignmentsList(
-                                            widget.classId,
-                                            widget.subjectId,
-                                            widget.topicId,
-                                            m.id,
-                                          ),
-                                        ),
-                                      ),
-                                    ];
+                                  if (preset && m.type == 'group') {
+                                    actions = null;
                                   } else if (!preset) {
                                     actions = [
                                       IconButton(
@@ -499,11 +496,8 @@ class _MethodsScreenState extends State<MethodsScreen> {
                                   }
 
                                   return TeacherMethodGridCard(
-                                    title: _methodDisplayTitle(m),
-                                    contextHint:
-                                        '${CurriculumCatalog.gradeContextLabel(widget.classId)} · ${_topicLabelForNav()}',
                                     methodType: m.type,
-                                    isPreset: preset,
+                                    methodName: _methodCardTitle(m),
                                     onOpen: () =>
                                         _openFromMethodsList(context, m),
                                     actions: actions,

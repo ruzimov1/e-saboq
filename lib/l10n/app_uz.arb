@@ -177,6 +177,9 @@
   "@studentQuizCorrectOption": {
     "placeholders": { "answer": {"type": "String"} }
   },
+  "studentQuizPrevious": "Oldingi",
+  "studentQuizNext": "Keyingi",
+  "studentQuizTimeElapsed": "Tugadi",
   "studentMethodCaseScenario": "Vaziyat (case-study)",
   "studentMethodBrainstormPrompt": "Savol",
   "studentMethodBrainstormGuide": "Yo'riqnoma",

@@ -2,8 +2,6 @@
 
 import 'dart:async';
 import 'dart:math' show Random;
-import 'dart:ui' show ImageFilter;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -444,6 +442,9 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
         displayIdx >= layout.displayToOriginalQuestionIndex.length) {
       return;
     }
+    if (_quizSessionResolvedAtDisplay(displayIdx)) {
+      return;
+    }
     final oi = layout.displayToOriginalQuestionIndex[displayIdx];
     final back = layout.displayOptionToOriginal[displayIdx];
     if (displayOpt < 0 || displayOpt >= back.length) {
@@ -476,6 +477,24 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
       _quizTimeOk[oi] = true;
     });
     _scheduleDraftSave();
+  }
+
+  /// Tanlangan yoki vaqt bo‘yicha yopilgan savol — taymer qayta ishga tushmaydi, variant o‘zgarmaydi.
+  bool _quizSessionResolvedAtDisplay(int displayIdx) {
+    final layout = _quizLayout;
+    if (layout == null) {
+      return false;
+    }
+    if (displayIdx < 0 ||
+        displayIdx >= layout.displayToOriginalQuestionIndex.length) {
+      return false;
+    }
+    final oi = layout.displayToOriginalQuestionIndex[displayIdx];
+    final hasChoice =
+        oi < _quizChoices.length && _quizChoices[oi] != null;
+    final timeClosed =
+        oi < _quizTimeOk.length && _quizTimeOk[oi] != null;
+    return hasChoice || timeClosed;
   }
 
   void _onQuizTimerExpiredForDisplay(int displayIdx) {
@@ -752,14 +771,23 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
         return;
       }
     } else if (m.type == 'quiz') {
-      for (var i = 0; i < _quizChoices.length; i++) {
-        if (_quizChoices[i] == null) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('${i + 1}-savolga javob bering')),
-          );
-          return;
+      final rawQs = m.config?['questions'] as List<dynamic>? ?? [];
+      final n = rawQs.length;
+      setState(() {
+        _ensureQuizSidecars(n);
+        for (var i = 0; i < n; i++) {
+          final noAnswer =
+              i >= _quizChoices.length || _quizChoices[i] == null;
+          final timeStillOpen =
+              i >= _quizTimeOk.length || _quizTimeOk[i] == null;
+          if (noAnswer && timeStillOpen) {
+            while (_quizTimeOk.length <= i) {
+              _quizTimeOk.add(null);
+            }
+            _quizTimeOk[i] = false;
+          }
         }
-      }
+      });
     } else if (m.type == 'poll' && _pollChoice == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Variant tanlang')),
@@ -1973,6 +2001,7 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
       questions: layout.displayQuestions,
       secondsPerQuestion: sec,
       choiceAtDisplay: _quizChoiceAtDisplay,
+      quizSessionResolvedAtDisplay: _quizSessionResolvedAtDisplay,
       onChoiceDisplay: _setQuizAnswerFromDisplay,
       onAnsweredInTimeDisplay: _onQuizAnsweredInTimeForDisplay,
       onTimerExpiredDisplay: _onQuizTimerExpiredForDisplay,
@@ -2008,6 +2037,7 @@ class _InteractiveQuizHost extends StatefulWidget {
     required this.questions,
     required this.secondsPerQuestion,
     required this.choiceAtDisplay,
+    required this.quizSessionResolvedAtDisplay,
     required this.onChoiceDisplay,
     required this.onAnsweredInTimeDisplay,
     required this.onTimerExpiredDisplay,
@@ -2016,6 +2046,7 @@ class _InteractiveQuizHost extends StatefulWidget {
   final List<Map<String, dynamic>> questions;
   final int secondsPerQuestion;
   final int? Function(int displayIndex) choiceAtDisplay;
+  final bool Function(int displayIndex) quizSessionResolvedAtDisplay;
   final void Function(int displayIndex, int optionIndex) onChoiceDisplay;
   final void Function(int displayIndex) onAnsweredInTimeDisplay;
   final void Function(int displayIndex) onTimerExpiredDisplay;
@@ -2034,7 +2065,14 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
   void initState() {
     super.initState();
     _pageController = PageController();
-    WidgetsBinding.instance.addPostFrameCallback((_) => _armTimerForIndex(0));
+    final resolved0 = widget.quizSessionResolvedAtDisplay(0);
+    _armedIndex = 0;
+    _remaining = resolved0 ? 0 : widget.secondsPerQuestion;
+    if (!resolved0 && _remaining > 0) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _startTickerForArmedIndex();
+      });
+    }
   }
 
   @override
@@ -2047,6 +2085,9 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
   void _startTickerForArmedIndex() {
     _ticker?.cancel();
     final idx = _armedIndex;
+    if (widget.quizSessionResolvedAtDisplay(idx) || _remaining <= 0) {
+      return;
+    }
     _ticker = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) {
         return;
@@ -2069,11 +2110,14 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
     if (!mounted) {
       return;
     }
+    final resolved = widget.quizSessionResolvedAtDisplay(i);
     setState(() {
       _armedIndex = i;
-      _remaining = widget.secondsPerQuestion;
+      _remaining = resolved ? 0 : widget.secondsPerQuestion;
     });
-    _startTickerForArmedIndex();
+    if (!resolved) {
+      _startTickerForArmedIndex();
+    }
   }
 
   void _onPageChanged(int newIndex) {
@@ -2084,7 +2128,7 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
     final old = _armedIndex;
     if (old >= 0 && old < widget.questions.length) {
       final picked = widget.choiceAtDisplay(old);
-      if (picked == null) {
+      if (picked == null && !widget.quizSessionResolvedAtDisplay(old)) {
         widget.onTimerExpiredDisplay(old);
       }
     }
@@ -2092,18 +2136,35 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
   }
 
   void _onOptionSelected(int qIndex, int optIndex) {
+    if (widget.quizSessionResolvedAtDisplay(qIndex)) {
+      return;
+    }
     widget.onChoiceDisplay(qIndex, optIndex);
     if (_remaining > 0 && qIndex == _armedIndex) {
       widget.onAnsweredInTimeDisplay(qIndex);
       _ticker?.cancel();
       setState(() => _remaining = 0);
     }
+    final n = widget.questions.length;
+    if (qIndex < n - 1) {
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        if (!mounted) return;
+        await _pageController.nextPage(
+          duration: const Duration(milliseconds: 280),
+          curve: Curves.easeOutCubic,
+        );
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context)!;
     final n = widget.questions.length;
+    final resolvedHere = widget.quizSessionResolvedAtDisplay(_armedIndex);
+    final showElapsed = resolvedHere || _remaining <= 0;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -2129,7 +2190,7 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
                   Icon(Icons.timer_outlined, size: 18, color: scheme.primary),
                   const SizedBox(width: 6),
                   Text(
-                    '${_remaining}s',
+                    showElapsed ? l10n.studentQuizTimeElapsed : '${_remaining}s',
                     style: Theme.of(context).textTheme.titleSmall?.copyWith(
                           fontWeight: FontWeight.w700,
                           color: scheme.primary,
@@ -2140,7 +2201,37 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
             ),
           ],
         ),
-        const SizedBox(height: 12),
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            TextButton.icon(
+              onPressed: _armedIndex > 0
+                  ? () {
+                      _pageController.previousPage(
+                        duration: const Duration(milliseconds: 280),
+                        curve: Curves.easeOutCubic,
+                      );
+                    }
+                  : null,
+              icon: const Icon(Icons.chevron_left),
+              label: Text(l10n.studentQuizPrevious),
+            ),
+            const Spacer(),
+            TextButton.icon(
+              onPressed: _armedIndex < n - 1
+                  ? () {
+                      _pageController.nextPage(
+                        duration: const Duration(milliseconds: 280),
+                        curve: Curves.easeOutCubic,
+                      );
+                    }
+                  : null,
+              icon: const Icon(Icons.chevron_right),
+              label: Text(l10n.studentQuizNext),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
         SizedBox(
           height: 420,
           child: PageView.builder(
@@ -2155,12 +2246,14 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
                   ? <String>[]
                   : optsDyn.map((e) => '$e').toList();
               final picked = widget.choiceAtDisplay(qi);
+              final locked = widget.quizSessionResolvedAtDisplay(qi);
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
                 child: _QuizGlassQuestionCard(
                   prompt: prompt.isEmpty ? 'Savol' : prompt,
                   options: opts,
                   selected: picked,
+                  optionsLocked: locked,
                   onSelect: (v) => _onOptionSelected(qi, v),
                 ),
               )
@@ -2201,12 +2294,14 @@ class _QuizGlassQuestionCard extends StatelessWidget {
     required this.prompt,
     required this.options,
     required this.selected,
+    required this.optionsLocked,
     required this.onSelect,
   });
 
   final String prompt;
   final List<String> options;
   final int? selected;
+  final bool optionsLocked;
   final void Function(int index) onSelect;
 
   @override
@@ -2214,72 +2309,84 @@ class _QuizGlassQuestionCard extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     return ClipRRect(
       borderRadius: BorderRadius.circular(24),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 14, sigmaY: 14),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24),
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                scheme.primary.withValues(alpha: 0.14),
-                scheme.secondary.withValues(alpha: 0.10),
-                scheme.surface.withValues(alpha: 0.22),
-              ],
-            ),
-            border: Border.all(color: scheme.onSurface.withValues(alpha: 0.12)),
-            boxShadow: [
-              BoxShadow(
-                color: scheme.shadow.withValues(alpha: 0.12),
-                blurRadius: 24,
-                offset: const Offset(0, 12),
-              ),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(24),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              scheme.surfaceContainerLow,
+              Color.lerp(
+                    scheme.surfaceContainerLow,
+                    scheme.primaryContainer,
+                    0.35,
+                  ) ??
+                  scheme.primaryContainer,
+              scheme.surface,
             ],
           ),
-          padding: const EdgeInsets.fromLTRB(18, 20, 18, 18),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                prompt,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      height: 1.35,
-                      fontWeight: FontWeight.w600,
-                    ),
-              ),
-              const SizedBox(height: 18),
-              Expanded(
-                child: ListView.separated(
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: options.length.clamp(0, 4),
-                  separatorBuilder: (context, index) => const SizedBox(height: 10),
-                  itemBuilder: (context, j) {
-                    if (j >= options.length) {
-                      return const SizedBox.shrink();
-                    }
-                    final sel = selected == j;
-                    final letter = j < _quizLabels.length ? _quizLabels[j] : '${j + 1}';
-                    final t = options[j].trim();
-                    return Material(
+          border: Border.all(
+            color: scheme.outlineVariant.withValues(alpha: 0.45),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: scheme.shadow.withValues(alpha: 0.06),
+              blurRadius: 18,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.fromLTRB(18, 20, 18, 18),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              prompt,
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    height: 1.35,
+                    fontWeight: FontWeight.w600,
+                  ),
+            ),
+            const SizedBox(height: 18),
+            Expanded(
+              child: ListView.separated(
+                physics: const BouncingScrollPhysics(),
+                itemCount: options.length.clamp(0, 4),
+                separatorBuilder: (context, index) => const SizedBox(height: 10),
+                itemBuilder: (context, j) {
+                  if (j >= options.length) {
+                    return const SizedBox.shrink();
+                  }
+                  final sel = selected == j;
+                  final letter =
+                      j < _quizLabels.length ? _quizLabels[j] : '${j + 1}';
+                  final t = options[j].trim();
+                  final dim = optionsLocked && !sel;
+                  return Opacity(
+                    opacity: dim ? 0.48 : 1.0,
+                    child: Material(
                       color: Colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(16),
-                        onTap: () => onSelect(j),
+                        onTap: optionsLocked ? null : () => onSelect(j),
                         child: AnimatedContainer(
                           duration: const Duration(milliseconds: 200),
-                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14,
+                            vertical: 12,
+                          ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
                             border: Border.all(
                               color: sel
                                   ? scheme.primary
-                                  : scheme.outline.withValues(alpha: 0.25),
+                                  : scheme.outline.withValues(alpha: 0.28),
                               width: sel ? 2 : 1,
                             ),
                             color: sel
-                                ? scheme.primary.withValues(alpha: 0.18)
-                                : scheme.surface.withValues(alpha: 0.32),
+                                ? scheme.primary.withValues(alpha: 0.16)
+                                : scheme.surface,
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2288,13 +2395,15 @@ class _QuizGlassQuestionCard extends StatelessWidget {
                                 radius: 15,
                                 backgroundColor: sel
                                     ? scheme.primary
-                                    : scheme.secondary.withValues(alpha: 0.35),
+                                    : scheme.secondary.withValues(alpha: 0.28),
                                 child: Text(
                                   letter,
                                   style: TextStyle(
                                     fontSize: 13,
                                     fontWeight: FontWeight.w800,
-                                    color: sel ? scheme.onPrimary : scheme.onSecondaryContainer,
+                                    color: sel
+                                        ? scheme.onPrimary
+                                        : scheme.onSecondaryContainer,
                                   ),
                                 ),
                               ),
@@ -2302,7 +2411,10 @@ class _QuizGlassQuestionCard extends StatelessWidget {
                               Expanded(
                                 child: Text(
                                   t.isEmpty ? '—' : t,
-                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium
+                                      ?.copyWith(
                                         height: 1.3,
                                       ),
                                 ),
@@ -2311,12 +2423,12 @@ class _QuizGlassQuestionCard extends StatelessWidget {
                           ),
                         ),
                       ),
-                    );
-                  },
-                ),
+                    ),
+                  );
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

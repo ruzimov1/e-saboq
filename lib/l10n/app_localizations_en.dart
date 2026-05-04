@@ -375,6 +375,15 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get studentQuizPrevious => 'Previous';
+
+  @override
+  String get studentQuizNext => 'Next';
+
+  @override
+  String get studentQuizTimeElapsed => 'Done';
+
+  @override
   String get studentMethodCaseScenario => 'Situation (case study)';
 
   @override

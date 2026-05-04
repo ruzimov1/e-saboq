@@ -382,6 +382,15 @@ class AppLocalizationsUz extends AppLocalizations {
   }
 
   @override
+  String get studentQuizPrevious => 'Oldingi';
+
+  @override
+  String get studentQuizNext => 'Keyingi';
+
+  @override
+  String get studentQuizTimeElapsed => 'Tugadi';
+
+  @override
   String get studentMethodCaseScenario => 'Vaziyat (case-study)';
 
   @override
