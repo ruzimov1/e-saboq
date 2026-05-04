@@ -170,14 +170,14 @@ class _MethodsScreenState extends State<MethodsScreen> {
               crossAxisCount: cross,
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
-              childAspectRatio: cross == 1 ? 1.1 : 0.82,
+              childAspectRatio: cross == 1 ? 0.88 : 0.78,
               children: [
                 for (final mt in _addableMethodTypes)
                   TeacherMethodGridCard(
                     title: _methodTitle(mt),
                     methodType: mt.firestoreValue,
-                    presetAccent: true,
                     onOpen: () => Navigator.pop(ctx, mt.firestoreValue),
+                    showBoshlash: false,
                   ),
               ],
             ),
@@ -231,17 +231,17 @@ class _MethodsScreenState extends State<MethodsScreen> {
                   crossAxisCount: math.min(3, _methodGridCrossAxisCount(mq.width)),
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
-                  childAspectRatio: 0.78,
+                  childAspectRatio: 0.75,
                 ),
                 itemCount: methods.length,
                 itemBuilder: (context, i) {
                   final m = methods[i];
                   return TeacherMethodGridCard(
                     title: _methodDisplayTitle(m),
-                    subtitle: m.id,
                     methodType: m.type,
-                    presetAccent: CurriculumPresets.isPresetMethodId(m.id),
+                    isPreset: CurriculumPresets.isPresetMethodId(m.id),
                     onOpen: () => Navigator.pop(ctx, m),
+                    showBoshlash: false,
                   );
                 },
               ),
@@ -339,13 +339,16 @@ class _MethodsScreenState extends State<MethodsScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 8, 20, 4),
+              padding: const EdgeInsets.fromLTRB(20, 8, 20, 6),
               child: Text(
                 _navContextLine(),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.58),
+                      fontWeight: FontWeight.w500,
+                      height: 1.35,
+                      fontSize: 13,
                     ),
               ),
             ),
@@ -423,7 +426,7 @@ class _MethodsScreenState extends State<MethodsScreen> {
                                   crossAxisCount: cross,
                                   mainAxisSpacing: 12,
                                   crossAxisSpacing: 12,
-                                  childAspectRatio: 0.68,
+                                  childAspectRatio: 0.76,
                                 ),
                                 itemCount: filtered.length,
                                 itemBuilder: (context, i) {
@@ -497,11 +500,10 @@ class _MethodsScreenState extends State<MethodsScreen> {
 
                                   return TeacherMethodGridCard(
                                     title: _methodDisplayTitle(m),
-                                    subtitle: preset
-                                        ? 'Tayyor shablon · ${m.id}'
-                                        : 'Qo\'shimcha · ${m.id}',
+                                    contextHint:
+                                        '${CurriculumCatalog.gradeContextLabel(widget.classId)} · ${_topicLabelForNav()}',
                                     methodType: m.type,
-                                    presetAccent: preset,
+                                    isPreset: preset,
                                     onOpen: () =>
                                         _openFromMethodsList(context, m),
                                     actions: actions,
