@@ -84,7 +84,7 @@ class _FishboneMethodScreenState extends State<FishboneMethodScreen> {
   Future<void> _load() async {
     final a = widget.args;
     if (a?.methodId == null) {
-      setState(() => _loading = false);
+      if (mounted) setState(() => _loading = false);
       return;
     }
     if (!InformatikaJsonPresets.isReady) {
@@ -384,23 +384,29 @@ class _FishboneMethodScreenState extends State<FishboneMethodScreen> {
                 return Card(
                   margin: const EdgeInsets.only(bottom: 8),
                   color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
-                  child: ListTile(
-                    dense: true,
-                    title: Text(
-                      items[i].text.isEmpty ? '(bo‘sh)' : items[i].text,
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    trailing: Row(
-                      mainAxisSize: MainAxisSize.min,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(12, 6, 4, 6),
+                    child: Row(
                       children: [
+                        Expanded(
+                          child: Text(
+                            items[i].text.isEmpty ? '(boʼsh)' : items[i].text,
+                            maxLines: 3,
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ),
                         IconButton(
                           icon: const Icon(Icons.edit_outlined, size: 20),
                           onPressed: () => _editItem(left, i),
+                          visualDensity: VisualDensity.compact,
                         ),
                         IconButton(
-                          icon: Icon(Icons.delete_outline, size: 20, color: Theme.of(context).colorScheme.error),
+                          icon: Icon(Icons.delete_outline,
+                              size: 20,
+                              color: Theme.of(context).colorScheme.error),
                           onPressed: () => _deleteItem(left, i),
+                          visualDensity: VisualDensity.compact,
                         ),
                       ],
                     ),

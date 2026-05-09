@@ -15,6 +15,9 @@ import '../data/submission_repository.dart';
 
 import '../../../../core/assignments/brainstorm_session_config.dart';
 
+/// O‘quvchi matni: APK / och fonlarda ham o‘qish oson bo‘lsin.
+const Color _kStudentBodyText = Color(0xFF1A1A1A);
+const Color _kStudentSecondaryText = Color(0xFF37474F);
 /// Aqliy hujum: doska, yaltirash savol, burchakdagi taymer, stikerlar, like, slotlar.
 class BrainstormStudentExperience extends StatefulWidget {
   const BrainstormStudentExperience({
@@ -173,7 +176,10 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
             children: [
               SelectableText(
                 text.isEmpty ? '—' : text,
-                style: t.textTheme.bodyLarge?.copyWith(height: 1.45),
+                style: t.textTheme.bodyLarge?.copyWith(
+                  height: 1.45,
+                  color: t.colorScheme.onSurface,
+                ),
               ),
               const SizedBox(height: 12),
               _stickerAttribution(
@@ -258,28 +264,47 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
               'Kod: ${widget.assignmentCode}',
               style: t.textTheme.labelMedium?.copyWith(
                 color: t.colorScheme.onSurfaceVariant,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),
         if (widget.guide != null && widget.guide!.trim().isNotEmpty) ...[
-          Text('Yo‘riq', style: t.textTheme.labelLarge),
+          Text(
+            'Yo‘riq',
+            style: t.textTheme.labelLarge?.copyWith(
+              color: t.colorScheme.onSurface,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
           const SizedBox(height: 4),
           Text(
             widget.guide!.trim(),
-            style: t.textTheme.bodySmall?.copyWith(
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+            style: t.textTheme.bodyMedium?.copyWith(
               color: t.colorScheme.onSurfaceVariant,
+              height: 1.35,
             ),
           ),
           const SizedBox(height: 8),
         ],
         if (widget.rubric.isNotEmpty) ...[
           Card(
+            margin: EdgeInsets.zero,
             child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: Text(widget.rubric, style: t.textTheme.bodySmall),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+              child: Text(
+                widget.rubric,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: t.textTheme.bodySmall?.copyWith(
+                  color: t.colorScheme.onSurface,
+                  height: 1.3,
+                ),
+              ),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 6),
         ],
         _buildSlotRow(t, maxSlots),
         const SizedBox(height: 4),
@@ -330,8 +355,9 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
                                   child: Text(
                                     'Hali stikerlar yo‘q. Pastdan birinchi fikrni yuboring.',
                                     textAlign: TextAlign.center,
-                                    style: t.textTheme.bodySmall?.copyWith(
-                                      color: t.colorScheme.onSurfaceVariant,
+                                    style: t.textTheme.bodyMedium?.copyWith(
+                                      color: _kStudentSecondaryText,
+                                      height: 1.35,
                                     ),
                                   ),
                                 ),
@@ -451,9 +477,12 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
       child: Text(
         widget.mainPrompt,
         textAlign: TextAlign.center,
+        maxLines: 4,
+        overflow: TextOverflow.ellipsis,
         style: t.textTheme.titleLarge?.copyWith(
           fontWeight: FontWeight.w700,
           height: 1.35,
+          color: t.colorScheme.onPrimaryContainer,
         ),
       )
           .animate(
@@ -462,7 +491,7 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
           .shimmer(
             delay: 1.seconds,
             duration: 2.5.seconds,
-            color: Colors.white70,
+            color: t.colorScheme.onPrimaryContainer.withValues(alpha: 0.08),
           ),
     );
   }
@@ -568,7 +597,8 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
                           style: t.textTheme.bodySmall?.copyWith(
                             height: 1.2,
                             fontWeight:
-                                isOnTop ? FontWeight.w500 : FontWeight.w400,
+                                isOnTop ? FontWeight.w600 : FontWeight.w500,
+                            color: _kStudentBodyText,
                           ),
                         ),
                       ),
@@ -626,7 +656,8 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
                                       '$likeCount',
                                       style: t.textTheme.labelSmall?.copyWith(
                                         fontSize: 10,
-                                        fontWeight: FontWeight.w600,
+                                        fontWeight: FontWeight.w700,
+                                        color: _kStudentBodyText,
                                       ),
                                     ),
                                   ],
@@ -660,8 +691,8 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
         overflow: TextOverflow.ellipsis,
         style: t.textTheme.labelSmall?.copyWith(
           fontSize: 9.5,
-          color: t.colorScheme.primary,
-          fontWeight: FontWeight.w600,
+          color: _kStudentBodyText,
+          fontWeight: FontWeight.w700,
         ),
       );
     }
@@ -671,7 +702,8 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
         maxLines: 1,
         style: t.textTheme.labelSmall?.copyWith(
           fontSize: 9.5,
-          color: t.colorScheme.onSurfaceVariant,
+          color: _kStudentSecondaryText,
+          fontWeight: FontWeight.w600,
         ),
       );
     }
@@ -685,7 +717,8 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
           overflow: TextOverflow.ellipsis,
           style: t.textTheme.labelSmall?.copyWith(
             fontSize: 9.5,
-            color: t.colorScheme.onSurfaceVariant,
+            color: _kStudentSecondaryText,
+            fontWeight: FontWeight.w600,
           ),
         );
       },
@@ -778,7 +811,13 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('Yangi fikr', style: t.textTheme.labelLarge),
+              Text(
+                'Yangi fikr',
+                style: t.textTheme.labelLarge?.copyWith(
+                  color: t.colorScheme.onSurface,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
               const SizedBox(height: 6),
               TextField(
                 controller: widget.ideaInput,
@@ -786,11 +825,20 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
                 minLines: 1,
                 textInputAction: TextInputAction.newline,
                 enabled: widget.loggedIn && !widget.blockSession,
-                decoration: const InputDecoration(
-                  hintText: 'Bir qator – bir g‘oya. Doskaga yuborishingiz mumkin',
-                  border: OutlineInputBorder(),
+                style: TextStyle(
+                  color: t.colorScheme.onSurface,
+                  fontSize: 16,
+                  height: 1.35,
+                ),
+                decoration: InputDecoration(
+                  hintText:
+                      'Bir qator – bir g‘oya. Doskaga yuborishingiz mumkin',
+                  hintStyle: TextStyle(
+                    color: t.colorScheme.onSurfaceVariant.withValues(alpha: 0.85),
+                  ),
+                  border: const OutlineInputBorder(),
                   isDense: true,
-                  contentPadding: EdgeInsets.symmetric(
+                  contentPadding: const EdgeInsets.symmetric(
                     horizontal: 10,
                     vertical: 8,
                   ),
@@ -799,52 +847,63 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
               const SizedBox(height: 8),
               Row(
                 children: [
-                  FilledButton.tonalIcon(
-                    onPressed: (widget.isSubmitting ||
-                            _adding ||
-                            !widget.loggedIn ||
-                            widget.blockSession)
-                        ? null
-                        : () async {
-                            final s = widget.ideaInput.text.trim();
-                            if (s.isEmpty) {
-                              return;
-                            }
-                            if (widget.myIdeas.length >=
-                                widget.config.maxIdeasPerStudent) {
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text(
-                                      'Fikr limiti to‘lgan. Avvalgilar doskada',
+                  Flexible(
+                    child: FilledButton.tonalIcon(
+                      style: FilledButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 10),
+                      ),
+                      onPressed: (widget.isSubmitting ||
+                              _adding ||
+                              !widget.loggedIn ||
+                              widget.blockSession)
+                          ? null
+                          : () async {
+                              final s = widget.ideaInput.text.trim();
+                              if (s.isEmpty) {
+                                return;
+                              }
+                              if (widget.myIdeas.length >=
+                                  widget.config.maxIdeasPerStudent) {
+                                if (context.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text(
+                                        'Fikr limiti to’lgan. Avvalgilar doskada',
+                                      ),
                                     ),
-                                  ),
-                                );
+                                  );
+                                }
+                                return;
                               }
-                              return;
-                            }
-                            setState(() => _adding = true);
-                            try {
-                              await widget.onAddIdea(s);
-                            } finally {
-                              if (mounted) {
-                                setState(() => _adding = false);
+                              setState(() => _adding = true);
+                              try {
+                                await widget.onAddIdea(s);
+                              } finally {
+                                if (mounted) {
+                                  setState(() => _adding = false);
+                                }
                               }
-                            }
-                          },
-                    icon: _adding
-                        ? const SizedBox(
-                            width: 16,
-                            height: 16,
-                            child: CircularProgressIndicator(
-                              strokeWidth: 2,
-                            ),
-                          )
-                        : const Icon(Icons.sticky_note_2_outlined, size: 20),
-                    label: const Text('Stiker sifatida yuborish'),
+                            },
+                      icon: _adding
+                          ? const SizedBox(
+                              width: 16,
+                              height: 16,
+                              child: CircularProgressIndicator(strokeWidth: 2),
+                            )
+                          : const Icon(Icons.sticky_note_2_outlined, size: 20),
+                      label: const Text(
+                        'Doskaga yuborish',
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
                   ),
-                  const Spacer(),
+                  const SizedBox(width: 8),
                   FilledButton(
+                    style: FilledButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 14, vertical: 10),
+                    ),
                     onPressed: (widget.isSubmitting ||
                             !widget.loggedIn ||
                             widget.blockSession)
@@ -859,7 +918,7 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
                               color: Colors.white,
                             ),
                           )
-                        : const Text('Yopish / yuborish'),
+                        : const Text('Yuborish'),
                   ),
                 ],
               ),
@@ -870,3 +929,4 @@ class _BrainstormStudentExperienceState extends State<BrainstormStudentExperienc
     );
   }
 }
+

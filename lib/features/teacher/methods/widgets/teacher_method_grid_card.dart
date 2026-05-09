@@ -49,7 +49,7 @@ class _TeacherMethodGridCardState extends State<TeacherMethodGridCard> {
         child: InkWell(
           onTap: widget.onOpen,
           child: Padding(
-            padding: const EdgeInsets.all(3),
+            padding: const EdgeInsets.all(4),
             child: Center(
               child: _MethodHeroBackdrop(
                 methodType: widget.methodType,
@@ -220,7 +220,7 @@ class _MethodHeroFallback extends StatelessWidget {
           child: MethodTypeArtworkImage(
             methodType: methodType,
             fit: BoxFit.contain,
-            iconSize: 56,
+            iconSize: 58,
           ),
         ),
       ),

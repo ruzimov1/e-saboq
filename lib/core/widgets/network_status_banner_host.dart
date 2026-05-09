@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +19,7 @@ class NetworkStatusBannerHost extends StatefulWidget {
 class _NetworkStatusBannerHostState extends State<NetworkStatusBannerHost> {
   List<ConnectivityResult> _last = [ConnectivityResult.none];
   bool _showOnlineFlash = false;
+  StreamSubscription<List<ConnectivityResult>>? _connectivitySub;
 
   @override
   void initState() {
@@ -24,7 +27,7 @@ class _NetworkStatusBannerHostState extends State<NetworkStatusBannerHost> {
     Connectivity().checkConnectivity().then((r) {
       if (mounted) setState(() => _last = r);
     });
-    Connectivity().onConnectivityChanged.listen((r) {
+    _connectivitySub = Connectivity().onConnectivityChanged.listen((r) {
       if (!mounted) return;
       final wasOffline = !_last.any((e) => e != ConnectivityResult.none);
       final nowOnline = r.any((e) => e != ConnectivityResult.none);
@@ -38,6 +41,12 @@ class _NetworkStatusBannerHostState extends State<NetworkStatusBannerHost> {
         }
       });
     });
+  }
+
+  @override
+  void dispose() {
+    _connectivitySub?.cancel();
+    super.dispose();
   }
 
   bool get _offline => !_last.any((e) => e != ConnectivityResult.none);

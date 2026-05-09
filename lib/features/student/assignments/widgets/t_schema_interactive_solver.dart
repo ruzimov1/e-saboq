@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'dart:math' show Random;
-import 'dart:ui' show ImageFilter;
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +11,7 @@ import 'package:uuid/uuid.dart';
 import '../../../../core/t_schema/t_schema_method_config.dart';
 
 const _uuid = Uuid();
+
 
 class TSchemaDragPayload {
   const TSchemaDragPayload({
@@ -317,78 +317,32 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
     final maxN = widget.config.maxUserStickers;
     final currentUser = _leftColumn.values.where((e) => e.isUserAdded).length +
         _rightColumn.values.where((e) => e.isUserAdded).length;
-    if (maxN <= 0) {
-      return;
-    }
+    if (maxN <= 0) return;
     if (currentUser >= maxN) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Maksimal $maxN ta o‘z fikringiz')),
+          SnackBar(content: Text('Maksimal $maxN ta o’z fikringiz')),
         );
       }
       return;
     }
-    if (!mounted) {
-      return;
-    }
-    final textCtrl = TextEditingController();
-    var side = 'left';
+    if (!mounted) return;
+
     final picked = await showDialog<String>(
       context: context,
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx2, setSt) => AlertDialog(
-          title: const Text('O‘z fikringiz'),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              SegmentedButton<String>(
-                segments: [
-                  ButtonSegment(
-                    value: 'left',
-                    label: Text(widget.config.leftTitle, overflow: TextOverflow.ellipsis),
-                  ),
-                  ButtonSegment(
-                    value: 'right',
-                    label: Text(widget.config.rightTitle, overflow: TextOverflow.ellipsis),
-                  ),
-                ],
-                selected: {side},
-                onSelectionChanged: (s) => setSt(() => side = s.first),
-              ),
-              const SizedBox(height: 12),
-              TextField(
-                controller: textCtrl,
-                maxLines: 3,
-                decoration: const InputDecoration(
-                  labelText: 'Matn',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-            ],
-          ),
-          actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Bekor')),
-            FilledButton(
-              onPressed: () =>
-                  Navigator.pop(ctx, '${side.trim()}|${textCtrl.text.trim()}'),
-              child: const Text('Qo‘shish'),
-            ),
-          ],
-        ),
+      builder: (ctx) => _AddStickerDialog(
+        leftTitle: widget.config.leftTitle,
+        rightTitle: widget.config.rightTitle,
       ),
     );
-    textCtrl.dispose();
+
     final raw = picked?.trim() ?? '';
-    if (raw.isEmpty || !raw.contains('|') || !mounted) {
-      return;
-    }
+    if (raw.isEmpty || !raw.contains('|') || !mounted) return;
     final sep = raw.indexOf('|');
     final sidePick = raw.substring(0, sep).trim();
     final t = raw.substring(sep + 1).trim();
-    if (t.isEmpty) {
-      return;
-    }
+    if (t.isEmpty) return;
+
     final id = 'user_${_uuid.v4()}';
     final def = TSchemaStickerDef(id: id, text: t, isUserAdded: true);
     setState(() {
@@ -403,19 +357,29 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
   }
 
   Widget _glassCard({required Widget child, EdgeInsetsGeometry? pad}) {
+    final scheme = Theme.of(context).colorScheme;
+    final dark = scheme.brightness == Brightness.dark;
     return ClipRRect(
       borderRadius: BorderRadius.circular(14),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: Container(
-          padding: pad ?? const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.42),
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.55)),
+      child: Container(
+        padding: pad ?? const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: scheme.surfaceContainerHighest.withValues(alpha: dark ? 0.88 : 0.94),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+            color: dark
+                ? scheme.outline.withValues(alpha: 0.85)
+                : scheme.outlineVariant.withValues(alpha: 0.55),
           ),
-          child: child,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: dark ? 0.35 : 0.06),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
+        child: child,
       ),
     );
   }
@@ -436,7 +400,11 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
           def.text,
           maxLines: 6,
           minFontSize: 10,
-          style: const TextStyle(fontWeight: FontWeight.w600, height: 1.2),
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            height: 1.2,
+            color: Theme.of(context).colorScheme.onSurface,
+          ),
         ),
       ),
     );
@@ -464,6 +432,50 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
     );
   }
 
+  /// Light/dark rejimga mos ustun fon gradienti.
+  Gradient _columnGradient(BuildContext context, String side) {
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    if (dark) {
+      final cs = Theme.of(context).colorScheme;
+      if (side == 'left') {
+        return LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            cs.secondaryContainer.withValues(alpha: 0.55),
+            cs.secondaryContainer.withValues(alpha: 0.35),
+          ],
+        );
+      }
+      return LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          cs.tertiaryContainer.withValues(alpha: 0.55),
+          cs.tertiaryContainer.withValues(alpha: 0.35),
+        ],
+      );
+    }
+    if (side == 'left') {
+      return LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          const Color(0xFFDFF5E4),
+          const Color(0xFFC8EDD0).withValues(alpha: 0.85),
+        ],
+      );
+    }
+    return LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [
+        const Color(0xFFFFF9E0),
+        const Color(0xFFFFF3BF).withValues(alpha: 0.9),
+      ],
+    );
+  }
+
   Widget _buildColumn({
     required String side,
     required String title,
@@ -483,7 +495,12 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
                 child: Text(
                   title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 15,
+                    color: Theme.of(context).colorScheme.onSurface,
+                    height: 1.2,
+                  ),
                 ),
               ),
               Expanded(
@@ -544,12 +561,16 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
                   Icon(
                     widget.timeExpired ? Icons.timer_off_outlined : Icons.timer_outlined,
                     size: 18,
+                    color: Theme.of(context).colorScheme.onSurface,
                   ),
                   const SizedBox(width: 6),
                   Expanded(
                     child: Text(
                       widget.timeExpired ? 'Vaqt tugadi' : 'Qolgan vaqt: $mmSs',
-                      style: Theme.of(context).textTheme.labelLarge,
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            color: Theme.of(context).colorScheme.onSurface,
+                            fontWeight: FontWeight.w600,
+                          ),
                     ),
                   ),
                 ],
@@ -564,7 +585,7 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
             const SizedBox(height: 6),
             Card(
               margin: EdgeInsets.zero,
-              color: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.55),
+              color: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.75),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: Text(
@@ -574,6 +595,8 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
                         fontWeight: FontWeight.w700,
+                        color: Theme.of(context).colorScheme.onPrimaryContainer,
+                        height: 1.3,
                       ),
                 ),
               ),
@@ -591,32 +614,18 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
                           child: _buildColumn(
                             side: 'left',
                             title: widget.config.leftTitle,
-                            gradient: LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                const Color(0xFFDFF5E4),
-                                const Color(0xFFC8EDD0).withValues(alpha: 0.85),
-                              ],
-                            ),
+                            gradient: _columnGradient(context, 'left'),
                           ),
                         ),
                         Container(
                           width: 4,
-                          color: const Color(0xFF1565C0).withValues(alpha: 0.85),
+                          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.75),
                         ),
                         Expanded(
                           child: _buildColumn(
                             side: 'right',
                             title: widget.config.rightTitle,
-                            gradient: LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: [
-                                const Color(0xFFFFF9E0),
-                                const Color(0xFFFFF3BF).withValues(alpha: 0.9),
-                              ],
-                            ),
+                            gradient: _columnGradient(context, 'right'),
                           ),
                         ),
                       ],
@@ -625,8 +634,9 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
                   const SizedBox(height: 4),
                   Text(
                     'Pastga sudrang',
-                    style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                          color: Theme.of(context).colorScheme.onSurface,
+                          fontWeight: FontWeight.w600,
                         ),
                   ),
                   const SizedBox(height: 4),
@@ -676,14 +686,19 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Text(
+                        Text(
                           'Ajoyib!',
-                          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).colorScheme.onSurface,
+                              ),
                         ),
                         const SizedBox(height: 8),
                         Text(
                           'Barcha stikerlar to‘g‘ri joyda',
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                color: Theme.of(context).colorScheme.onSurface,
+                              ),
                         ),
                         const SizedBox(height: 12),
                         FilledButton(
@@ -700,6 +715,81 @@ class TSchemaInteractiveSolverState extends State<TSchemaInteractiveSolver> {
               ),
             ),
           ),
+      ],
+    );
+  }
+}
+
+// ── Stiker qo'shish dialogi (alohida StatefulWidget — InheritedWidget xatosini oldini oladi) ──
+class _AddStickerDialog extends StatefulWidget {
+  const _AddStickerDialog({
+    required this.leftTitle,
+    required this.rightTitle,
+  });
+
+  final String leftTitle;
+  final String rightTitle;
+
+  @override
+  State<_AddStickerDialog> createState() => _AddStickerDialogState();
+}
+
+class _AddStickerDialogState extends State<_AddStickerDialog> {
+  final _textCtrl = TextEditingController();
+  String _side = 'left';
+
+  @override
+  void dispose() {
+    _textCtrl.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text('O\u2019z fikringiz'),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          SegmentedButton<String>(
+            segments: [
+              ButtonSegment(
+                value: 'left',
+                label: Text(widget.leftTitle, overflow: TextOverflow.ellipsis),
+              ),
+              ButtonSegment(
+                value: 'right',
+                label: Text(widget.rightTitle, overflow: TextOverflow.ellipsis),
+              ),
+            ],
+            selected: {_side},
+            onSelectionChanged: (s) => setState(() => _side = s.first),
+          ),
+          const SizedBox(height: 12),
+          TextField(
+            controller: _textCtrl,
+            autofocus: true,
+            maxLines: 3,
+            textInputAction: TextInputAction.done,
+            decoration: const InputDecoration(
+              labelText: 'Matn',
+              border: OutlineInputBorder(),
+              alignLabelWithHint: true,
+            ),
+          ),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.pop(context),
+          child: const Text('Bekor'),
+        ),
+        FilledButton(
+          onPressed: () =>
+              Navigator.pop(context, '$_side|${_textCtrl.text.trim()}'),
+          child: const Text('Qo\u2019shish'),
+        ),
       ],
     );
   }

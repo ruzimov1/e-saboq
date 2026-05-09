@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_strings.dart';
+import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/auth_brand_gradients.dart';
 import '../../../core/utils/validators.dart';
 import '../../../core/widgets/firebase_setup_banner.dart';
@@ -133,7 +134,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Theme(
+      /// Kirish ekrani doim ochiq (gradient) fonda — qorong'i rejimni o'chiramiz.
+      data: AppTheme.light(),
+      child: Scaffold(
       body: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is AuthFailure) {
@@ -446,6 +450,7 @@ class _LoginScreenState extends State<LoginScreen> {
           );
         },
       ),
+    ),
     );
   }
 }

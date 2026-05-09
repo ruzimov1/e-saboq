@@ -1,7 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'dart:async';
-import 'dart:ui' show ImageFilter;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -10,12 +9,17 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../../../../core/ai/gemini_method_coach.dart';
 import '../../../../core/case_study/case_study_cyber_models.dart';
 
-const _kDarkCyan = Color(0xFF00E5FF);
-const _kNeonGreen = Color(0xFF39FF14);
-const _kPanel = Color(0xFF0D1520);
-const _kLine = Color(0xFF1E3A5F);
+// ── Rang palitasi (minimal, uyg'un) ─────────────────────────────────────────
+const _kAccent = Color(0xFF00BCD4);      // moviy-ko'k
+const _kSuccess = Color(0xFF66BB6A);     // yashil
+const _kWarning = Color(0xFFFFA726);     // sariq-to'q
+const _kSurface = Color(0xFF0E1621);     // asosiy qora-ko'k fon
+const _kCard = Color(0xFF152233);        // karta foni
+const _kBorder = Color(0xFF1E3A5F);      // chegara
+const _kTextPrimary = Color(0xFFE8F0FE); // asosiy matn
+const _kTextMuted = Color(0xFF7B8EA8);   // ikkinchi darajali matn
 
-/// Muammoli vaziyat «Problem Solving Hub»: hikoya, glassmorphism, qaror kartalari, DnD asboblar, tahlil.
+/// Muammoli vaziyat «Problem Solving Hub» — o'quvchi uchun interaktiv tajriba.
 class CaseStudyCyberExperience extends StatefulWidget {
   const CaseStudyCyberExperience({
     super.key,
@@ -29,7 +33,8 @@ class CaseStudyCyberExperience extends StatefulWidget {
   final VoidCallback onChanged;
 
   @override
-  State<CaseStudyCyberExperience> createState() => CaseStudyCyberExperienceState();
+  State<CaseStudyCyberExperience> createState() =>
+      CaseStudyCyberExperienceState();
 }
 
 class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
@@ -40,11 +45,7 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
   bool _aiBranchLoading = false;
   bool _reflectionAiBusy = false;
   String? _reflectionAiNote;
-
-  static const _darkCyan = _kDarkCyan;
-  static const _neonGreen = _kNeonGreen;
-  static const _panel = _kPanel;
-  static const _line = _kLine;
+  bool _scenarioExpanded = false;
 
   static const _toolbox = [
     'Antivirus',
@@ -58,7 +59,7 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
     final reflection = widget.reflectionController.text.trim();
     final buf = StringBuffer();
     if (_probeLog.isNotEmpty) {
-      buf.writeln('— Taassurof tanlovlari —');
+      buf.writeln('— Qarorlar —');
       for (final p in _probeLog) {
         buf.writeln('• ${p['label']} → ${p['reaction']}');
       }
@@ -71,15 +72,14 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
       }
       buf.writeln();
     }
-    buf.writeln('— Yozma yechim / tahlil —');
+    buf.writeln('— Yozma tahlil —');
     buf.writeln(reflection.isEmpty ? '—' : reflection);
     return {
       'kind': 'case',
       'text': buf.toString(),
       'caseReflection': reflection,
       'caseProbes': List<Map<String, dynamic>>.from(
-        _probeLog.map((e) => Map<String, dynamic>.from(e)),
-      ),
+          _probeLog.map((e) => Map<String, dynamic>.from(e))),
       if (_toolDrops.isNotEmpty)
         'caseToolDrops': _toolDrops.map((t) => {'tool': t}).toList(),
       if (_aiStoryBranches.isNotEmpty)
@@ -94,9 +94,7 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
   Future<void> _flashConsequence(bool positive) async {
     setState(() => _consequenceFlash = positive);
     await Future<void>.delayed(const Duration(milliseconds: 520));
-    if (mounted) {
-      setState(() => _consequenceFlash = null);
-    }
+    if (mounted) setState(() => _consequenceFlash = null);
   }
 
   Future<void> _pick(CaseCyberOption o) async {
@@ -116,20 +114,20 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
             Icon(
               o.isCorrect ? Icons.check_circle_outline : Icons.error_outline,
               color: Colors.white,
+              size: 18,
             ),
-            const SizedBox(width: 10),
+            const SizedBox(width: 8),
             Expanded(child: Text(o.reaction)),
           ],
         ),
         duration: const Duration(seconds: 5),
         behavior: SnackBarBehavior.floating,
-        backgroundColor: o.isCorrect ? Colors.green.shade800 : Colors.red.shade900,
+        backgroundColor:
+            o.isCorrect ? const Color(0xFF2E7D32) : const Color(0xFFC62828),
       ),
     );
     widget.onChanged();
-    if (!o.isCorrect) {
-      unawaited(_maybeAiScenarioBranch(o));
-    }
+    if (!o.isCorrect) unawaited(_maybeAiScenarioBranch(o));
   }
 
   Future<void> _maybeAiScenarioBranch(CaseCyberOption o) async {
@@ -161,9 +159,7 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
     if (key.isEmpty) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('GEMINI_API_KEY .env faylida yo‘q'),
-        ),
+        const SnackBar(content: Text('GEMINI_API_KEY .env faylida yo\'q')),
       );
       return;
     }
@@ -171,16 +167,15 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
     if (draft.length < 12) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Tahlil matnini biroz kengroq yozing'),
-        ),
+        const SnackBar(content: Text('Tahlil matnini biroz kengroq yozing')),
       );
       return;
     }
     setState(() => _reflectionAiBusy = true);
     try {
       final probes = _probeLog
-          .map((p) => '${p['label']} (${p['correct'] == true ? 'to‘g‘ri' : 'xato'})')
+          .map((p) =>
+              '${p['label']} (${p['correct'] == true ? 'to\u2019g\u2019ri' : 'xato'})')
           .join('; ');
       final note = await GeminiMethodCoach.caseStudyReflectionCoach(
         apiKey: key,
@@ -201,419 +196,343 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
     }
   }
 
-  Widget _aiSsenaristBubble(String paragraph) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: _glassCard(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(Icons.auto_awesome, size: 18, color: _neonGreen.withValues(alpha: 0.9)),
-                const SizedBox(width: 8),
-                Text(
-                  'AI SSENARIST · keyingi voqea',
-                  style: TextStyle(
-                    color: _neonGreen.withValues(alpha: 0.85),
-                    fontWeight: FontWeight.w800,
-                    fontSize: 11,
-                    letterSpacing: 0.7,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text(
-              paragraph,
-              style: TextStyle(
-                height: 1.35,
-                color: Colors.white.withValues(alpha: 0.88),
-              ),
-            ),
-          ],
-        ),
+  // ── Kichik yordamchi widgetlar ────────────────────────────────────────────
+
+  Widget _card({required Widget child, EdgeInsetsGeometry pad = const EdgeInsets.all(14)}) {
+    return Container(
+      padding: pad,
+      decoration: BoxDecoration(
+        color: _kCard,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _kBorder),
+      ),
+      child: child,
+    );
+  }
+
+  Widget _label(String text, {Color color = _kAccent, double size = 10.5}) {
+    return Text(
+      text,
+      style: TextStyle(
+        color: color,
+        fontWeight: FontWeight.w800,
+        fontSize: size,
+        letterSpacing: 0.9,
       ),
     );
   }
 
-  _CaseScene _sceneForBlob(String blob) {
-    final b = blob.toLowerCase();
-    if (b.contains('pocht') || b.contains('email') || b.contains('xat') || b.contains('gmail')) {
-      return _CaseScene.email;
-    }
-    if (b.contains('protsessor') ||
-        b.contains('hardware') ||
-        b.contains('qurilma') ||
-        b.contains('matx') ||
-        b.contains('kompyuter')) {
-      return _CaseScene.hardware;
-    }
-    if (b.contains('tarmoq') || b.contains('internet') || b.contains('wifi') || b.contains('dns')) {
-      return _CaseScene.network;
-    }
-    return _CaseScene.generic;
+  // ── 1. Alert Banner ───────────────────────────────────────────────────────
+  Widget _alertBanner() {
+    return Container(
+      padding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
+      decoration: BoxDecoration(
+        color: _kWarning.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: _kWarning.withValues(alpha: 0.55)),
+      ),
+      child: Row(
+        children: [
+          Icon(Icons.warning_amber_rounded,
+              color: _kWarning, size: 22),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              widget.task.alertTitle,
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 14,
+                color: _kWarning,
+                height: 1.3,
+              ),
+            ),
+          ),
+        ],
+      ),
+    )
+        .animate()
+        .fadeIn(duration: 400.ms)
+        .slideY(begin: -0.05, end: 0, curve: Curves.easeOut);
   }
 
-  LinearGradient _gradientFor(_CaseScene s) {
-    switch (s) {
-      case _CaseScene.email:
-        return const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFF0A1628), Color(0xFF152238), Color(0xFF0D1B2A)],
-        );
-      case _CaseScene.hardware:
-        return const LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Color(0xFF080A0C), Color(0xFF121920), Color(0xFF1A1510)],
-        );
-      case _CaseScene.network:
-        return const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color(0xFF050810), Color(0xFF0C1829), Color(0xFF061016)],
-        );
-      case _CaseScene.generic:
-        return const LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Color(0xFF070B12), Color(0xFF121A28)],
-        );
-    }
+  // ── 2. Scenario ───────────────────────────────────────────────────────────
+  Widget _scenarioCard() {
+    final scenario = widget.task.scenario.trim();
+    if (scenario.isEmpty) return const SizedBox.shrink();
+    final isLong = scenario.length > 280;
+    return _card(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.description_outlined, size: 16, color: _kAccent),
+              const SizedBox(width: 6),
+              _label('VAZIYAT TAVSIFI'),
+            ],
+          ),
+          const SizedBox(height: 10),
+          AnimatedCrossFade(
+            duration: const Duration(milliseconds: 250),
+            crossFadeState: (_scenarioExpanded || !isLong)
+                ? CrossFadeState.showFirst
+                : CrossFadeState.showSecond,
+            firstChild: Text(
+              scenario,
+              style: const TextStyle(
+                color: _kTextPrimary,
+                height: 1.55,
+                fontSize: 14,
+              ),
+            ),
+            secondChild: Text(
+              scenario,
+              maxLines: 5,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                color: _kTextPrimary,
+                height: 1.55,
+                fontSize: 14,
+              ),
+            ),
+          ),
+          if (isLong) ...[
+            const SizedBox(height: 8),
+            GestureDetector(
+              onTap: () => setState(() => _scenarioExpanded = !_scenarioExpanded),
+              child: Text(
+                _scenarioExpanded ? 'Yig\'ish ▲' : 'To\'liq o\'qish ▼',
+                style: const TextStyle(
+                  color: _kAccent,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 12,
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  // ── 3. Dialogue bubbles ───────────────────────────────────────────────────
+  Widget _dialogueBubbles(List<CaseDialogueLine> lines) {
+    if (lines.isEmpty) return const SizedBox.shrink();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Icon(Icons.chat_outlined, size: 16, color: _kAccent),
+            const SizedBox(width: 6),
+            _label('SUHBAT / HODISA'),
+          ],
+        ),
+        const SizedBox(height: 10),
+        for (var i = 0; i < lines.length; i++)
+          _bubble(lines[i], index: i),
+      ],
+    );
+  }
+
+  Widget _bubble(CaseDialogueLine line, {required int index}) {
+    final isRight = line.role == 'client' || line.role == 'user';
+    final accent = isRight
+        ? _kAccent.withValues(alpha: 0.75)
+        : _kWarning.withValues(alpha: 0.65);
+    final bubbleColor = isRight
+        ? _kAccent.withValues(alpha: 0.10)
+        : const Color(0xFF1E2D3D);
+    final speaker = _speakerTitle(line.role);
+    return Align(
+      alignment: isRight ? Alignment.centerRight : Alignment.centerLeft,
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 480),
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+            decoration: BoxDecoration(
+              color: bubbleColor,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: accent.withValues(alpha: 0.5)),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  speaker,
+                  style: TextStyle(
+                    color: accent,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 10.5,
+                    letterSpacing: 0.7,
+                  ),
+                ),
+                const SizedBox(height: 6),
+                index == 1
+                    ? _TypewriterText(
+                        text: line.text,
+                        style: const TextStyle(
+                          color: _kTextPrimary,
+                          height: 1.45,
+                          fontSize: 13.5,
+                        ),
+                      )
+                    : Text(
+                        line.text,
+                        style: const TextStyle(
+                          color: _kTextPrimary,
+                          height: 1.45,
+                          fontSize: 13.5,
+                        ),
+                      )
+                            .animate()
+                            .fadeIn(duration: 380.ms, delay: (60 * index).ms),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   String _speakerTitle(String role) {
     switch (role) {
       case 'admin':
-        return 'TIZIM ADMINI';
+        return 'IT ADMIN';
       case 'system':
         return 'TIZIM';
       case 'client':
-        return 'MIJOZ';
-      case 'user':
         return 'FOYDALANUVCHI';
+      case 'user':
+        return 'SIZ';
       default:
         return 'OPERATOR';
     }
   }
 
-  Alignment _bubbleAlign(String role) {
-    if (role == 'client' || role == 'user') {
-      return Alignment.centerRight;
-    }
-    return Alignment.centerLeft;
-  }
-
-  Color _bubbleAccent(String role) {
-    if (role == 'client' || role == 'user') {
-      return _darkCyan.withValues(alpha: 0.65);
-    }
-    return Colors.orangeAccent.withValues(alpha: 0.55);
-  }
-
-  Widget _glassCard({required Widget child, EdgeInsetsGeometry pad = const EdgeInsets.all(14)}) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(16),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 14, sigmaY: 14),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.07),
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.14)),
-          ),
-          child: Padding(padding: pad, child: child),
-        ),
-      ),
-    );
-  }
-
-  Widget _sceneWatermark(_CaseScene scene) {
-    IconData icon;
-    switch (scene) {
-      case _CaseScene.email:
-        icon = Icons.mark_email_unread_outlined;
-        break;
-      case _CaseScene.hardware:
-        icon = Icons.memory_outlined;
-        break;
-      case _CaseScene.network:
-        icon = Icons.hub_outlined;
-        break;
-      case _CaseScene.generic:
-        icon = Icons.shield_outlined;
-        break;
-    }
-    return Positioned.fill(
-      child: IgnorePointer(
-        child: Align(
-          alignment: Alignment.center,
-          child: Icon(
-            icon,
-            size: 220,
-            color: Colors.white.withValues(alpha: 0.04),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _faintGrid() {
-    return Positioned.fill(
-      child: IgnorePointer(
-        child: CustomPaint(
-          painter: _GridPainter(color: _darkCyan.withValues(alpha: 0.07)),
-        ),
-      ),
-    );
-  }
-
-  Widget _progressTrack() {
+  // ── 4. Progress ───────────────────────────────────────────────────────────
+  Widget _progressBar() {
     final lines = widget.task.resolvedDialogue();
-    final baseSteps = lines.isEmpty ? 1 : lines.length.clamp(2, 6);
-    final decisionCount = _probeLog.length;
-    final total = baseSteps + 3;
-    final current = (1 + decisionCount).clamp(0, total);
-
-    return _glassCard(
-      pad: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+    final total = (lines.length.clamp(2, 6) + 3);
+    final current = (1 + _probeLog.length).clamp(0, total);
+    return _card(
+      pad: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(Icons.route_outlined, size: 18, color: _darkCyan.withValues(alpha: 0.85)),
-              const SizedBox(width: 8),
+              const Icon(Icons.route_outlined, size: 16, color: _kAccent),
+              const SizedBox(width: 6),
+              _label('MUAMMONI HAL QILISH YO\u2018LI'),
+              const Spacer(),
               Text(
-                'MUAMMONI HAL QILISH YO‘LI',
-                style: TextStyle(
-                  color: _darkCyan.withValues(alpha: 0.85),
+                '$current / $total qadam',
+                style: const TextStyle(
+                  color: _kTextMuted,
                   fontSize: 11,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: 0.9,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 8),
           ClipRRect(
             borderRadius: BorderRadius.circular(6),
             child: LinearProgressIndicator(
               value: total == 0 ? 0 : current / total,
               minHeight: 6,
-              backgroundColor: Colors.black.withValues(alpha: 0.35),
-              color: _neonGreen.withValues(alpha: 0.85),
+              backgroundColor: Colors.black38,
+              color: _kSuccess.withValues(alpha: 0.85),
             ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            'Holat: tahlil bosqichi · qarorlar: $decisionCount',
-            style: TextStyle(color: Colors.white.withValues(alpha: 0.45), fontSize: 11),
           ),
         ],
       ),
     );
   }
 
-  Widget _chatSection(List<CaseDialogueLine> lines) {
+  // ── 5. Harakat kartalari ──────────────────────────────────────────────────
+  Widget _decisionSection() {
+    if (!widget.task.hasInteractive) return const SizedBox.shrink();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        for (var i = 0; i < lines.length; i++)
-          Align(
-            alignment: _bubbleAlign(lines[i].role),
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 520),
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 10),
-                child: _glassCard(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.smart_toy_outlined,
-                              size: 18, color: _bubbleAccent(lines[i].role)),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: Text(
-                              _speakerTitle(lines[i].role),
-                              style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 11,
-                                letterSpacing: 0.6,
-                                color: _bubbleAccent(lines[i].role),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 8),
-                      Builder(
-                        builder: (ctx) {
-                          final longSingle = lines.length == 1 && lines[i].text.length > 100;
-                          final useTw = (lines.length > 1 && i == 1) || longSingle;
-                          if (useTw) {
-                            return _TypewriterText(
-                              text: lines[i].text,
-                              style: TextStyle(
-                                height: 1.35,
-                                fontSize: 14.5,
-                                color: Colors.white.withValues(alpha: 0.92),
-                              ),
-                            );
-                          }
-                          return Text(
-                            lines[i].text,
-                            style: TextStyle(
-                              height: 1.35,
-                              fontSize: 14.5,
-                              color: Colors.white.withValues(alpha: 0.92),
-                            ),
-                          )
-                              .animate()
-                              .fadeIn(duration: 450.ms, delay: (60 * i).ms)
-                              .slideY(begin: 0.06, end: 0);
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
-      ],
-    );
-  }
-
-  Widget _decisionCard(CaseCyberOption o) {
-    return _CyberActionCard(
-      label: o.label,
-      onTap: () => _pick(o),
-    );
-  }
-
-  String _debriefAdvice() {
-    if (_probeLog.isEmpty) {
-      return 'Harakat variantlarini tanlab, keyin o‘z tahlilingizni terminalga yozing.';
-    }
-    final ok = _probeLog.where((p) => p['correct'] == true).length;
-    final total = _probeLog.length;
-    final ratio = ok / total;
-    if (ratio >= 0.75) {
-      return 'Siz mantiqiy va xavfsizlikni ustun qo‘ygan yo‘l tutdingiz. Yakuniy tahlilda qoidalar va ishonchli manbalarni alohida qayd eting.';
-    }
-    if (ratio >= 0.4) {
-      return 'Qisman to‘g‘ri taktika — lekin ayrim qadamlar xavfni oshirishi mumkin. Zaxira nusxa va rasmiy kanallarni tekshirishni unutmang.';
-    }
-    return 'Bu vaziyatda shoshilinch tanlov va yashirish odatda muammoni kattalashtiradi. Qayta tahlil qilib, xavfsiz yo‘lni tanlang.';
-  }
-
-  Widget _impactMeter() {
-    if (_probeLog.isEmpty) {
-      return const SizedBox.shrink();
-    }
-    final ok = _probeLog.where((p) => p['correct'] == true).length;
-    final total = _probeLog.length;
-    final safety = ok / total;
-    final eff = 0.55 + 0.45 * safety - (1 - safety) * 0.15;
-
-    return _glassCard(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'TAHLIL · TA’SIR',
-            style: TextStyle(
-              color: _neonGreen.withValues(alpha: 0.9),
-              fontWeight: FontWeight.w800,
-              fontSize: 11,
-              letterSpacing: 0.8,
-            ),
-          ),
-          const SizedBox(height: 12),
-          _meterRow('Xavfsizlik', safety, Colors.greenAccent.shade200),
-          const SizedBox(height: 10),
-          _meterRow('Samaradorlik', eff.clamp(0.0, 1.0), _darkCyan),
-          const SizedBox(height: 12),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(Icons.psychology_outlined, size: 20, color: Colors.amber.shade200),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  _debriefAdvice(),
-                  style: TextStyle(
-                    height: 1.35,
-                    color: Colors.white.withValues(alpha: 0.78),
-                    fontSize: 13,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 6),
-          Text(
-            'Aqlli maslahat: o‘qituvchi va AI tahlili topshiriq yuborilgach ham mavjud bo‘lishi mumkin.',
-            style: TextStyle(
-              fontSize: 11,
-              color: Colors.white.withValues(alpha: 0.4),
-              fontStyle: FontStyle.italic,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _meterRow(String label, double v, Color c) {
-    final pct = (v * 100).round();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(label, style: TextStyle(color: Colors.white.withValues(alpha: 0.7), fontSize: 12)),
-            Text(
-              '${pct > 0 ? '+' : ''}$pct% rel.',
-              style: TextStyle(color: c.withValues(alpha: 0.95), fontWeight: FontWeight.w700, fontSize: 12),
-            ),
+            const Icon(Icons.bolt_outlined, size: 16, color: _kWarning),
+            const SizedBox(width: 6),
+            _label('HARAKAT TANLANG', color: _kWarning),
           ],
         ),
         const SizedBox(height: 4),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(4),
-          child: LinearProgressIndicator(
-            value: v.clamp(0.0, 1.0),
-            minHeight: 7,
-            backgroundColor: Colors.black.withValues(alpha: 0.35),
-            color: c.withValues(alpha: 0.85),
-          ),
+        const Text(
+          'Muammoni hal qilish uchun eng to\'g\'ri chora-tadbirni tanlang',
+          style: TextStyle(color: _kTextMuted, fontSize: 12, height: 1.35),
         ),
+        const SizedBox(height: 10),
+        for (final o in widget.task.options)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: _CyberActionCard(label: o.label, onTap: () => _pick(o)),
+          ),
       ],
     );
   }
 
-  Widget _toolboxDnD() {
-    if (!widget.task.hasInteractive) {
-      return const SizedBox.shrink();
-    }
-    return _glassCard(
+  // ── 6. AI voqea rivojlanishi ──────────────────────────────────────────────
+  Widget _aiStorySection() {
+    if (_aiStoryBranches.isEmpty && !_aiBranchLoading) return const SizedBox.shrink();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            const Icon(Icons.auto_awesome, size: 16, color: _kSuccess),
+            const SizedBox(width: 6),
+            _label('AI SSENARIST · VOQEA RIVOJLANDI', color: _kSuccess),
+          ],
+        ),
+        const SizedBox(height: 8),
+        if (_aiBranchLoading)
+          const LinearProgressIndicator(minHeight: 3),
+        for (final s in _aiStoryBranches)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8, top: 4),
+            child: _card(
+              child: Text(
+                s,
+                style: const TextStyle(
+                  color: _kTextPrimary,
+                  height: 1.45,
+                  fontSize: 13.5,
+                ),
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+
+  // ── 7. Asboblar qutisi ────────────────────────────────────────────────────
+  Widget _toolboxSection() {
+    if (!widget.task.hasInteractive) return const SizedBox.shrink();
+    return _card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'ASBOBLAR QUTISI · sudrab muammo zonasiga torting',
-            style: TextStyle(
-              color: _darkCyan.withValues(alpha: 0.85),
-              fontSize: 11,
-              fontWeight: FontWeight.w800,
-              letterSpacing: 0.7,
-            ),
+          Row(
+            children: [
+              const Icon(Icons.build_outlined, size: 16, color: _kAccent),
+              const SizedBox(width: 6),
+              _label('ASBOBLAR QUTISI'),
+            ],
+          ),
+          const SizedBox(height: 4),
+          const Text(
+            'Asbobni sudrab pastdagi zonaga tashlang',
+            style: TextStyle(color: _kTextMuted, fontSize: 12),
           ),
           const SizedBox(height: 10),
           Wrap(
@@ -624,10 +543,10 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
                 data: t,
                 feedback: Material(
                   color: Colors.transparent,
-                  child: _toolChip(t, dragging: true),
+                  child: _ToolChip(label: t, dragging: true),
                 ),
-                childWhenDragging: Opacity(opacity: 0.35, child: _toolChip(t)),
-                child: _toolChip(t),
+                childWhenDragging: Opacity(opacity: 0.3, child: _ToolChip(label: t)),
+                child: _ToolChip(label: t),
               );
             }).toList(),
           ),
@@ -635,14 +554,12 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
           DragTarget<String>(
             onAcceptWithDetails: (d) {
               setState(() {
-                if (!_toolDrops.contains(d.data)) {
-                  _toolDrops.add(d.data);
-                }
+                if (!_toolDrops.contains(d.data)) _toolDrops.add(d.data);
               });
               widget.onChanged();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text('«${d.data}» operativ reja zonasiga qo‘shildi'),
+                  content: Text('«${d.data}» operativ reja zonasiga qo\u2019shildi'),
                   behavior: SnackBarBehavior.floating,
                   duration: const Duration(seconds: 2),
                 ),
@@ -652,23 +569,29 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
               final hover = candidate.isNotEmpty;
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 200),
-                height: 88,
+                height: 80,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: hover ? _neonGreen.withValues(alpha: 0.7) : Colors.white24,
+                    color: hover
+                        ? _kSuccess.withValues(alpha: 0.7)
+                        : _kBorder.withValues(alpha: 0.8),
                     width: hover ? 2 : 1,
                   ),
-                  color: hover ? _neonGreen.withValues(alpha: 0.08) : Colors.black.withValues(alpha: 0.25),
+                  color: hover
+                      ? _kSuccess.withValues(alpha: 0.08)
+                      : Colors.black.withValues(alpha: 0.2),
                 ),
                 alignment: Alignment.center,
                 child: Text(
                   _toolDrops.isEmpty
-                      ? 'Muammo hal zonasi — asbobni bu yerga torting'
+                      ? 'Operativ reja zonasi — asbobni bu yerga tashlang'
                       : _toolDrops.join(' · '),
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white.withValues(alpha: _toolDrops.isEmpty ? 0.35 : 0.8),
+                    color: _toolDrops.isEmpty
+                        ? _kTextMuted
+                        : _kTextPrimary,
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
                   ),
@@ -681,121 +604,227 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
     );
   }
 
-  Widget _toolChip(String t, {bool dragging = false}) {
-    return Material(
-      color: _line.withValues(alpha: dragging ? 0.75 : 0.55),
-      borderRadius: BorderRadius.circular(10),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.build_circle_outlined, size: 18, color: _darkCyan.withValues(alpha: 0.85)),
-            const SizedBox(width: 6),
-            Text(
-              t,
-              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
-            ),
-          ],
-        ),
+  // ── 8. Ta'sir o'lchagich ──────────────────────────────────────────────────
+  Widget _impactSection() {
+    if (_probeLog.isEmpty) return const SizedBox.shrink();
+    final ok = _probeLog.where((p) => p['correct'] == true).length;
+    final total = _probeLog.length;
+    final safety = ok / total;
+    final eff = (0.55 + 0.45 * safety - (1 - safety) * 0.15).clamp(0.0, 1.0);
+
+    String advice;
+    if (safety >= 0.75) {
+      advice = 'Mantiqiy va xavfsizlikni ustun qo\u2019ygan yo\u2019l tutdingiz. Yakuniy tahlilda qoidalar va ishonchli manbalarni alohida qayd eting.';
+    } else if (safety >= 0.4) {
+      advice = 'Qisman to\u2019g\u2019ri taktika — lekin ayrim qadamlar xavfni oshirishi mumkin. Zaxira nusxa va rasmiy kanallarni tekshirishni unutmang.';
+    } else {
+      advice = 'Bu vaziyatda shoshilinch tanlov va yashirish muammoni kattalashtiradi. Qayta tahlil qilib, xavfsiz yo\u2019lni tanlang.';
+    }
+
+    return _card(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.bar_chart_outlined, size: 16, color: _kSuccess),
+              const SizedBox(width: 6),
+              _label('TAHLIL · TA\u02bcSIR', color: _kSuccess),
+            ],
+          ),
+          const SizedBox(height: 12),
+          _meterRow('Xavfsizlik', safety, _kSuccess),
+          const SizedBox(height: 10),
+          _meterRow('Samaradorlik', eff, _kAccent),
+          const SizedBox(height: 12),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(Icons.lightbulb_outline, size: 18, color: _kWarning.withValues(alpha: 0.9)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  advice,
+                  style: const TextStyle(
+                    color: _kTextPrimary,
+                    height: 1.4,
+                    fontSize: 13,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
 
-  Widget _terminalField() {
+  Widget _meterRow(String label, double v, Color c) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(label,
+                style: const TextStyle(color: _kTextMuted, fontSize: 12)),
+            Text(
+              '${(v * 100).round()}%',
+              style: TextStyle(
+                color: c,
+                fontWeight: FontWeight.w700,
+                fontSize: 12,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 4),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: LinearProgressIndicator(
+            value: v,
+            minHeight: 6,
+            backgroundColor: Colors.black38,
+            color: c.withValues(alpha: 0.85),
+          ),
+        ),
+      ],
+    );
+  }
+
+  // ── 9. Qarorlar jurnali ───────────────────────────────────────────────────
+  Widget _probeLogSection() {
+    if (_probeLog.isEmpty) return const SizedBox.shrink();
+    return _card(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.history_outlined, size: 16, color: _kTextMuted),
+              const SizedBox(width: 6),
+              _label('QARORLAR JURNALI', color: _kTextMuted),
+            ],
+          ),
+          const SizedBox(height: 8),
+          for (final p in _probeLog)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(
+                    p['correct'] == true
+                        ? Icons.check_circle_outline
+                        : Icons.cancel_outlined,
+                    size: 16,
+                    color: p['correct'] == true ? _kSuccess : Colors.redAccent,
+                  ),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(
+                      '${p['label']}',
+                      style: const TextStyle(
+                        color: _kTextPrimary,
+                        fontSize: 12.5,
+                        height: 1.35,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+
+  // ── 10. Terminal (tahlil maydoni) ─────────────────────────────────────────
+  Widget _terminalSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            Expanded(
-              child: Text(
-                'TERMINAL · JAVOB / TAHLIL',
-                style: TextStyle(
-                  color: _neonGreen.withValues(alpha: 0.75),
-                  fontSize: 11,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: 0.85,
-                ),
-              ),
-            ),
+            const Icon(Icons.terminal, size: 16, color: _kSuccess),
+            const SizedBox(width: 6),
+            _label('YOZMA TAHLIL / JAVOB', color: _kSuccess),
+            const Spacer(),
             TextButton.icon(
               onPressed: _reflectionAiBusy ? null : _runReflectionCoach,
+              style: TextButton.styleFrom(
+                foregroundColor: _kSuccess,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              ),
               icon: _reflectionAiBusy
-                  ? SizedBox(
-                      width: 16,
-                      height: 16,
+                  ? const SizedBox(
+                      width: 14,
+                      height: 14,
                       child: CircularProgressIndicator(
                         strokeWidth: 2,
-                        color: _neonGreen.withValues(alpha: 0.8),
+                        color: _kSuccess,
                       ),
                     )
-                  : Icon(Icons.psychology_outlined, size: 18, color: _neonGreen.withValues(alpha: 0.85)),
-              label: Text(
-                'AI maslahat',
-                style: TextStyle(color: _neonGreen.withValues(alpha: 0.9)),
-              ),
+                  : const Icon(Icons.psychology_outlined, size: 16),
+              label: const Text('AI maslahat', style: TextStyle(fontSize: 12)),
             ),
           ],
         ),
-        if (_reflectionAiNote != null && _reflectionAiNote!.trim().isNotEmpty) ...[
+        if (_reflectionAiNote != null &&
+            _reflectionAiNote!.trim().isNotEmpty) ...[
           const SizedBox(height: 8),
-          _glassCard(
+          _card(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'AI · INDIVIDUAL TAHLIL',
-                  style: TextStyle(
-                    color: Colors.amber.shade200,
-                    fontWeight: FontWeight.w800,
-                    fontSize: 10,
-                    letterSpacing: 0.7,
-                  ),
-                ),
+                _label('AI · INDIVIDUAL TAHLIL',
+                    color: _kWarning.withValues(alpha: 0.9)),
                 const SizedBox(height: 8),
                 SelectableText(
                   _reflectionAiNote!,
-                  style: TextStyle(
-                    height: 1.35,
-                    color: Colors.white.withValues(alpha: 0.88),
+                  style: const TextStyle(
+                    color: _kTextPrimary,
+                    height: 1.4,
+                    fontSize: 13,
                   ),
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 8),
         ],
-        TextField(
-          controller: widget.reflectionController,
-          onChanged: (_) => widget.onChanged(),
-          minLines: 4,
-          maxLines: 10,
-          style: TextStyle(
-            fontFamily: 'monospace',
-            color: _neonGreen.withValues(alpha: 0.92),
-            height: 1.45,
-            fontSize: 13,
+        const SizedBox(height: 8),
+        Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFF050806),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: _kSuccess.withValues(alpha: 0.35),
+            ),
           ),
-          decoration: InputDecoration(
-            hintText: '> tahlil, xavflar, aniq qadamlar va asoslantirish...',
-            hintStyle: TextStyle(
+          child: TextField(
+            controller: widget.reflectionController,
+            onChanged: (_) => widget.onChanged(),
+            minLines: 4,
+            maxLines: 10,
+            style: TextStyle(
               fontFamily: 'monospace',
-              color: _neonGreen.withValues(alpha: 0.25),
+              color: _kSuccess.withValues(alpha: 0.92),
+              height: 1.5,
+              fontSize: 13,
             ),
-            filled: true,
-            fillColor: const Color(0xFF050806),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(color: Color(0xFF1A4D2E)),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: _neonGreen.withValues(alpha: 0.35)),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: _neonGreen.withValues(alpha: 0.85), width: 1.4),
+            decoration: InputDecoration(
+              hintText:
+                  '> tahlil, xavflar, aniq qadamlar va asoslantirish...',
+              hintStyle: TextStyle(
+                fontFamily: 'monospace',
+                color: _kSuccess.withValues(alpha: 0.28),
+              ),
+              filled: true,
+              fillColor: Colors.transparent,
+              border: InputBorder.none,
+              contentPadding: const EdgeInsets.all(14),
             ),
           ),
         ),
@@ -803,123 +832,147 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
     );
   }
 
+  // ── Build ─────────────────────────────────────────────────────────────────
   @override
   Widget build(BuildContext context) {
-    final blob = '${widget.task.scenario} ${widget.task.alertTitle}'.toLowerCase();
-    final scene = _sceneForBlob(blob);
     final lines = widget.task.resolvedDialogue();
 
-    final dark = ThemeData(
-      brightness: Brightness.dark,
-      useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: _darkCyan,
-        brightness: Brightness.dark,
-        surface: _panel,
-      ),
-    );
-
     return Theme(
-      data: dark,
+      data: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: _kAccent,
+          brightness: Brightness.dark,
+          surface: _kSurface,
+        ),
+      ),
       child: Stack(
         fit: StackFit.expand,
         children: [
-          DecoratedBox(decoration: BoxDecoration(gradient: _gradientFor(scene))),
-          _faintGrid(),
-          _sceneWatermark(scene),
+          // Fon
+          const DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0xFF0A1628), _kSurface],
+              ),
+            ),
+          ),
+          // Konten
           if (_consequenceFlash != null)
             Positioned.fill(
               child: IgnorePointer(
                 child: TweenAnimationBuilder<double>(
-                  tween: Tween(begin: 0.32, end: 0),
+                  tween: Tween(begin: 0.28, end: 0),
                   duration: const Duration(milliseconds: 500),
-                  builder: (ctx, v, _) {
-                    final pos = _consequenceFlash == true;
-                    return Container(
-                      color: (pos ? Colors.greenAccent : Colors.redAccent).withValues(alpha: v),
-                    );
-                  },
+                  builder: (ctx, v, _) => Container(
+                    color: (_consequenceFlash == true
+                            ? Colors.greenAccent
+                            : Colors.redAccent)
+                        .withValues(alpha: v),
+                  ),
                 ),
               ),
             ),
           SafeArea(
             top: false,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+            child: ListView(
+              padding: const EdgeInsets.fromLTRB(14, 8, 14, 24),
               children: [
+                // Sarlavha qatori
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(12, 8, 12, 4),
+                  padding: const EdgeInsets.only(bottom: 10),
                   child: Row(
                     children: [
-                      Icon(Icons.hub_outlined, color: _darkCyan.withValues(alpha: 0.9), size: 22),
+                      const Icon(Icons.hub_outlined,
+                          color: _kAccent, size: 20),
                       const SizedBox(width: 8),
-                      Text(
-                        'MUAMMOLARNI HAL QILISH MARKAZI',
-                        style: TextStyle(
-                          color: _darkCyan.withValues(alpha: 0.95),
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: 1.05,
-                          fontSize: 11.5,
-                        ),
-                      ),
-                      const Spacer(),
-                      Icon(Icons.circle, size: 9, color: Colors.greenAccent.withValues(alpha: 0.85)),
-                      const SizedBox(width: 6),
-                      Text(
-                        'SESSIYA: FAOL',
-                        style: TextStyle(
-                          color: Colors.white.withValues(alpha: 0.45),
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
-                  child: _progressTrack(),
-                ),
-                Expanded(
-                  child: ListView(
-                    padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-                    children: [
-                      _chatSection(lines),
-                      if (_aiBranchLoading)
-                        const Padding(
-                          padding: EdgeInsets.only(bottom: 10),
-                          child: LinearProgressIndicator(minHeight: 3),
-                        ),
-                      for (final s in _aiStoryBranches) _aiSsenaristBubble(s),
-                      if (widget.task.hasInteractive) ...[
-                        const SizedBox(height: 8),
-                        Text(
-                          'HARAKAT KARTALARI',
+                      const Expanded(
+                        child: Text(
+                          'MUAMMOLARNI HAL QILISH MARKAZI',
                           style: TextStyle(
-                            color: _darkCyan.withValues(alpha: 0.75),
+                            color: _kAccent,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: 0.9,
                             fontSize: 11,
-                            fontWeight: FontWeight.w700,
-                            letterSpacing: 0.8,
                           ),
                         ),
-                        const SizedBox(height: 8),
-                        for (final o in widget.task.options)
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 8),
-                            child: _decisionCard(o),
-                          ),
-                        const SizedBox(height: 6),
-                        _toolboxDnD(),
-                      ],
-                      if (_probeLog.isNotEmpty) ...[
-                        const SizedBox(height: 16),
-                        _impactMeter(),
-                      ],
-                      const SizedBox(height: 18),
-                      _terminalField(),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 3),
+                        decoration: BoxDecoration(
+                          color: _kSuccess.withValues(alpha: 0.15),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                              color: _kSuccess.withValues(alpha: 0.4)),
+                        ),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.circle,
+                                size: 7, color: _kSuccess),
+                            SizedBox(width: 4),
+                            Text(
+                              'FAOL',
+                              style: TextStyle(
+                                color: _kSuccess,
+                                fontSize: 9.5,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
+
+                // 1. Alert
+                _alertBanner(),
+                const SizedBox(height: 10),
+
+                // 2. Progress
+                _progressBar(),
+                const SizedBox(height: 10),
+
+                // 3. Vaziyat matni
+                _scenarioCard(),
+                const SizedBox(height: 10),
+
+                // 4. Dialogue
+                if (lines.isNotEmpty) ...[
+                  _dialogueBubbles(lines),
+                  const SizedBox(height: 10),
+                ],
+
+                // 5. Harakat kartalari
+                _decisionSection(),
+                const SizedBox(height: 10),
+
+                // 6. Asboblar
+                if (widget.task.hasInteractive) ...[
+                  _toolboxSection(),
+                  const SizedBox(height: 10),
+                ],
+
+                // 7. AI voqea
+                _aiStorySection(),
+                if (_aiStoryBranches.isNotEmpty)
+                  const SizedBox(height: 10),
+
+                // 8. Qarorlar jurnali
+                _probeLogSection(),
+                if (_probeLog.isNotEmpty) const SizedBox(height: 10),
+
+                // 9. Ta'sir o'lchagich
+                _impactSection(),
+                if (_probeLog.isNotEmpty) const SizedBox(height: 10),
+
+                // 10. Terminal
+                _terminalSection(),
               ],
             ),
           ),
@@ -929,8 +982,7 @@ class CaseStudyCyberExperienceState extends State<CaseStudyCyberExperience> {
   }
 }
 
-enum _CaseScene { email, hardware, network, generic }
-
+// ── Harakar kartasi ───────────────────────────────────────────────────────────
 class _CyberActionCard extends StatefulWidget {
   const _CyberActionCard({required this.label, required this.onTap});
 
@@ -942,64 +994,111 @@ class _CyberActionCard extends StatefulWidget {
 }
 
 class _CyberActionCardState extends State<_CyberActionCard> {
-  double _scale = 1;
+  bool _pressed = false;
 
   @override
   Widget build(BuildContext context) {
-    const cyan = _kDarkCyan;
-    const line = _kLine;
     return GestureDetector(
-      onTapDown: (_) => setState(() => _scale = 0.97),
-      onTapUp: (_) => setState(() => _scale = 1),
-      onTapCancel: () => setState(() => _scale = 1),
+      onTapDown: (_) => setState(() => _pressed = true),
+      onTapUp: (_) => setState(() => _pressed = false),
+      onTapCancel: () => setState(() => _pressed = false),
       onTap: widget.onTap,
-      child: AnimatedScale(
-        scale: _scale,
-        duration: const Duration(milliseconds: 120),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
-            color: line.withValues(alpha: 0.55),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
-            boxShadow: [
-              BoxShadow(
-                color: cyan.withValues(alpha: _scale < 1 ? 0.35 : 0.12),
-                blurRadius: _scale < 1 ? 20 : 10,
-                offset: const Offset(0, 4),
-              ),
-            ],
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 140),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: _pressed
+              ? _kAccent.withValues(alpha: 0.18)
+              : _kCard,
+          border: Border.all(
+            color: _pressed
+                ? _kAccent.withValues(alpha: 0.8)
+                : _kBorder,
+            width: _pressed ? 1.5 : 1,
           ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
-            child: Row(
-              children: [
-                Icon(Icons.bolt_outlined, size: 22, color: cyan.withValues(alpha: 0.85)),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Text(
-                    widget.label,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w700,
-                      height: 1.25,
-                    ),
+          boxShadow: _pressed
+              ? [
+                  BoxShadow(
+                    color: _kAccent.withValues(alpha: 0.25),
+                    blurRadius: 16,
+                    offset: const Offset(0, 4),
                   ),
-                ),
-                Icon(Icons.touch_app_outlined, color: Colors.white.withValues(alpha: 0.35)),
-              ],
+                ]
+              : null,
+        ),
+        child: Row(
+          children: [
+            Icon(
+              Icons.bolt_outlined,
+              size: 20,
+              color: _kAccent.withValues(alpha: 0.85),
             ),
-          ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                widget.label,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w600,
+                  height: 1.3,
+                  color: _kTextPrimary,
+                  fontSize: 13.5,
+                ),
+              ),
+            ),
+            const Icon(
+              Icons.touch_app_outlined,
+              color: _kTextMuted,
+              size: 18,
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
+// ── Asbob chipi ───────────────────────────────────────────────────────────────
+class _ToolChip extends StatelessWidget {
+  const _ToolChip({required this.label, this.dragging = false});
+
+  final String label;
+  final bool dragging;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: dragging
+            ? _kAccent.withValues(alpha: 0.25)
+            : _kBorder.withValues(alpha: 0.7),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: _kAccent.withValues(alpha: 0.4)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.build_circle_outlined,
+              size: 16, color: _kAccent.withValues(alpha: 0.85)),
+          const SizedBox(width: 6),
+          Text(
+            label,
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 12.5,
+              color: _kTextPrimary,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ── Typewriter animatsiyasi ───────────────────────────────────────────────────
 class _TypewriterText extends StatefulWidget {
-  const _TypewriterText({
-    required this.text,
-    required this.style,
-  });
+  const _TypewriterText({required this.text, required this.style});
 
   final String text;
   final TextStyle style;
@@ -1015,7 +1114,7 @@ class _TypewriterTextState extends State<_TypewriterText> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(const Duration(milliseconds: 22), (_) {
+    _timer = Timer.periodic(const Duration(milliseconds: 20), (_) {
       if (_i >= widget.text.length) {
         _timer?.cancel();
         return;
@@ -1033,39 +1132,9 @@ class _TypewriterTextState extends State<_TypewriterText> {
   @override
   Widget build(BuildContext context) {
     final shown = widget.text.substring(0, _i.clamp(0, widget.text.length));
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        Expanded(
-          child: Text(
-            shown + (_i < widget.text.length ? '▍' : ''),
-            style: widget.style,
-          ),
-        ),
-      ],
+    return Text(
+      shown + (_i < widget.text.length ? '▍' : ''),
+      style: widget.style,
     );
   }
-}
-
-class _GridPainter extends CustomPainter {
-  _GridPainter({required this.color});
-
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color
-      ..strokeWidth = 1;
-    const step = 32.0;
-    for (double x = 0; x < size.width; x += step) {
-      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
-    }
-    for (double y = 0; y < size.height; y += step) {
-      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant _GridPainter oldDelegate) => oldDelegate.color != color;
 }

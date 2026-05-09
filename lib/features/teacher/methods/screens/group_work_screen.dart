@@ -119,7 +119,7 @@ class _GroupWorkScreenState extends State<GroupWorkScreen> {
   Future<void> _load() async {
     final a = widget.args;
     if (a?.methodId == null) {
-      setState(() => _loading = false);
+      if (mounted) setState(() => _loading = false);
       return;
     }
     final m = await context.read<MethodRepository>().fetchMethod(

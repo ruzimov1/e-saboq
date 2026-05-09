@@ -11,7 +11,6 @@ class PollMethodScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final id = args?.methodId ?? '—';
     return Scaffold(
       appBar: AppBar(
         leadingWidth: AppBarBackOrHomeLeading.leadingWidth(context),
@@ -20,7 +19,30 @@ class PollMethodScreen extends StatelessWidget {
         actions: const [AppProfileIcon()],
       ),
       body: Center(
-        child: Text('Poll · metodId: $id', textAlign: TextAlign.center),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.poll_outlined,
+              size: 64,
+              color: Theme.of(context).colorScheme.outline,
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'So\'rovnoma tez orada',
+              style: Theme.of(context).textTheme.titleMedium,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Bu bo\'lim hali ishlab chiqilmoqda',
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Theme.of(context).colorScheme.onSurfaceVariant,
+                  ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
       ),
     );
   }

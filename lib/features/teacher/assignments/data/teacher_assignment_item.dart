@@ -11,6 +11,7 @@ class TeacherAssignmentItem {
     required this.code,
     required this.title,
     this.deadline,
+    this.createdAt,
   });
 
   final String subjectId;
@@ -21,6 +22,7 @@ class TeacherAssignmentItem {
   final String code;
   final String title;
   final DateTime? deadline;
+  final DateTime? createdAt;
 
   /// Muddati o'tmagan (yoki muddat yo'q).
   bool get isActive {
@@ -35,6 +37,7 @@ class TeacherAssignmentItem {
     final path = doc.reference.path.split('/');
     final data = doc.data();
     final ts = data['deadline'] as Timestamp?;
+    final cts = data['createdAt'] as Timestamp?;
     return TeacherAssignmentItem(
       subjectId: path.length > 1 ? path[1] : '',
       classId: path.length > 3 ? path[3] : '',
@@ -44,6 +47,7 @@ class TeacherAssignmentItem {
       code: '${data['code'] ?? ''}',
       title: '${data['title'] ?? 'Topshiriq'}',
       deadline: ts?.toDate(),
+      createdAt: cts?.toDate(),
     );
   }
 }

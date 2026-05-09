@@ -181,19 +181,26 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
     }
     _timeExpired = false;
     _sessionTimer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (!mounted) {
-        return;
-      }
+      if (!mounted) return;
+      bool justExpired = false;
       setState(() {
         final s = _secondsLeft;
         if (s == null || s <= 1) {
           _secondsLeft = 0;
           _timeExpired = true;
+          justExpired = true;
           _sessionTimer?.cancel();
         } else {
           _secondsLeft = s - 1;
         }
       });
+      if (justExpired) {
+        Future.delayed(const Duration(milliseconds: 700), () {
+          if (mounted && !_submitting && !_alreadySubmitted) {
+            _submit(auto: true);
+          }
+        });
+      }
     });
   }
 
@@ -223,19 +230,26 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
     }
     _tSchemaTimeExpired = false;
     _tSchemaTimer = Timer.periodic(const Duration(seconds: 1), (_) {
-      if (!mounted) {
-        return;
-      }
+      if (!mounted) return;
+      bool justExpired = false;
       setState(() {
         final s = _tSchemaSecondsLeft;
         if (s == null || s <= 1) {
           _tSchemaSecondsLeft = 0;
           _tSchemaTimeExpired = true;
+          justExpired = true;
           _tSchemaTimer?.cancel();
         } else {
           _tSchemaSecondsLeft = s - 1;
         }
       });
+      if (justExpired) {
+        Future.delayed(const Duration(milliseconds: 700), () {
+          if (mounted && !_submitting && !_alreadySubmitted) {
+            _submit(auto: true);
+          }
+        });
+      }
     });
   }
 
@@ -516,6 +530,23 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
       }
     });
     _scheduleDraftSave();
+    _checkAndMaybeAutoSubmitQuiz();
+  }
+
+  /// Barcha quiz savollari (javob berilgan yoki vaqti tugagan) bo'lganda avtomatik yuboradi.
+  void _checkAndMaybeAutoSubmitQuiz() {
+    final layout = _quizLayout;
+    if (layout == null || _submitting || _alreadySubmitted) return;
+    final n = layout.displayQuestions.length;
+    if (n == 0) return;
+    for (var i = 0; i < n; i++) {
+      if (!_quizSessionResolvedAtDisplay(i)) return;
+    }
+    Future.delayed(const Duration(milliseconds: 800), () {
+      if (mounted && !_submitting && !_alreadySubmitted) {
+        _submit(auto: true);
+      }
+    });
   }
 
   Future<void> _load() async {
@@ -752,25 +783,28 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
     };
   }
 
-  Future<void> _submit() async {
+  Future<void> _submit({bool auto = false}) async {
     final l = _lookup ?? widget.lookup;
     if (l == null) return;
     final auth = context.read<AuthBloc>().state;
     if (auth is! AuthAuthenticated) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Avval tizimga kiring (o\'quvchi)')),
-      );
+      if (!auto) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Avval tizimga kiring (o\'quvchi)')),
+        );
+      }
       return;
     }
     final m = _method;
     if (m == null) {
-      if (_textAnswer.text.trim().isEmpty) {
+      if (!auto && _textAnswer.text.trim().isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Javob yozing')),
         );
         return;
       }
     } else if (m.type == 'quiz') {
+      // Javob berilmagan va vaqti hali ochiq savollarni «tuugadi» deb belgilash
       final rawQs = m.config?['questions'] as List<dynamic>? ?? [];
       final n = rawQs.length;
       setState(() {
@@ -789,77 +823,70 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
         }
       });
     } else if (m.type == 'poll' && _pollChoice == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Variant tanlang')),
-      );
+      if (!auto) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Variant tanlang')),
+        );
+      }
       return;
     } else if (m.type == 'group' && _isGroupClusterMode) {
       final st = _clusterKey.currentState;
-      if (st == null || !st.isSessionComplete) {
+      if (!auto && (st == null || !st.isSessionComplete)) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Barcha to‘g‘ri tarmoqlarni markazga ulang'),
+            content: Text('Barcha to’g’ri tarmoqlarni markazga ulang'),
           ),
         );
         return;
       }
     } else if (m.type == 'brainstorm') {
-      if (_blockSubmitByTimer) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Vaqt tugadi. Fikr yuborib bo‘lmaydi'),
-          ),
-        );
-        return;
-      }
+      // Vaqt tugagan bo’lsa — auto yoki manual ham qabul qilinadi
       final ideas = _brainstormMyIdeas;
       final cfg = _brainstormConfig ?? BrainstormSessionConfig.fallback;
-      if (ideas.length < cfg.minIdeasPerStudent) {
+      if (!auto && ideas.length < cfg.minIdeasPerStudent) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              'Kamida ${cfg.minIdeasPerStudent} ta fikr «Stiker sifatida yuborish» orqali doskaga qo‘ying',
+              'Kamida ${cfg.minIdeasPerStudent} ta fikr «Doskaga yuborish» orqali doskaga qo’ying',
             ),
           ),
         );
         return;
       }
-      if (ideas.length > cfg.maxIdeasPerStudent) {
+      if (!auto && ideas.length > cfg.maxIdeasPerStudent) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              'O‘quvchi faqat ${cfg.maxIdeasPerStudent} tagacha fikr yuboradi',
+              'O’quvchi faqat ${cfg.maxIdeasPerStudent} tagacha fikr yuboradi',
             ),
           ),
         );
         return;
       }
     } else if (m.type == 'case' && _caseCyberTask != null) {
-      if (_textAnswer.text.trim().isEmpty) {
+      if (!auto && _textAnswer.text.trim().isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('O‘z tahlilingiz va yechim matnini yozing'),
+            content: Text('O’z tahlilingiz va yechim matnini yozing'),
           ),
         );
         return;
       }
     } else if (m.type == 'fishbone' && _tSchemaConfig != null) {
-      if (_blockSubmitByTimer) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Vaqt tugadi. Stikerlarni yuborib bo‘lmaydi')),
-        );
-        return;
+      // Auto bo’lsa: vaqt tugaganda qisman to’ldirilgan holda ham yuboriladi
+      if (!auto) {
+        final st = _tSchemaKey.currentState;
+        if (st == null || !st.isSessionComplete) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Barcha stikerlarni to’g’ri ustunlarga joylang'),
+            ),
+          );
+          return;
+        }
       }
-      final st = _tSchemaKey.currentState;
-      if (st == null || !st.isSessionComplete) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Barcha stikerlarni to‘g‘ri ustunlarga joylang'),
-          ),
-        );
-        return;
-      }
-    } else if (m.type != 'quiz' &&
+    } else if (!auto &&
+        m.type != 'quiz' &&
         m.type != 'poll' &&
         !(m.type == 'group' && _isGroupClusterMode) &&
         !(m.type == 'fishbone' && _tSchemaConfig != null) &&
@@ -871,27 +898,30 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
       return;
     }
 
-    final confirm = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('Javobni yuborish'),
-        content: const Text(
-          'Yakuniy yuborishdan oldin javobingizni tekshiring. Odatda yuborganingizdan '
-          'keyin tahrir qilish mumkin emas.',
+    // Avtomatik yuborishda tasdiq dialogi ko’rsatilmaydi
+    if (!auto) {
+      final confirm = await showDialog<bool>(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: const Text('Javobni yuborish'),
+          content: const Text(
+            'Yakuniy yuborishdan oldin javobingizni tekshiring. Odatda yuborganingizdan '
+            'keyin tahrir qilish mumkin emas.',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(ctx, false),
+              child: const Text('Bekor qilish'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.pop(ctx, true),
+              child: const Text('Yuborish'),
+            ),
+          ],
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx, false),
-            child: const Text('Bekor qilish'),
-          ),
-          FilledButton(
-            onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Yuborish'),
-          ),
-        ],
-      ),
-    );
-    if (confirm != true || !mounted) return;
+      );
+      if (confirm != true || !mounted) return;
+    }
 
     setState(() => _submitting = true);
     try {
@@ -907,25 +937,28 @@ class _SolveAssignmentScreenState extends State<SolveAssignmentScreen> {
       if (mounted) {
         final isBs = m?.type == 'brainstorm';
         final cfg = _brainstormConfig;
-        final showMedal = isBs &&
+        final showMedal = !auto &&
+            isBs &&
             cfg != null &&
             _brainstormMyIdeas.length >= cfg.minIdeasPerStudent &&
             (cfg.durationMinutes <= 0 || !_timeExpired);
         if (showMedal) {
           await _showCreativityRewardDialog(
-            filledAllSlots: _brainstormMyIdeas.length >=
-                cfg.maxIdeasPerStudent,
+            filledAllSlots:
+                _brainstormMyIdeas.length >= cfg.maxIdeasPerStudent,
           );
         }
-        if (!mounted) {
-          return;
-        }
+        if (!mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              score != null
-                  ? 'Yuborildi. Ball: ${score.toStringAsFixed(0)}'
-                  : 'Yuborildi',
+              auto
+                  ? (score != null
+                      ? 'Vaqt tugadi — avtomatik yuborildi. Ball: ${score.toStringAsFixed(0)}'
+                      : 'Vaqt tugadi — avtomatik yuborildi')
+                  : (score != null
+                      ? 'Yuborildi. Ball: ${score.toStringAsFixed(0)}'
+                      : 'Yuborildi'),
             ),
           ),
         );
@@ -2233,7 +2266,7 @@ class _InteractiveQuizHostState extends State<_InteractiveQuizHost> {
         ),
         const SizedBox(height: 6),
         SizedBox(
-          height: 420,
+          height: (MediaQuery.sizeOf(context).height * 0.54).clamp(320.0, 480.0),
           child: PageView.builder(
             controller: _pageController,
             itemCount: n,

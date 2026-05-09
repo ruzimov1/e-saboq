@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_strings.dart';
+import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/auth_brand_gradients.dart';
 import '../../../core/utils/validators.dart';
 import '../../../core/widgets/app_bar_back_or_home.dart';
@@ -84,107 +85,111 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: TabletConstrainedBody(
                         child: SingleChildScrollView(
                           padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
-                          child: Form(
-                            key: _formKey,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Text(
-                                  AppStrings.register,
-                                  textAlign: TextAlign.center,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium
-                                      ?.copyWith(
-                                        fontWeight: FontWeight.w800,
-                                        color: AppColors.primary,
-                                        letterSpacing: -0.5,
-                                      ),
-                                ),
-                                const SizedBox(height: 6),
-                                Text(
-                                  l10n.registerSubtitle,
-                                  textAlign: TextAlign.center,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyMedium
-                                      ?.copyWith(
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .onSurfaceVariant,
-                                      ),
-                                ),
-                                const SizedBox(height: 20),
-                                const FirebaseSetupBanner(),
-                                const SizedBox(height: 16),
-                                CustomTextField(
-                                  controller: _name,
-                                  label: AppStrings.fullName,
-                                  validator: (v) =>
-                                      validateRequired(v, AppStrings.fullName),
-                                ),
-                                const SizedBox(height: 16),
-                                CustomTextField(
-                                  controller: _username,
-                                  label: AppStrings.usernameLabel,
-                                  keyboardType: TextInputType.text,
-                                  validator: validateUsername,
-                                ),
-                                const SizedBox(height: 16),
-                                CustomTextField(
-                                  controller: _password,
-                                  label: 'Parol',
-                                  obscureText: true,
-                                  validator: validatePassword,
-                                ),
-                                const SizedBox(height: 16),
-                                SegmentedButton<String>(
-                                  segments: const [
-                                    ButtonSegment(
-                                      value: 'teacher',
-                                      label: Text(AppStrings.teacher),
-                                    ),
-                                    ButtonSegment(
-                                      value: 'student',
-                                      label: Text(AppStrings.student),
-                                    ),
-                                  ],
-                                  selected: {_role},
-                                  onSelectionChanged: (s) {
-                                    setState(() => _role = s.first);
-                                  },
-                                ),
-                                const SizedBox(height: 24),
-                                CustomButton(
-                                  label: AppStrings.register,
-                                  isLoading: loading,
-                                  onPressed: loading
-                                      ? null
-                                      : () {
-                                          if (_formKey.currentState
-                                                  ?.validate() ??
-                                              false) {
-                                            context.read<AuthBloc>().add(
-                                                  AuthRegisterRequested(
-                                                    username: _username.text,
-                                                    password: _password.text,
-                                                    name: _name.text.trim(),
-                                                    role: _role,
-                                                  ),
-                                                );
-                                          }
-                                        },
-                                ),
-                                TextButton(
-                                  onPressed: loading
-                                      ? null
-                                      : () => context.go(AppRoutes.login),
-                                  style: TextButton.styleFrom(
-                                    foregroundColor: AppColors.primary,
+                          child: Theme(
+                            /// Gradient ochiq fon; tizim qorong‘i rejimida bo‘lsa ham form
+                            /// matnlari to‘q rangda qolishi kerak.
+                            data: AppTheme.light(),
+                            child: Form(
+                              key: _formKey,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  Text(
+                                    AppStrings.register,
+                                    textAlign: TextAlign.center,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium
+                                        ?.copyWith(
+                                          fontWeight: FontWeight.w800,
+                                          color: AppColors.primary,
+                                          letterSpacing: -0.5,
+                                        ),
                                   ),
-                                  child: const Text(AppStrings.login),
-                                ),
-                              ],
+                                  const SizedBox(height: 6),
+                                  Text(
+                                    l10n.registerSubtitle,
+                                    textAlign: TextAlign.center,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(
+                                          color: const Color(0xFF424242),
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                  ),
+                                  const SizedBox(height: 20),
+                                  const FirebaseSetupBanner(),
+                                  const SizedBox(height: 16),
+                                  CustomTextField(
+                                    controller: _name,
+                                    label: AppStrings.fullName,
+                                    validator: (v) =>
+                                        validateRequired(v, AppStrings.fullName),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  CustomTextField(
+                                    controller: _username,
+                                    label: AppStrings.usernameLabel,
+                                    keyboardType: TextInputType.text,
+                                    validator: validateUsername,
+                                  ),
+                                  const SizedBox(height: 16),
+                                  CustomTextField(
+                                    controller: _password,
+                                    label: 'Parol',
+                                    obscureText: true,
+                                    validator: validatePassword,
+                                  ),
+                                  const SizedBox(height: 16),
+                                  SegmentedButton<String>(
+                                    segments: const [
+                                      ButtonSegment(
+                                        value: 'teacher',
+                                        label: Text(AppStrings.teacher),
+                                      ),
+                                      ButtonSegment(
+                                        value: 'student',
+                                        label: Text(AppStrings.student),
+                                      ),
+                                    ],
+                                    selected: {_role},
+                                    onSelectionChanged: (s) {
+                                      setState(() => _role = s.first);
+                                    },
+                                  ),
+                                  const SizedBox(height: 24),
+                                  CustomButton(
+                                    label: AppStrings.register,
+                                    isLoading: loading,
+                                    onPressed: loading
+                                        ? null
+                                        : () {
+                                            if (_formKey.currentState
+                                                    ?.validate() ??
+                                                false) {
+                                              context.read<AuthBloc>().add(
+                                                    AuthRegisterRequested(
+                                                      username: _username.text,
+                                                      password: _password.text,
+                                                      name: _name.text.trim(),
+                                                      role: _role,
+                                                    ),
+                                                  );
+                                            }
+                                          },
+                                  ),
+                                  TextButton(
+                                    onPressed: loading
+                                        ? null
+                                        : () => context.go(AppRoutes.login),
+                                    style: TextButton.styleFrom(
+                                      foregroundColor: AppColors.primary,
+                                    ),
+                                    child: const Text(AppStrings.login),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

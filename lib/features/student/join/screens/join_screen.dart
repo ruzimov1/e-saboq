@@ -199,7 +199,7 @@ class _JoinScreenState extends State<JoinScreen>
     bool loggedIn,
     bool asStudent,
   ) {
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.all(24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -252,6 +252,7 @@ class _JoinScreenState extends State<JoinScreen>
                 : () => context.push(AppRoutes.studentAssignments),
             child: Text(l10n.myAssignments),
           ),
+          const SizedBox(height: 16),
         ],
       ),
     );
@@ -262,7 +263,7 @@ class _JoinScreenState extends State<JoinScreen>
     AppLocalizations l10n,
     bool asStudent,
   ) {
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.all(24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -294,6 +295,7 @@ class _JoinScreenState extends State<JoinScreen>
             isLoading: _loadingG,
             onPressed: (_loadingG || !asStudent) ? null : _joinGroup,
           ),
+          const SizedBox(height: 16),
         ],
       ),
     );

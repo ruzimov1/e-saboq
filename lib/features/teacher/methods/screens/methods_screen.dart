@@ -142,6 +142,43 @@ class _MethodsScreenState extends State<MethodsScreen> {
     MethodType.fishbone,
   ];
 
+  static int _methodSortWeight(MethodModel m) {
+    final parsed = methodTypeFromFirestore(m.type);
+    switch (parsed) {
+      case MethodType.brainstorm:
+        return 0;
+      case MethodType.caseStudy:
+        return 1;
+      case MethodType.groupWork:
+        return 2;
+      case MethodType.quiz:
+        return 3;
+      case MethodType.fishbone:
+        return 4;
+      case MethodType.poll:
+        return 5;
+      case MethodType.rolePlay:
+        return 6;
+      case null:
+        return 99;
+    }
+  }
+
+  List<MethodModel> _sortedMethods(Iterable<MethodModel> input) {
+    final list = input.toList(growable: false);
+    final out = List<MethodModel>.from(list);
+    out.sort((a, b) {
+      final byWeight = _methodSortWeight(a).compareTo(_methodSortWeight(b));
+      if (byWeight != 0) return byWeight;
+      final byTitle = _methodCardTitle(a).toLowerCase().compareTo(
+            _methodCardTitle(b).toLowerCase(),
+          );
+      if (byTitle != 0) return byTitle;
+      return a.id.toLowerCase().compareTo(b.id.toLowerCase());
+    });
+    return out;
+  }
+
   static int _methodGridCrossAxisCount(double width) {
     if (width >= 1000) {
       return 4;
@@ -170,7 +207,7 @@ class _MethodsScreenState extends State<MethodsScreen> {
               crossAxisCount: cross,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
-              childAspectRatio: cross == 1 ? 1.34 : 1.22,
+              childAspectRatio: cross == 1 ? 1.2 : 1.12,
               children: [
                 for (final mt in _addableMethodTypes)
                   TeacherMethodGridCard(
@@ -205,7 +242,9 @@ class _MethodsScreenState extends State<MethodsScreen> {
 
   Future<void> _createAssignment(BuildContext context) async {
     final state = context.read<MethodBloc>().state;
-    final methods = state is MethodLoaded ? state.methods : <MethodModel>[];
+    final methods = state is MethodLoaded
+        ? _sortedMethods(state.methods)
+        : <MethodModel>[];
     if (methods.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Avval metod yarating')),
@@ -231,7 +270,7 @@ class _MethodsScreenState extends State<MethodsScreen> {
                   crossAxisCount: math.min(3, _methodGridCrossAxisCount(mq.width)),
                   mainAxisSpacing: 8,
                   crossAxisSpacing: 8,
-                  childAspectRatio: 1.22,
+                  childAspectRatio: 1.15,
                 ),
                 itemCount: methods.length,
                 itemBuilder: (context, i) {
@@ -390,11 +429,13 @@ class _MethodsScreenState extends State<MethodsScreen> {
             }
             final q = _query.trim().toLowerCase();
             final filtered = q.isEmpty
-                ? state.methods
-                : state.methods.where((m) {
-                    final title = _methodDisplayTitle(m).toLowerCase();
-                    return title.contains(q) || m.id.toLowerCase().contains(q);
-                  }).toList();
+                ? _sortedMethods(state.methods)
+                : _sortedMethods(
+                    state.methods.where((m) {
+                      final title = _methodDisplayTitle(m).toLowerCase();
+                      return title.contains(q) || m.id.toLowerCase().contains(q);
+                    }),
+                  );
 
             return Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -442,7 +483,7 @@ class _MethodsScreenState extends State<MethodsScreen> {
                                   crossAxisCount: cross,
                                   mainAxisSpacing: 8,
                                   crossAxisSpacing: 8,
-                                  childAspectRatio: 1.34,
+                                  childAspectRatio: 1.2,
                                 ),
                                 itemCount: filtered.length,
                                 itemBuilder: (context, i) {

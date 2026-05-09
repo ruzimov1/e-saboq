@@ -265,6 +265,7 @@ class AssignmentRepository {
   }
 
   /// Barcha fanlar bo'ylab o'qituvchi yaratgan topshiriqlar (`teacherId` maydoni kerak).
+  /// Yangi topshiriqlar ro'yxat boshida bo'ladi (createdAt bo'yicha teskari tartib).
   Stream<List<TeacherAssignmentItem>> watchAssignmentsForTeacher(String teacherId) {
     if (!_ready || teacherId.isEmpty) {
       return Stream.value([]);
@@ -273,12 +274,22 @@ class AssignmentRepository {
         .collectionGroup('assignments')
         .where('teacherId', isEqualTo: teacherId)
         .snapshots()
-        .map(
-          (snap) => snap.docs.map(TeacherAssignmentItem.fromDoc).toList(),
-        );
+        .map((snap) {
+          final items = snap.docs.map(TeacherAssignmentItem.fromDoc).toList();
+          items.sort((a, b) {
+            final ca = a.createdAt;
+            final cb = b.createdAt;
+            if (ca == null && cb == null) return 0;
+            if (ca == null) return 1;
+            if (cb == null) return -1;
+            return cb.compareTo(ca); // teskari: yangi birinchi
+          });
+          return items;
+        });
   }
 
   /// Ushbu metod ostidagi barcha topshiriqlar (real vaqtda).
+  /// Yangi topshiriqlar ro'yxat boshida bo'ladi (createdAt bo'yicha teskari tartib).
   Stream<List<Map<String, dynamic>>> watchAssignmentsForMethod({
     required String subjectId,
     required String classId,
@@ -291,10 +302,22 @@ class AssignmentRepository {
       classId: classId,
       topicId: topicId,
       methodId: methodId,
-    ).snapshots().map(
-          (snap) => snap.docs
-              .map((d) => {...d.data(), 'id': d.id})
-              .toList(),
-        );
+    ).snapshots().map((snap) {
+      final list = snap.docs
+          .map((d) => {...d.data(), 'id': d.id})
+          .toList();
+      list.sort((a, b) {
+        final ca = a['createdAt'];
+        final cb = b['createdAt'];
+        if (ca == null && cb == null) return 0;
+        if (ca == null) return 1;
+        if (cb == null) return -1;
+        // Firestore Timestamp yoki DateTime bo'lishi mumkin
+        final ta = ca is Timestamp ? ca.toDate() : (ca as DateTime);
+        final tb = cb is Timestamp ? cb.toDate() : (cb as DateTime);
+        return tb.compareTo(ta); // teskari: yangi birinchi
+      });
+      return list;
+    });
   }
 }
